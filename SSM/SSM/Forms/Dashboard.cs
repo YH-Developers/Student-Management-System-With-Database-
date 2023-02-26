@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
+using System.Data.SqlClient;
 
 namespace SSM.Forms
 {
@@ -19,26 +20,19 @@ namespace SSM.Forms
             
         }
 
-        private void Label4_Click(object sender, EventArgs e)
-        {
-        }
+
+
 
         private void Dashboard_Load(object sender, EventArgs e)
         {
             dashBoard_User_Control1.Show();
             student_User_Control1.Hide();
             dashBoard_User_Control1.BringToFront();
+
+            
         }
 
-        private void Panel5_Paint(object sender, PaintEventArgs e)
-        {
 
-        }
-
-        private void FlowLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private void BtnAnalytics_Click(object sender, EventArgs e)
         {
@@ -59,17 +53,19 @@ namespace SSM.Forms
 
         }
 
-        private void Student_User_Control1_Load(object sender, EventArgs e)
-        {
 
-        }
 
         private void BtnCalander_Click(object sender, EventArgs e)
         {
-            add_Student1.Show();
+            attendence1.Show();
             student_User_Control1.Hide();
             dashBoard_User_Control1.Hide();
-            add_Student1.BringToFront();
+            attendence1.BringToFront();
+        }
+
+        private void Student_User_Control1_Load_1(object sender, EventArgs e)
+        {
+            
         }
     }
 }

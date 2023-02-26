@@ -118,15 +118,19 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="bunifuProgressBar1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="bunifuThinButton21.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAR0AAAANCAYAAACUy7pUAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEfSURBVGhD7duhbsJQFMbx8xg8wuQkjzA1zUvsAVCXQGhK
-        SZOGBBwaiZqdRU7gh0TQpdnEKiou95ArGriY25CZ/5f85Kn8cnt7KoQQ8n8xZiCz2aeMRhYAomiHJMnK
-        9UnPN8udZNmHbDY/cjhYsRYA4miH7HZW5vPSFdCrb5irTKdvst3+Bh8AADHq2kpRfLsTz5NvmlbS9EuO
-        x/AgAMTa7617i3r3TdOKvoeFBgCgCz3tTCZ/vmlaoXQAPIr2y00oHQCPEiydJDlJVYUHACBW01gZjxvf
-        NK3oRY9e+ISGACCWfj7XvZ2bGPMsi0V5aaXQIADEWK8r1y8vvmmukqZDWS4rlgMBdKYrOFo4eV74hrkT
-        Y/r8BgGgM939C55wRM5nwO6WdDulNAAAAABJRU5ErkJggg==
+        iVBORw0KGgoAAAANSUhEUgAAAG8AAAApCAYAAAA7xHcRAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAH/SURBVHhe7ZuvS0NRFMf9i2wmm8lmEsuSBhEMWrRoMBkU
+        /BEWhAWDImgYGJYEEQeiQUREWZggLKiIIgtDw5XP3bsPH/vRtt0D3w9ceLxtL9wP55x73z0bcsIskmcY
+        yTOM5BlG8gwjeYbpKq/x++NKj2W3dLrjZo7W3PjevBvemNLo4WCOmeuF4qYr3p+770Y9sdFKR3mX1Vv/
+        IMQh8OblwdW+3pJPRa9gjpnrs8q1Wy3lvQMktqNFHqb50dzJunuvfyZ3xaDo5iMjjy9O7i93NC0GB5kw
+        d7CSyX4ZeRiWuHghnVIPA6k8zBKaIm62Lw5d4aror708VpUURtW4+MEVpa36UWvKI1WSMoUNiDwi0Mtj
+        T8HSVNjg6fXZR5+XN1FY9GEobEDqHNnKNeWN7k533cmL+OBtjJfHhbCF5BlG8gwjeYaRPMNInmEkzzCS
+        Z5hUHrt1du3CDqk8ThTU4mCLVB7neJznCRvwHpr30V5eOGIQNghHeF4eKROTqns2CEd4Xh7ky8d+iLgJ
+        fbSQyiPqaG65q1WSOyI2aFMhQ4bju1QeUAhDf4SIC8QRXHSQBTLygMhDYOhQEoOH+kbE/RcHLfKAFMrq
+        E9OsbNRV1n9IjaG+sUBp1+nQVl4A0yxJx/KzflOo0b9Ba0r4n0gnusoTcSN5hpE8w0ieYSTPLM79Afe/
+        8trtH/cUAAAAAElFTkSuQmCC
 </value>
   </data>
 </root>

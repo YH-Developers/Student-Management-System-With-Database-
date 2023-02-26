@@ -42,12 +42,15 @@
             this.label1 = new System.Windows.Forms.Label();
             this.Picture = new System.Windows.Forms.PictureBox();
             this.btnSettings = new System.Windows.Forms.Button();
+            this.panelcontainer = new System.Windows.Forms.Panel();
+            this.attendence1 = new SSM.Forms.Attendence();
             this.student_User_Control1 = new SSM.Forms.Student_User_Control();
             this.dashBoard_User_Control1 = new SSM.Forms.DashBoard_User_Control();
             this.add_Student1 = new SSM.Forms.Add_Student();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Picture)).BeginInit();
+            this.panelcontainer.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -239,18 +242,43 @@
             this.btnSettings.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnSettings.UseVisualStyleBackColor = true;
             // 
+            // panelcontainer
+            // 
+            this.panelcontainer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelcontainer.Controls.Add(this.attendence1);
+            this.panelcontainer.Controls.Add(this.student_User_Control1);
+            this.panelcontainer.Controls.Add(this.dashBoard_User_Control1);
+            this.panelcontainer.Controls.Add(this.add_Student1);
+            this.panelcontainer.Location = new System.Drawing.Point(194, 0);
+            this.panelcontainer.Name = "panelcontainer";
+            this.panelcontainer.Size = new System.Drawing.Size(741, 561);
+            this.panelcontainer.TabIndex = 6;
+            // 
+            // attendence1
+            // 
+            this.attendence1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.attendence1.Location = new System.Drawing.Point(0, 3);
+            this.attendence1.MinimumSize = new System.Drawing.Size(734, 560);
+            this.attendence1.Name = "attendence1";
+            this.attendence1.Size = new System.Drawing.Size(741, 560);
+            this.attendence1.TabIndex = 3;
+            // 
             // student_User_Control1
             // 
             this.student_User_Control1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.student_User_Control1.BackColor = System.Drawing.Color.White;
-            this.student_User_Control1.Location = new System.Drawing.Point(189, 1);
+            this.student_User_Control1.Location = new System.Drawing.Point(0, 3);
             this.student_User_Control1.MinimumSize = new System.Drawing.Size(734, 560);
             this.student_User_Control1.Name = "student_User_Control1";
-            this.student_User_Control1.Size = new System.Drawing.Size(746, 560);
-            this.student_User_Control1.TabIndex = 4;
-            this.student_User_Control1.Load += new System.EventHandler(this.Student_User_Control1_Load);
+            this.student_User_Control1.Size = new System.Drawing.Size(734, 560);
+            this.student_User_Control1.TabIndex = 1;
+            this.student_User_Control1.Load += new System.EventHandler(this.Student_User_Control1_Load_1);
             // 
             // dashBoard_User_Control1
             // 
@@ -258,10 +286,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dashBoard_User_Control1.BackColor = System.Drawing.Color.White;
-            this.dashBoard_User_Control1.Location = new System.Drawing.Point(194, 0);
+            this.dashBoard_User_Control1.Location = new System.Drawing.Point(0, 1);
             this.dashBoard_User_Control1.Name = "dashBoard_User_Control1";
-            this.dashBoard_User_Control1.Size = new System.Drawing.Size(741, 560);
-            this.dashBoard_User_Control1.TabIndex = 3;
+            this.dashBoard_User_Control1.Size = new System.Drawing.Size(734, 560);
+            this.dashBoard_User_Control1.TabIndex = 0;
             // 
             // add_Student1
             // 
@@ -269,11 +297,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.add_Student1.BackColor = System.Drawing.Color.White;
-            this.add_Student1.Location = new System.Drawing.Point(194, 1);
+            this.add_Student1.Location = new System.Drawing.Point(0, 3);
             this.add_Student1.MinimumSize = new System.Drawing.Size(734, 560);
             this.add_Student1.Name = "add_Student1";
-            this.add_Student1.Size = new System.Drawing.Size(741, 560);
-            this.add_Student1.TabIndex = 5;
+            this.add_Student1.Size = new System.Drawing.Size(734, 560);
+            this.add_Student1.TabIndex = 2;
             // 
             // Dashboard
             // 
@@ -281,10 +309,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(935, 561);
+            this.Controls.Add(this.panelcontainer);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.add_Student1);
-            this.Controls.Add(this.dashBoard_User_Control1);
-            this.Controls.Add(this.student_User_Control1);
             this.MinimumSize = new System.Drawing.Size(951, 577);
             this.Name = "Dashboard";
             this.Text = "Dashboard";
@@ -293,6 +319,7 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Picture)).EndInit();
+            this.panelcontainer.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -313,8 +340,10 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
-        private DashBoard_User_Control dashBoard_User_Control1;
-        private Student_User_Control student_User_Control1;
+        private System.Windows.Forms.Panel panelcontainer;
         private Add_Student add_Student1;
+        private DashBoard_User_Control dashBoard_User_Control1;
+        private Attendence attendence1;
+        private Student_User_Control student_User_Control1;
     }
 }

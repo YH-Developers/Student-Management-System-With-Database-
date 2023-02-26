@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using SSM.Forms;
 
 namespace SSM.Forms
 {
@@ -61,7 +62,8 @@ namespace SSM.Forms
 
         private void BunifuButton1_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            
         }
     }
 }

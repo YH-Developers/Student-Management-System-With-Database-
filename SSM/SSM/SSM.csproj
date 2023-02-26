@@ -45,6 +45,9 @@
     <Reference Include="Bunifu.UI.WinForms.BunifuButton">
       <HintPath>..\packages\BunifuCrack-main\Bunifu.UI.WinForms.BunifuButton.dll</HintPath>
     </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuColorTransition">
+      <HintPath>..\packages\BunifuCrack-main\Bunifu.UI.WinForms.BunifuColorTransition.dll</HintPath>
+    </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuDataGridView">
       <HintPath>..\packages\BunifuCrack-main\Bunifu.UI.WinForms.BunifuDataGridView.dll</HintPath>
     </Reference>
@@ -276,11 +279,11 @@
     <Compile Include="Forms\Student_User_Control.Designer.cs">
       <DependentUpon>Student_User_Control.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Update_Student.cs">
+    <Compile Include="Forms\UCReports.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Forms\Update_Student.Designer.cs">
-      <DependentUpon>Update_Student.cs</DependentUpon>
+    <Compile Include="Forms\UCReports.Designer.cs">
+      <DependentUpon>UCReports.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -299,8 +302,8 @@
     <EmbeddedResource Include="Forms\Student_User_Control.resx">
       <DependentUpon>Student_User_Control.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Update_Student.resx">
-      <DependentUpon>Update_Student.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\UCReports.resx">
+      <DependentUpon>UCReports.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
