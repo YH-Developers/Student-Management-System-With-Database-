@@ -30,37 +30,32 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlNav = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnContactUs = new System.Windows.Forms.Button();
             this.btnCalander = new System.Windows.Forms.Button();
             this.btnAnalytics = new System.Windows.Forms.Button();
+            this.btnDashboard = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnContactUs = new System.Windows.Forms.Button();
-            this.btnDashboard = new System.Windows.Forms.Button();
             this.Picture = new System.Windows.Forms.PictureBox();
             this.btnSettings = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.circularProgressBar1 = new CircularProgressBar.CircularProgressBar();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.student_User_Control1 = new SSM.Forms.Student_User_Control();
+            this.dashBoard_User_Control1 = new SSM.Forms.DashBoard_User_Control();
+            this.add_Student1 = new SSM.Forms.Add_Student();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Picture)).BeginInit();
-            this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.panel1.Controls.Add(this.pnlNav);
+            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.btnContactUs);
             this.panel1.Controls.Add(this.btnCalander);
             this.panel1.Controls.Add(this.btnAnalytics);
@@ -71,16 +66,61 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.MinimumSize = new System.Drawing.Size(193, 538);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(193, 538);
+            this.panel1.Size = new System.Drawing.Size(193, 561);
             this.panel1.TabIndex = 2;
             // 
             // pnlNav
             // 
             this.pnlNav.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.pnlNav.Location = new System.Drawing.Point(0, 178);
+            this.pnlNav.Location = new System.Drawing.Point(-7, 172);
             this.pnlNav.Name = "pnlNav";
-            this.pnlNav.Size = new System.Drawing.Size(3, 100);
+            this.pnlNav.Size = new System.Drawing.Size(12, 252);
             this.pnlNav.TabIndex = 3;
+            // 
+            // button2
+            // 
+            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.button2.Location = new System.Drawing.Point(0, 382);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(193, 42);
+            this.button2.TabIndex = 5;
+            this.button2.Text = "Reports";
+            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.button1.Location = new System.Drawing.Point(0, 340);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(193, 42);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Evaluation";
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // btnContactUs
+            // 
+            this.btnContactUs.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnContactUs.FlatAppearance.BorderSize = 0;
+            this.btnContactUs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnContactUs.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnContactUs.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnContactUs.Location = new System.Drawing.Point(0, 298);
+            this.btnContactUs.Name = "btnContactUs";
+            this.btnContactUs.Size = new System.Drawing.Size(193, 42);
+            this.btnContactUs.TabIndex = 1;
+            this.btnContactUs.Text = "CLOs\'s";
+            this.btnContactUs.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnContactUs.UseVisualStyleBackColor = true;
             // 
             // btnCalander
             // 
@@ -93,9 +133,10 @@
             this.btnCalander.Name = "btnCalander";
             this.btnCalander.Size = new System.Drawing.Size(193, 42);
             this.btnCalander.TabIndex = 1;
-            this.btnCalander.Text = "Calander";
+            this.btnCalander.Text = "Attendence";
             this.btnCalander.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnCalander.UseVisualStyleBackColor = true;
+            this.btnCalander.Click += new System.EventHandler(this.BtnCalander_Click);
             // 
             // btnAnalytics
             // 
@@ -108,9 +149,26 @@
             this.btnAnalytics.Name = "btnAnalytics";
             this.btnAnalytics.Size = new System.Drawing.Size(193, 42);
             this.btnAnalytics.TabIndex = 1;
-            this.btnAnalytics.Text = "Analytics";
+            this.btnAnalytics.Text = "Students";
             this.btnAnalytics.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnAnalytics.UseVisualStyleBackColor = true;
+            this.btnAnalytics.Click += new System.EventHandler(this.BtnAnalytics_Click);
+            // 
+            // btnDashboard
+            // 
+            this.btnDashboard.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnDashboard.FlatAppearance.BorderSize = 0;
+            this.btnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDashboard.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDashboard.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnDashboard.Location = new System.Drawing.Point(0, 172);
+            this.btnDashboard.Name = "btnDashboard";
+            this.btnDashboard.Size = new System.Drawing.Size(193, 42);
+            this.btnDashboard.TabIndex = 1;
+            this.btnDashboard.Text = "Dashboard";
+            this.btnDashboard.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnDashboard.UseVisualStyleBackColor = true;
+            this.btnDashboard.Click += new System.EventHandler(this.BtnDashboard_Click);
             // 
             // panel2
             // 
@@ -123,6 +181,14 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(193, 172);
             this.panel2.TabIndex = 0;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel2_Paint);
+            // 
+            // panel3
+            // 
+            this.panel3.Location = new System.Drawing.Point(194, 85);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(744, 450);
+            this.panel3.TabIndex = 3;
             // 
             // label2
             // 
@@ -146,38 +212,6 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Yasir Hassan";
             // 
-            // btnContactUs
-            // 
-            this.btnContactUs.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnContactUs.FlatAppearance.BorderSize = 0;
-            this.btnContactUs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnContactUs.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnContactUs.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.btnContactUs.Image = global::SSM.Properties.Resources.Conact;
-            this.btnContactUs.Location = new System.Drawing.Point(0, 298);
-            this.btnContactUs.Name = "btnContactUs";
-            this.btnContactUs.Size = new System.Drawing.Size(193, 42);
-            this.btnContactUs.TabIndex = 1;
-            this.btnContactUs.Text = "Contact Us";
-            this.btnContactUs.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnContactUs.UseVisualStyleBackColor = true;
-            // 
-            // btnDashboard
-            // 
-            this.btnDashboard.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnDashboard.FlatAppearance.BorderSize = 0;
-            this.btnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDashboard.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDashboard.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.btnDashboard.Image = global::SSM.Properties.Resources.home;
-            this.btnDashboard.Location = new System.Drawing.Point(0, 172);
-            this.btnDashboard.Name = "btnDashboard";
-            this.btnDashboard.Size = new System.Drawing.Size(193, 42);
-            this.btnDashboard.TabIndex = 1;
-            this.btnDashboard.Text = "Dashboard";
-            this.btnDashboard.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnDashboard.UseVisualStyleBackColor = true;
-            // 
             // Picture
             // 
             this.Picture.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -197,8 +231,7 @@
             this.btnSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSettings.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSettings.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.btnSettings.Image = global::SSM.Properties.Resources.settings;
-            this.btnSettings.Location = new System.Drawing.Point(0, 496);
+            this.btnSettings.Location = new System.Drawing.Point(0, 519);
             this.btnSettings.Name = "btnSettings";
             this.btnSettings.Size = new System.Drawing.Size(193, 42);
             this.btnSettings.TabIndex = 1;
@@ -206,154 +239,52 @@
             this.btnSettings.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnSettings.UseVisualStyleBackColor = true;
             // 
-            // panel3
+            // student_User_Control1
             // 
-            this.panel3.Location = new System.Drawing.Point(194, 85);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(744, 450);
-            this.panel3.TabIndex = 3;
-            // 
-            // panel4
-            // 
-            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.student_User_Control1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
-            this.panel4.Controls.Add(this.pictureBox2);
-            this.panel4.Controls.Add(this.label5);
-            this.panel4.Controls.Add(this.label10);
-            this.panel4.Controls.Add(this.label4);
-            this.panel4.Location = new System.Drawing.Point(220, 84);
-            this.panel4.MaximumSize = new System.Drawing.Size(366, 194);
-            this.panel4.MinimumSize = new System.Drawing.Size(275, 153);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(275, 153);
-            this.panel4.TabIndex = 5;
+            this.student_User_Control1.BackColor = System.Drawing.Color.White;
+            this.student_User_Control1.Location = new System.Drawing.Point(189, 1);
+            this.student_User_Control1.MinimumSize = new System.Drawing.Size(734, 560);
+            this.student_User_Control1.Name = "student_User_Control1";
+            this.student_User_Control1.Size = new System.Drawing.Size(746, 560);
+            this.student_User_Control1.TabIndex = 4;
+            this.student_User_Control1.Load += new System.EventHandler(this.Student_User_Control1_Load);
             // 
-            // pictureBox2
+            // dashBoard_User_Control1
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(155, 13);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(100, 102);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 2;
-            this.pictureBox2.TabStop = false;
-            // 
-            // label5
-            // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.dashBoard_User_Control1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 21F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(146)))), ((int)(((byte)(249)))));
-            this.label5.Location = new System.Drawing.Point(17, 59);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(32, 32);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "0";
+            this.dashBoard_User_Control1.BackColor = System.Drawing.Color.White;
+            this.dashBoard_User_Control1.Location = new System.Drawing.Point(194, 0);
+            this.dashBoard_User_Control1.Name = "dashBoard_User_Control1";
+            this.dashBoard_User_Control1.Size = new System.Drawing.Size(741, 560);
+            this.dashBoard_User_Control1.TabIndex = 3;
             // 
-            // label10
+            // add_Student1
             // 
-            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(151)))), ((int)(((byte)(176)))));
-            this.label10.Location = new System.Drawing.Point(20, 113);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(128, 17);
-            this.label10.TabIndex = 0;
-            this.label10.Text = "Total No of Students";
-            // 
-            // label4
-            // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(18, 25);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(84, 25);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Students";
-            this.label4.Click += new System.EventHandler(this.Label4_Click);
-            // 
-            // circularProgressBar1
-            // 
-            this.circularProgressBar1.AnimationFunction = WinFormAnimation.KnownAnimationFunctions.Liner;
-            this.circularProgressBar1.AnimationSpeed = 500;
-            this.circularProgressBar1.BackColor = System.Drawing.Color.Transparent;
-            this.circularProgressBar1.Cursor = System.Windows.Forms.Cursors.PanNW;
-            this.circularProgressBar1.Font = new System.Drawing.Font("Microsoft Sans Serif", 39.75F, System.Drawing.FontStyle.Bold);
-            this.circularProgressBar1.ForeColor = System.Drawing.Color.White;
-            this.circularProgressBar1.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
-            this.circularProgressBar1.InnerMargin = 2;
-            this.circularProgressBar1.InnerWidth = -1;
-            this.circularProgressBar1.Location = new System.Drawing.Point(46, 52);
-            this.circularProgressBar1.MarqueeAnimationSpeed = 2000;
-            this.circularProgressBar1.Name = "circularProgressBar1";
-            this.circularProgressBar1.OuterColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.circularProgressBar1.OuterMargin = -25;
-            this.circularProgressBar1.OuterWidth = 26;
-            this.circularProgressBar1.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(162)))), ((int)(((byte)(249)))));
-            this.circularProgressBar1.ProgressWidth = 7;
-            this.circularProgressBar1.SecondaryFont = new System.Drawing.Font("Microsoft Sans Serif", 36F);
-            this.circularProgressBar1.Size = new System.Drawing.Size(231, 227);
-            this.circularProgressBar1.StartAngle = 270;
-            this.circularProgressBar1.SubscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(162)))), ((int)(((byte)(249)))));
-            this.circularProgressBar1.SubscriptMargin = new System.Windows.Forms.Padding(10, -35, 0, 0);
-            this.circularProgressBar1.SubscriptText = "";
-            this.circularProgressBar1.SuperscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
-            this.circularProgressBar1.SuperscriptMargin = new System.Windows.Forms.Padding(10, 35, 0, 0);
-            this.circularProgressBar1.SuperscriptText = "";
-            this.circularProgressBar1.TabIndex = 1;
-            this.circularProgressBar1.Text = "65%";
-            this.circularProgressBar1.TextMargin = new System.Windows.Forms.Padding(8, 8, 0, 0);
-            this.circularProgressBar1.Value = 65;
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
-            this.panel5.Controls.Add(this.label12);
-            this.panel5.Controls.Add(this.circularProgressBar1);
-            this.panel5.Controls.Add(this.label6);
-            this.panel5.Location = new System.Drawing.Point(600, 84);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(312, 391);
-            this.panel5.TabIndex = 6;
-            this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel5_Paint);
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(18, 24);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(137, 25);
-            this.label12.TabIndex = 0;
-            this.label12.Text = "Some Progress";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(151)))), ((int)(((byte)(176)))));
-            this.label6.Location = new System.Drawing.Point(68, 298);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(191, 51);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "Details Of last 28 Days\r\nSome Extra Text Here To Make \r\nThe Tab More Acctrative";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.add_Student1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.add_Student1.BackColor = System.Drawing.Color.White;
+            this.add_Student1.Location = new System.Drawing.Point(194, 1);
+            this.add_Student1.MinimumSize = new System.Drawing.Size(734, 560);
+            this.add_Student1.Name = "add_Student1";
+            this.add_Student1.Size = new System.Drawing.Size(741, 560);
+            this.add_Student1.TabIndex = 5;
             // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(53)))), ((int)(((byte)(73)))));
-            this.ClientSize = new System.Drawing.Size(935, 538);
-            this.Controls.Add(this.panel5);
-            this.Controls.Add(this.panel4);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(935, 561);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.add_Student1);
+            this.Controls.Add(this.dashBoard_User_Control1);
+            this.Controls.Add(this.student_User_Control1);
             this.MinimumSize = new System.Drawing.Size(951, 577);
             this.Name = "Dashboard";
             this.Text = "Dashboard";
@@ -362,11 +293,6 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Picture)).EndInit();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -385,14 +311,10 @@
         private System.Windows.Forms.PictureBox Picture;
         private System.Windows.Forms.Button btnSettings;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label4;
-        private CircularProgressBar.CircularProgressBar circularProgressBar1;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
+        private DashBoard_User_Control dashBoard_User_Control1;
+        private Student_User_Control student_User_Control1;
+        private Add_Student add_Student1;
     }
 }
