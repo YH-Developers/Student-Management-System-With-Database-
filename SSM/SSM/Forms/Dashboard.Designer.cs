@@ -43,6 +43,8 @@
             this.Picture = new System.Windows.Forms.PictureBox();
             this.btnSettings = new System.Windows.Forms.Button();
             this.panelcontainer = new System.Windows.Forms.Panel();
+            this.ucReports2 = new SSM.Forms.UCReports();
+            this.ucReports1 = new SSM.Forms.UCReports();
             this.attendence1 = new SSM.Forms.Attendence();
             this.student_User_Control1 = new SSM.Forms.Student_User_Control();
             this.dashBoard_User_Control1 = new SSM.Forms.DashBoard_User_Control();
@@ -87,13 +89,15 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.button2.Image = global::SSM.Properties.Resources.reports;
             this.button2.Location = new System.Drawing.Point(0, 382);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(193, 42);
             this.button2.TabIndex = 5;
-            this.button2.Text = "Reports";
+            this.button2.Text = "Reports     ";
             this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.Button2_Click);
             // 
             // button1
             // 
@@ -102,6 +106,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.button1.Image = global::SSM.Properties.Resources.evaluation;
             this.button1.Location = new System.Drawing.Point(0, 340);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(193, 42);
@@ -117,11 +122,12 @@
             this.btnContactUs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnContactUs.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnContactUs.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnContactUs.Image = global::SSM.Properties.Resources.clo_s;
             this.btnContactUs.Location = new System.Drawing.Point(0, 298);
             this.btnContactUs.Name = "btnContactUs";
             this.btnContactUs.Size = new System.Drawing.Size(193, 42);
             this.btnContactUs.TabIndex = 1;
-            this.btnContactUs.Text = "CLOs\'s";
+            this.btnContactUs.Text = "CLOs\'s      ";
             this.btnContactUs.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnContactUs.UseVisualStyleBackColor = true;
             // 
@@ -132,6 +138,7 @@
             this.btnCalander.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCalander.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCalander.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnCalander.Image = global::SSM.Properties.Resources.attendence1;
             this.btnCalander.Location = new System.Drawing.Point(0, 256);
             this.btnCalander.Name = "btnCalander";
             this.btnCalander.Size = new System.Drawing.Size(193, 42);
@@ -148,11 +155,12 @@
             this.btnAnalytics.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAnalytics.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAnalytics.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnAnalytics.Image = global::SSM.Properties.Resources.student;
             this.btnAnalytics.Location = new System.Drawing.Point(0, 214);
             this.btnAnalytics.Name = "btnAnalytics";
             this.btnAnalytics.Size = new System.Drawing.Size(193, 42);
             this.btnAnalytics.TabIndex = 1;
-            this.btnAnalytics.Text = "Students";
+            this.btnAnalytics.Text = "Students    ";
             this.btnAnalytics.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnAnalytics.UseVisualStyleBackColor = true;
             this.btnAnalytics.Click += new System.EventHandler(this.BtnAnalytics_Click);
@@ -164,6 +172,7 @@
             this.btnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDashboard.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDashboard.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnDashboard.Image = global::SSM.Properties.Resources.home;
             this.btnDashboard.Location = new System.Drawing.Point(0, 172);
             this.btnDashboard.Name = "btnDashboard";
             this.btnDashboard.Size = new System.Drawing.Size(193, 42);
@@ -234,6 +243,7 @@
             this.btnSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSettings.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSettings.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnSettings.Image = global::SSM.Properties.Resources.settings;
             this.btnSettings.Location = new System.Drawing.Point(0, 519);
             this.btnSettings.Name = "btnSettings";
             this.btnSettings.Size = new System.Drawing.Size(193, 42);
@@ -247,6 +257,8 @@
             this.panelcontainer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelcontainer.Controls.Add(this.ucReports2);
+            this.panelcontainer.Controls.Add(this.ucReports1);
             this.panelcontainer.Controls.Add(this.attendence1);
             this.panelcontainer.Controls.Add(this.student_User_Control1);
             this.panelcontainer.Controls.Add(this.dashBoard_User_Control1);
@@ -255,6 +267,23 @@
             this.panelcontainer.Name = "panelcontainer";
             this.panelcontainer.Size = new System.Drawing.Size(741, 561);
             this.panelcontainer.TabIndex = 6;
+            // 
+            // ucReports2
+            // 
+            this.ucReports2.Location = new System.Drawing.Point(20, 22);
+            this.ucReports2.Name = "ucReports2";
+            this.ucReports2.Size = new System.Drawing.Size(8, 8);
+            this.ucReports2.TabIndex = 5;
+            // 
+            // ucReports1
+            // 
+            this.ucReports1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ucReports1.Location = new System.Drawing.Point(0, 3);
+            this.ucReports1.Name = "ucReports1";
+            this.ucReports1.Size = new System.Drawing.Size(741, 560);
+            this.ucReports1.TabIndex = 4;
             // 
             // attendence1
             // 
@@ -313,6 +342,7 @@
             this.Controls.Add(this.panel1);
             this.MinimumSize = new System.Drawing.Size(951, 577);
             this.Name = "Dashboard";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dashboard";
             this.Load += new System.EventHandler(this.Dashboard_Load);
             this.panel1.ResumeLayout(false);
@@ -345,5 +375,7 @@
         private DashBoard_User_Control dashBoard_User_Control1;
         private Attendence attendence1;
         private Student_User_Control student_User_Control1;
+        private UCReports ucReports2;
+        private UCReports ucReports1;
     }
 }

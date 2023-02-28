@@ -41,16 +41,26 @@ namespace SSM.Forms
 
         private void BunifuButton3_Click(object sender, EventArgs e)
         {
-            var con = Configuration.getInstance().getConnection();
-            SqlCommand cmd = new SqlCommand("DELETE FROM Student WHERE ID = @ID", con);
-            cmd.Parameters.AddWithValue("@ID", int.Parse(materialTextBox1.Text));
-            cmd.ExecuteNonQuery();
-            MessageBox.Show("Successfully saved");
+            if(materialTextBox1.Text.Length<1)
+            {
+                ErrorLabel.Text= "ID can't be Emplty";
+            }
+            else
+            {
+                var con = Configuration.getInstance().getConnection();
+                SqlCommand cmd = new SqlCommand("DELETE FROM Student WHERE ID = @ID", con);
+                cmd.Parameters.AddWithValue("@ID", int.Parse(materialTextBox1.Text));
+                cmd.ExecuteNonQuery();
+                ErrorLabel.Text = " ";
+                MessageBox.Show("Successfully saved");
+                materialTextBox1.Clear();
+            }
+           
         }
 
         private void MaterialTextBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar >= 0 && e.KeyChar <= 9)
+            if (e.KeyChar >= '0' && e.KeyChar <= '9')
             {
                 e.Handled = false; //Do not reject the input
             }
@@ -64,6 +74,11 @@ namespace SSM.Forms
         {
             this.Hide();
             
+        }
+
+        private void BunifuLabel2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

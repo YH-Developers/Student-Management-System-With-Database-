@@ -48,3 +48,5 @@ E:\Study\Semesters\4th Semester\DBMS Lab\Mid Project\student-managment-system\SS
 E:\Study\Semesters\4th Semester\DBMS Lab\Mid Project\student-managment-system\SSM\SSM\obj\Debug\SSM.exe.licenses
 E:\Study\Semesters\4th Semester\DBMS Lab\Mid Project\student-managment-system\SSM\SSM\obj\Debug\SSM.Forms.Add_Student.resources
 E:\Study\Semesters\4th Semester\DBMS Lab\Mid Project\student-managment-system\SSM\SSM\obj\Debug\SSM.Forms.Attendence.resources
+E:\Study\Semesters\4th Semester\DBMS Lab\Mid Project\student-managment-system\SSM\SSM\obj\Debug\SSM.Forms.UCReports.resources
+E:\Study\Semesters\4th Semester\DBMS Lab\Mid Project\student-managment-system\SSM\SSM\obj\Debug\SSM.Forms.SplashScrren.resources

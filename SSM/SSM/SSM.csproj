@@ -273,6 +273,12 @@
     <Compile Include="Forms\DashBoard_User_Control.Designer.cs">
       <DependentUpon>DashBoard_User_Control.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\SplashScrren.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SplashScrren.Designer.cs">
+      <DependentUpon>SplashScrren.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Student_User_Control.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -298,6 +304,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\DashBoard_User_Control.resx">
       <DependentUpon>DashBoard_User_Control.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SplashScrren.resx">
+      <DependentUpon>SplashScrren.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Student_User_Control.resx">
       <DependentUpon>Student_User_Control.cs</DependentUpon>

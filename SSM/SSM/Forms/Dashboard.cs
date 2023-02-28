@@ -27,9 +27,9 @@ namespace SSM.Forms
         {
             dashBoard_User_Control1.Show();
             student_User_Control1.Hide();
+            attendence1.Hide();
+            ucReports1.Hide();
             dashBoard_User_Control1.BringToFront();
-
-            
         }
 
 
@@ -38,6 +38,8 @@ namespace SSM.Forms
         {
             student_User_Control1.Show();
             dashBoard_User_Control1.Hide();
+            attendence1.Hide();
+            ucReports1.Hide();
             student_User_Control1.BringToFront();
         }
 
@@ -66,6 +68,15 @@ namespace SSM.Forms
         private void Student_User_Control1_Load_1(object sender, EventArgs e)
         {
             
+        }
+
+        private void Button2_Click(object sender, EventArgs e)
+        {
+            ucReports1.Show();
+            student_User_Control1.Hide();
+            attendence1.Hide();
+            dashBoard_User_Control1.Hide();
+            ucReports1.BringToFront();
         }
     }
 }

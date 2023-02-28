@@ -41,6 +41,7 @@
             this.bunifuButton3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.bunifuButton1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.materialTextBox1 = new MaterialSkin.Controls.MaterialTextBox();
+            this.ErrorLabel = new Bunifu.UI.WinForms.BunifuLabel();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -99,7 +100,7 @@
             this.bunifuDataGridView1.EnableHeadersVisualStyles = false;
             this.bunifuDataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
             this.bunifuDataGridView1.HeaderBackColor = System.Drawing.Color.DodgerBlue;
-            this.bunifuDataGridView1.HeaderBgColor = System.Drawing.Color.Empty;
+            this.bunifuDataGridView1.HeaderBackColor = System.Drawing.Color.Empty;
             this.bunifuDataGridView1.HeaderForeColor = System.Drawing.Color.White;
             this.bunifuDataGridView1.Location = new System.Drawing.Point(0, 110);
             this.bunifuDataGridView1.Name = "bunifuDataGridView1";
@@ -325,7 +326,7 @@
             this.bunifuButton1.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.bunifuButton1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuButton1.BackgroundImage")));
             this.bunifuButton1.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.bunifuButton1.ButtonText = "Add Student";
+            this.bunifuButton1.ButtonText = "Edit Student";
             this.bunifuButton1.ButtonTextMarginLeft = 0;
             this.bunifuButton1.ColorContrastOnClick = 45;
             this.bunifuButton1.ColorContrastOnHover = 45;
@@ -421,11 +422,30 @@
             this.materialTextBox1.TrailingIcon = null;
             this.materialTextBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.MaterialTextBox1_KeyPress);
             // 
+            // ErrorLabel
+            // 
+            this.ErrorLabel.AllowParentOverrides = false;
+            this.ErrorLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.ErrorLabel.AutoEllipsis = false;
+            this.ErrorLabel.Cursor = System.Windows.Forms.Cursors.Default;
+            this.ErrorLabel.CursorType = System.Windows.Forms.Cursors.Default;
+            this.ErrorLabel.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.ErrorLabel.ForeColor = System.Drawing.Color.Red;
+            this.ErrorLabel.Location = new System.Drawing.Point(245, 516);
+            this.ErrorLabel.Name = "ErrorLabel";
+            this.ErrorLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.ErrorLabel.Size = new System.Drawing.Size(0, 0);
+            this.ErrorLabel.TabIndex = 7;
+            this.ErrorLabel.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.ErrorLabel.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.ErrorLabel.Click += new System.EventHandler(this.BunifuLabel2_Click);
+            // 
             // Student_User_Control
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.ErrorLabel);
             this.Controls.Add(this.materialTextBox1);
             this.Controls.Add(this.bunifuLabel1);
             this.Controls.Add(this.bunifuButton4);
@@ -450,5 +470,6 @@
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton bunifuButton4;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
         private MaterialSkin.Controls.MaterialTextBox materialTextBox1;
+        private Bunifu.UI.WinForms.BunifuLabel ErrorLabel;
     }
 }
