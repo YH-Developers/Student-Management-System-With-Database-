@@ -17,7 +17,7 @@ namespace SSM
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new SplashScrren());
+            Application.Run(new Dashboard());
         }
     }
 }

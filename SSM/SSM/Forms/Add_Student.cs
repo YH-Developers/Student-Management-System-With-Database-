@@ -133,5 +133,10 @@ namespace SSM.Forms
         {
 
         }
+
+        private void BunifuButton2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
