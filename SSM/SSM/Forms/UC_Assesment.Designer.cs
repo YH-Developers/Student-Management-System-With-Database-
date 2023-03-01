@@ -34,8 +34,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.MinimumSize = new System.Drawing.Size(787, 549);
             this.Name = "UC_Assesment";
-            this.Size = new System.Drawing.Size(734, 511);
+            this.Size = new System.Drawing.Size(787, 549);
             this.ResumeLayout(false);
 
         }

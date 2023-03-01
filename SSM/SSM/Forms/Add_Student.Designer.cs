@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Add_Student));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges13 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges14 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges15 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.ComboBoxSalary = new MaterialSkin.Controls.MaterialComboBox();
             this.bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
@@ -52,6 +52,7 @@
             this.bunifuLabel1.AutoEllipsis = false;
             this.bunifuLabel1.CursorType = null;
             this.bunifuLabel1.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold);
+            this.bunifuLabel1.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.bunifuLabel1.Location = new System.Drawing.Point(25, 29);
             this.bunifuLabel1.Name = "bunifuLabel1";
             this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -80,7 +81,7 @@
             this.ComboBoxSalary.Items.AddRange(new object[] {
             "Active",
             "InActive"});
-            this.ComboBoxSalary.Location = new System.Drawing.Point(353, 268);
+            this.ComboBoxSalary.Location = new System.Drawing.Point(406, 262);
             this.ComboBoxSalary.MaxDropDownItems = 4;
             this.ComboBoxSalary.MaximumSize = new System.Drawing.Size(336, 0);
             this.ComboBoxSalary.MouseState = MaterialSkin.MouseState.OUT;
@@ -98,7 +99,7 @@
             this.bunifuLabel2.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel2.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bunifuLabel2.ForeColor = System.Drawing.Color.Red;
-            this.bunifuLabel2.Location = new System.Drawing.Point(240, 322);
+            this.bunifuLabel2.Location = new System.Drawing.Point(240, 316);
             this.bunifuLabel2.Name = "bunifuLabel2";
             this.bunifuLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel2.Size = new System.Drawing.Size(0, 0);
@@ -126,11 +127,11 @@
             this.bunifuButton4.ColorContrastOnClick = 45;
             this.bunifuButton4.ColorContrastOnHover = 45;
             this.bunifuButton4.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges13.BottomLeft = true;
-            borderEdges13.BottomRight = true;
-            borderEdges13.TopLeft = true;
-            borderEdges13.TopRight = true;
-            this.bunifuButton4.CustomizableEdges = borderEdges13;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.bunifuButton4.CustomizableEdges = borderEdges1;
             this.bunifuButton4.DialogResult = System.Windows.Forms.DialogResult.None;
             this.bunifuButton4.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.bunifuButton4.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -154,7 +155,7 @@
             this.bunifuButton4.IdleIconLeftImage = null;
             this.bunifuButton4.IdleIconRightImage = null;
             this.bunifuButton4.IndicateFocus = false;
-            this.bunifuButton4.Location = new System.Drawing.Point(145, 406);
+            this.bunifuButton4.Location = new System.Drawing.Point(145, 395);
             this.bunifuButton4.Name = "bunifuButton4";
             this.bunifuButton4.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.bunifuButton4.OnDisabledState.BorderRadius = 1;
@@ -206,7 +207,7 @@
             this.materialTextBox3.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.materialTextBox3.Hint = "Registration Number";
             this.materialTextBox3.LeadingIcon = ((System.Drawing.Image)(resources.GetObject("materialTextBox3.LeadingIcon")));
-            this.materialTextBox3.Location = new System.Drawing.Point(353, 207);
+            this.materialTextBox3.Location = new System.Drawing.Point(406, 201);
             this.materialTextBox3.MaximumSize = new System.Drawing.Size(336, 36);
             this.materialTextBox3.MaxLength = 11;
             this.materialTextBox3.MouseState = MaterialSkin.MouseState.OUT;
@@ -228,7 +229,7 @@
             this.txtEmail.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtEmail.Hint = "Email";
             this.txtEmail.LeadingIcon = ((System.Drawing.Image)(resources.GetObject("txtEmail.LeadingIcon")));
-            this.txtEmail.Location = new System.Drawing.Point(14, 281);
+            this.txtEmail.Location = new System.Drawing.Point(14, 275);
             this.txtEmail.MaximumSize = new System.Drawing.Size(304, 36);
             this.txtEmail.MaxLength = 50;
             this.txtEmail.MouseState = MaterialSkin.MouseState.OUT;
@@ -250,12 +251,12 @@
             this.materialTextBox2.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.materialTextBox2.Hint = "Enter ID to Update";
             this.materialTextBox2.LeadingIcon = ((System.Drawing.Image)(resources.GetObject("materialTextBox2.LeadingIcon")));
-            this.materialTextBox2.Location = new System.Drawing.Point(123, 86);
+            this.materialTextBox2.Location = new System.Drawing.Point(123, 80);
             this.materialTextBox2.MaxLength = 11;
             this.materialTextBox2.MouseState = MaterialSkin.MouseState.OUT;
             this.materialTextBox2.Multiline = false;
             this.materialTextBox2.Name = "materialTextBox2";
-            this.materialTextBox2.Size = new System.Drawing.Size(300, 36);
+            this.materialTextBox2.Size = new System.Drawing.Size(353, 36);
             this.materialTextBox2.TabIndex = 28;
             this.materialTextBox2.Text = "";
             this.materialTextBox2.TrailingIcon = null;
@@ -271,7 +272,7 @@
             this.txtPhoneNumber.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtPhoneNumber.Hint = "Phone Number";
             this.txtPhoneNumber.LeadingIcon = ((System.Drawing.Image)(resources.GetObject("txtPhoneNumber.LeadingIcon")));
-            this.txtPhoneNumber.Location = new System.Drawing.Point(353, 148);
+            this.txtPhoneNumber.Location = new System.Drawing.Point(406, 142);
             this.txtPhoneNumber.MaximumSize = new System.Drawing.Size(336, 36);
             this.txtPhoneNumber.MaxLength = 11;
             this.txtPhoneNumber.MouseState = MaterialSkin.MouseState.OUT;
@@ -294,7 +295,7 @@
             this.materialTextBox1.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.materialTextBox1.Hint = "Last Name";
             this.materialTextBox1.LeadingIcon = ((System.Drawing.Image)(resources.GetObject("materialTextBox1.LeadingIcon")));
-            this.materialTextBox1.Location = new System.Drawing.Point(14, 207);
+            this.materialTextBox1.Location = new System.Drawing.Point(14, 201);
             this.materialTextBox1.MaximumSize = new System.Drawing.Size(304, 36);
             this.materialTextBox1.MaxLength = 50;
             this.materialTextBox1.MouseState = MaterialSkin.MouseState.OUT;
@@ -317,7 +318,7 @@
             this.txtName.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtName.Hint = "First Name";
             this.txtName.LeadingIcon = ((System.Drawing.Image)(resources.GetObject("txtName.LeadingIcon")));
-            this.txtName.Location = new System.Drawing.Point(14, 148);
+            this.txtName.Location = new System.Drawing.Point(14, 142);
             this.txtName.MaximumSize = new System.Drawing.Size(304, 36);
             this.txtName.MaxLength = 50;
             this.txtName.MouseState = MaterialSkin.MouseState.OUT;
@@ -350,11 +351,11 @@
             this.bunifuButton2.ColorContrastOnClick = 45;
             this.bunifuButton2.ColorContrastOnHover = 45;
             this.bunifuButton2.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges14.BottomLeft = true;
-            borderEdges14.BottomRight = true;
-            borderEdges14.TopLeft = true;
-            borderEdges14.TopRight = true;
-            this.bunifuButton2.CustomizableEdges = borderEdges14;
+            borderEdges2.BottomLeft = true;
+            borderEdges2.BottomRight = true;
+            borderEdges2.TopLeft = true;
+            borderEdges2.TopRight = true;
+            this.bunifuButton2.CustomizableEdges = borderEdges2;
             this.bunifuButton2.DialogResult = System.Windows.Forms.DialogResult.None;
             this.bunifuButton2.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.bunifuButton2.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -378,7 +379,7 @@
             this.bunifuButton2.IdleIconLeftImage = null;
             this.bunifuButton2.IdleIconRightImage = null;
             this.bunifuButton2.IndicateFocus = false;
-            this.bunifuButton2.Location = new System.Drawing.Point(462, 406);
+            this.bunifuButton2.Location = new System.Drawing.Point(515, 395);
             this.bunifuButton2.Name = "bunifuButton2";
             this.bunifuButton2.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.bunifuButton2.OnDisabledState.BorderRadius = 1;
@@ -441,11 +442,11 @@
             this.bunifuButton1.ColorContrastOnClick = 45;
             this.bunifuButton1.ColorContrastOnHover = 45;
             this.bunifuButton1.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges15.BottomLeft = true;
-            borderEdges15.BottomRight = true;
-            borderEdges15.TopLeft = true;
-            borderEdges15.TopRight = true;
-            this.bunifuButton1.CustomizableEdges = borderEdges15;
+            borderEdges3.BottomLeft = true;
+            borderEdges3.BottomRight = true;
+            borderEdges3.TopLeft = true;
+            borderEdges3.TopRight = true;
+            this.bunifuButton1.CustomizableEdges = borderEdges3;
             this.bunifuButton1.DialogResult = System.Windows.Forms.DialogResult.None;
             this.bunifuButton1.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.bunifuButton1.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -469,7 +470,7 @@
             this.bunifuButton1.IdleIconLeftImage = null;
             this.bunifuButton1.IdleIconRightImage = null;
             this.bunifuButton1.IndicateFocus = false;
-            this.bunifuButton1.Location = new System.Drawing.Point(483, 83);
+            this.bunifuButton1.Location = new System.Drawing.Point(536, 77);
             this.bunifuButton1.Name = "bunifuButton1";
             this.bunifuButton1.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.bunifuButton1.OnDisabledState.BorderRadius = 1;
@@ -529,9 +530,9 @@
             this.Controls.Add(this.materialTextBox1);
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.bunifuLabel1);
-            this.MinimumSize = new System.Drawing.Size(734, 560);
+            this.MinimumSize = new System.Drawing.Size(787, 549);
             this.Name = "Add_Student";
-            this.Size = new System.Drawing.Size(734, 560);
+            this.Size = new System.Drawing.Size(787, 549);
             this.Load += new System.EventHandler(this.Add_Student_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

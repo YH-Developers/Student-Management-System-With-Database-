@@ -62,7 +62,7 @@
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 32F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 68F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(710, 481);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(763, 470);
             this.tableLayoutPanel1.TabIndex = 8;
             // 
             // panel4
@@ -80,7 +80,7 @@
             this.panel4.Location = new System.Drawing.Point(3, 3);
             this.panel4.MinimumSize = new System.Drawing.Size(275, 153);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(349, 153);
+            this.panel4.Size = new System.Drawing.Size(375, 153);
             this.panel4.TabIndex = 5;
             // 
             // label2
@@ -129,7 +129,7 @@
             this.bunifuThinButton21.IdleFillColor = System.Drawing.Color.White;
             this.bunifuThinButton21.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.bunifuThinButton21.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton21.Location = new System.Drawing.Point(204, 45);
+            this.bunifuThinButton21.Location = new System.Drawing.Point(230, 45);
             this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuThinButton21.Name = "bunifuThinButton21";
             this.bunifuThinButton21.Size = new System.Drawing.Size(111, 41);
@@ -186,9 +186,9 @@
             this.panel5.Controls.Add(this.label12);
             this.panel5.Controls.Add(this.circularProgressBar1);
             this.panel5.Controls.Add(this.label6);
-            this.panel5.Location = new System.Drawing.Point(3, 156);
+            this.panel5.Location = new System.Drawing.Point(3, 153);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(349, 322);
+            this.panel5.Size = new System.Drawing.Size(375, 314);
             this.panel5.TabIndex = 6;
             // 
             // label12
@@ -227,7 +227,7 @@
             this.circularProgressBar1.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(162)))), ((int)(((byte)(249)))));
             this.circularProgressBar1.ProgressWidth = 7;
             this.circularProgressBar1.SecondaryFont = new System.Drawing.Font("Microsoft Sans Serif", 36F);
-            this.circularProgressBar1.Size = new System.Drawing.Size(180, 183);
+            this.circularProgressBar1.Size = new System.Drawing.Size(180, 175);
             this.circularProgressBar1.StartAngle = 270;
             this.circularProgressBar1.SubscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(162)))), ((int)(((byte)(249)))));
             this.circularProgressBar1.SubscriptMargin = new System.Windows.Forms.Padding(10, -35, 0, 0);
@@ -247,7 +247,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(97, 249);
+            this.label6.Location = new System.Drawing.Point(97, 241);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(170, 51);
             this.label6.TabIndex = 0;
@@ -272,8 +272,9 @@
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.MinimumSize = new System.Drawing.Size(787, 549);
             this.Name = "DashBoard_User_Control";
-            this.Size = new System.Drawing.Size(734, 560);
+            this.Size = new System.Drawing.Size(787, 549);
             this.Load += new System.EventHandler(this.DashBoard_User_Control_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);

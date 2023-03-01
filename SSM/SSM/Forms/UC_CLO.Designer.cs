@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_CLO));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.Updateclocombobox = new MaterialSkin.Controls.MaterialComboBox();
             this.bunifuThinButton24 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.cloError = new System.Windows.Forms.Label();
@@ -39,23 +40,22 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.materialComboBox3 = new MaterialSkin.Controls.MaterialComboBox();
             this.RubricError = new System.Windows.Forms.Label();
             this.RubricName = new MaterialSkin.Controls.MaterialTextBox2();
             this.bunifuThinButton22 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.materialComboBox2 = new MaterialSkin.Controls.MaterialComboBox();
+            this.materialComboBox1 = new MaterialSkin.Controls.MaterialComboBox();
+            this.bunifuDropdown1 = new Bunifu.UI.WinForms.BunifuDropdown();
             this.MeasurementLevelError = new System.Windows.Forms.Label();
             this.RubricLevelError = new System.Windows.Forms.Label();
+            this.MeasurmentLeveltxt = new MaterialSkin.Controls.MaterialTextBox2();
             this.RubricLeveltxt = new MaterialSkin.Controls.MaterialTextBox2();
             this.bunifuThinButton23 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.label1 = new System.Windows.Forms.Label();
             this.materialTextBox1 = new MaterialSkin.Controls.MaterialTextBox();
-            this.bunifuDropdown1 = new Bunifu.UI.WinForms.BunifuDropdown();
-            this.materialComboBox1 = new MaterialSkin.Controls.MaterialComboBox();
-            this.materialComboBox2 = new MaterialSkin.Controls.MaterialComboBox();
-            this.MeasurmentLeveltxt = new MaterialSkin.Controls.MaterialTextBox2();
-            this.materialComboBox3 = new MaterialSkin.Controls.MaterialComboBox();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -83,7 +83,7 @@
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 88F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(689, 448);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(735, 448);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // panel3
@@ -100,9 +100,22 @@
             this.panel3.Controls.Add(this.CloName);
             this.panel3.Location = new System.Drawing.Point(4, 58);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(220, 386);
+            this.panel3.Size = new System.Drawing.Size(235, 386);
             this.panel3.TabIndex = 7;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel3_Paint);
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.LinkColor = System.Drawing.Color.Black;
+            this.linkLabel1.Location = new System.Drawing.Point(171, 32);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(44, 13);
+            this.linkLabel1.TabIndex = 6;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Refresh";
+            this.linkLabel1.Visible = false;
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabel1_LinkClicked);
             // 
             // Updateclocombobox
             // 
@@ -124,7 +137,7 @@
             this.Updateclocombobox.MaxDropDownItems = 4;
             this.Updateclocombobox.MouseState = MaterialSkin.MouseState.OUT;
             this.Updateclocombobox.Name = "Updateclocombobox";
-            this.Updateclocombobox.Size = new System.Drawing.Size(214, 49);
+            this.Updateclocombobox.Size = new System.Drawing.Size(229, 49);
             this.Updateclocombobox.StartIndex = 0;
             this.Updateclocombobox.TabIndex = 5;
             this.Updateclocombobox.Visible = false;
@@ -153,7 +166,7 @@
             this.bunifuThinButton24.Location = new System.Drawing.Point(5, 331);
             this.bunifuThinButton24.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuThinButton24.Name = "bunifuThinButton24";
-            this.bunifuThinButton24.Size = new System.Drawing.Size(190, 41);
+            this.bunifuThinButton24.Size = new System.Drawing.Size(205, 41);
             this.bunifuThinButton24.TabIndex = 4;
             this.bunifuThinButton24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuThinButton24.Click += new System.EventHandler(this.BunifuThinButton24_Click);
@@ -191,7 +204,7 @@
             this.bunifuThinButton21.Location = new System.Drawing.Point(5, 280);
             this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuThinButton21.Name = "bunifuThinButton21";
-            this.bunifuThinButton21.Size = new System.Drawing.Size(190, 41);
+            this.bunifuThinButton21.Size = new System.Drawing.Size(205, 41);
             this.bunifuThinButton21.TabIndex = 2;
             this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuThinButton21.Click += new System.EventHandler(this.BunifuThinButton21_Click);
@@ -219,7 +232,7 @@
             this.CloName.SelectionLength = 0;
             this.CloName.SelectionStart = 0;
             this.CloName.ShortcutsEnabled = true;
-            this.CloName.Size = new System.Drawing.Size(218, 48);
+            this.CloName.Size = new System.Drawing.Size(233, 48);
             this.CloName.TabIndex = 1;
             this.CloName.TabStop = false;
             this.CloName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -235,9 +248,9 @@
             this.label4.AutoSize = true;
             this.label4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label4.Font = new System.Drawing.Font("Segoe Print", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(458, 1);
+            this.label4.Location = new System.Drawing.Point(488, 1);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(227, 53);
+            this.label4.Size = new System.Drawing.Size(243, 53);
             this.label4.TabIndex = 5;
             this.label4.Text = "Add Rubric Level";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -250,9 +263,9 @@
             this.label3.AutoSize = true;
             this.label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label3.Font = new System.Drawing.Font("Segoe Print", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(231, 1);
+            this.label3.Location = new System.Drawing.Point(246, 1);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(220, 53);
+            this.label3.Size = new System.Drawing.Size(235, 53);
             this.label3.TabIndex = 4;
             this.label3.Text = "Add Rubric";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -267,10 +280,34 @@
             this.panel1.Controls.Add(this.RubricError);
             this.panel1.Controls.Add(this.RubricName);
             this.panel1.Controls.Add(this.bunifuThinButton22);
-            this.panel1.Location = new System.Drawing.Point(231, 58);
+            this.panel1.Location = new System.Drawing.Point(246, 58);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(220, 386);
+            this.panel1.Size = new System.Drawing.Size(235, 386);
             this.panel1.TabIndex = 2;
+            // 
+            // materialComboBox3
+            // 
+            this.materialComboBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.materialComboBox3.AutoResize = false;
+            this.materialComboBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.materialComboBox3.Depth = 0;
+            this.materialComboBox3.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.materialComboBox3.DropDownHeight = 174;
+            this.materialComboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.materialComboBox3.DropDownWidth = 121;
+            this.materialComboBox3.Font = new System.Drawing.Font("Roboto Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.materialComboBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialComboBox3.FormattingEnabled = true;
+            this.materialComboBox3.Hint = "Select CLO";
+            this.materialComboBox3.IntegralHeight = false;
+            this.materialComboBox3.ItemHeight = 43;
+            this.materialComboBox3.Location = new System.Drawing.Point(1, 48);
+            this.materialComboBox3.MaxDropDownItems = 4;
+            this.materialComboBox3.MouseState = MaterialSkin.MouseState.OUT;
+            this.materialComboBox3.Name = "materialComboBox3";
+            this.materialComboBox3.Size = new System.Drawing.Size(242, 49);
+            this.materialComboBox3.StartIndex = 0;
+            this.materialComboBox3.TabIndex = 10;
             // 
             // RubricError
             // 
@@ -278,7 +315,7 @@
             this.RubricError.AutoSize = true;
             this.RubricError.BackColor = System.Drawing.Color.White;
             this.RubricError.ForeColor = System.Drawing.Color.Red;
-            this.RubricError.Location = new System.Drawing.Point(59, 199);
+            this.RubricError.Location = new System.Drawing.Point(74, 199);
             this.RubricError.Name = "RubricError";
             this.RubricError.Size = new System.Drawing.Size(0, 13);
             this.RubricError.TabIndex = 4;
@@ -307,7 +344,7 @@
             this.RubricName.SelectionLength = 0;
             this.RubricName.SelectionStart = 0;
             this.RubricName.ShortcutsEnabled = true;
-            this.RubricName.Size = new System.Drawing.Size(218, 48);
+            this.RubricName.Size = new System.Drawing.Size(233, 48);
             this.RubricName.TabIndex = 4;
             this.RubricName.TabStop = false;
             this.RubricName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -337,7 +374,7 @@
             this.bunifuThinButton22.Location = new System.Drawing.Point(5, 280);
             this.bunifuThinButton22.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuThinButton22.Name = "bunifuThinButton22";
-            this.bunifuThinButton22.Size = new System.Drawing.Size(190, 41);
+            this.bunifuThinButton22.Size = new System.Drawing.Size(205, 41);
             this.bunifuThinButton22.TabIndex = 3;
             this.bunifuThinButton22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuThinButton22.Click += new System.EventHandler(this.BunifuThinButton22_Click);
@@ -352,7 +389,7 @@
             this.label2.Font = new System.Drawing.Font("Segoe Print", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(4, 1);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(220, 53);
+            this.label2.Size = new System.Drawing.Size(235, 53);
             this.label2.TabIndex = 3;
             this.label2.Text = "Add / Update CLO";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -371,115 +408,58 @@
             this.panel2.Controls.Add(this.MeasurmentLeveltxt);
             this.panel2.Controls.Add(this.RubricLeveltxt);
             this.panel2.Controls.Add(this.bunifuThinButton23);
-            this.panel2.Location = new System.Drawing.Point(458, 58);
+            this.panel2.Location = new System.Drawing.Point(488, 58);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(227, 386);
+            this.panel2.Size = new System.Drawing.Size(243, 386);
             this.panel2.TabIndex = 6;
             // 
-            // MeasurementLevelError
+            // materialComboBox2
             // 
-            this.MeasurementLevelError.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.MeasurementLevelError.AutoSize = true;
-            this.MeasurementLevelError.ForeColor = System.Drawing.Color.Red;
-            this.MeasurementLevelError.Location = new System.Drawing.Point(62, 266);
-            this.MeasurementLevelError.Name = "MeasurementLevelError";
-            this.MeasurementLevelError.Size = new System.Drawing.Size(0, 13);
-            this.MeasurementLevelError.TabIndex = 7;
+            this.materialComboBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.materialComboBox2.AutoResize = false;
+            this.materialComboBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.materialComboBox2.Depth = 0;
+            this.materialComboBox2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.materialComboBox2.DropDownHeight = 174;
+            this.materialComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.materialComboBox2.DropDownWidth = 121;
+            this.materialComboBox2.Font = new System.Drawing.Font("Roboto Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.materialComboBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialComboBox2.FormattingEnabled = true;
+            this.materialComboBox2.Hint = "Select Rubric";
+            this.materialComboBox2.IntegralHeight = false;
+            this.materialComboBox2.ItemHeight = 43;
+            this.materialComboBox2.Location = new System.Drawing.Point(0, 71);
+            this.materialComboBox2.MaxDropDownItems = 4;
+            this.materialComboBox2.MouseState = MaterialSkin.MouseState.OUT;
+            this.materialComboBox2.Name = "materialComboBox2";
+            this.materialComboBox2.Size = new System.Drawing.Size(242, 49);
+            this.materialComboBox2.StartIndex = 0;
+            this.materialComboBox2.TabIndex = 10;
             // 
-            // RubricLevelError
+            // materialComboBox1
             // 
-            this.RubricLevelError.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.RubricLevelError.AutoSize = true;
-            this.RubricLevelError.ForeColor = System.Drawing.Color.Red;
-            this.RubricLevelError.Location = new System.Drawing.Point(68, 199);
-            this.RubricLevelError.Name = "RubricLevelError";
-            this.RubricLevelError.Size = new System.Drawing.Size(0, 13);
-            this.RubricLevelError.TabIndex = 6;
-            // 
-            // RubricLeveltxt
-            // 
-            this.RubricLeveltxt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.RubricLeveltxt.AnimateReadOnly = false;
-            this.RubricLeveltxt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.RubricLeveltxt.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.RubricLeveltxt.Depth = 0;
-            this.RubricLeveltxt.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.RubricLeveltxt.HideSelection = true;
-            this.RubricLeveltxt.Hint = "Enter Rubriic Level";
-            this.RubricLeveltxt.LeadingIcon = null;
-            this.RubricLeveltxt.Location = new System.Drawing.Point(-1, 144);
-            this.RubricLeveltxt.MaxLength = 32767;
-            this.RubricLeveltxt.MouseState = MaterialSkin.MouseState.OUT;
-            this.RubricLeveltxt.Name = "RubricLeveltxt";
-            this.RubricLeveltxt.PasswordChar = '\0';
-            this.RubricLeveltxt.PrefixSuffixText = null;
-            this.RubricLeveltxt.ReadOnly = false;
-            this.RubricLeveltxt.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.RubricLeveltxt.SelectedText = "";
-            this.RubricLeveltxt.SelectionLength = 0;
-            this.RubricLeveltxt.SelectionStart = 0;
-            this.RubricLeveltxt.ShortcutsEnabled = true;
-            this.RubricLeveltxt.Size = new System.Drawing.Size(227, 48);
-            this.RubricLeveltxt.TabIndex = 4;
-            this.RubricLeveltxt.TabStop = false;
-            this.RubricLeveltxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.RubricLeveltxt.TrailingIcon = null;
-            this.RubricLeveltxt.UseSystemPasswordChar = false;
-            // 
-            // bunifuThinButton23
-            // 
-            this.bunifuThinButton23.ActiveBorderThickness = 1;
-            this.bunifuThinButton23.ActiveCornerRadius = 20;
-            this.bunifuThinButton23.ActiveFillColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton23.ActiveForecolor = System.Drawing.Color.White;
-            this.bunifuThinButton23.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton23.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.bunifuThinButton23.BackColor = System.Drawing.SystemColors.Control;
-            this.bunifuThinButton23.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton23.BackgroundImage")));
-            this.bunifuThinButton23.ButtonText = "Save";
-            this.bunifuThinButton23.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuThinButton23.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuThinButton23.ForeColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton23.IdleBorderThickness = 1;
-            this.bunifuThinButton23.IdleCornerRadius = 20;
-            this.bunifuThinButton23.IdleFillColor = System.Drawing.Color.White;
-            this.bunifuThinButton23.IdleForecolor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton23.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton23.Location = new System.Drawing.Point(16, 280);
-            this.bunifuThinButton23.Margin = new System.Windows.Forms.Padding(5);
-            this.bunifuThinButton23.Name = "bunifuThinButton23";
-            this.bunifuThinButton23.Size = new System.Drawing.Size(190, 41);
-            this.bunifuThinButton23.TabIndex = 3;
-            this.bunifuThinButton23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuThinButton23.Click += new System.EventHandler(this.BunifuThinButton23_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Noto Sans", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(19, 20);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(202, 33);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Mannage Clos\'s";
-            // 
-            // materialTextBox1
-            // 
-            this.materialTextBox1.AnimateReadOnly = false;
-            this.materialTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.materialTextBox1.Depth = 0;
-            this.materialTextBox1.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialTextBox1.LeadingIcon = null;
-            this.materialTextBox1.Location = new System.Drawing.Point(3, 430);
-            this.materialTextBox1.MaxLength = 50;
-            this.materialTextBox1.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialTextBox1.Multiline = false;
-            this.materialTextBox1.Name = "materialTextBox1";
-            this.materialTextBox1.Size = new System.Drawing.Size(221, 50);
-            this.materialTextBox1.TabIndex = 0;
-            this.materialTextBox1.Text = "";
-            this.materialTextBox1.TrailingIcon = null;
+            this.materialComboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.materialComboBox1.AutoResize = false;
+            this.materialComboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.materialComboBox1.Depth = 0;
+            this.materialComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.materialComboBox1.DropDownHeight = 174;
+            this.materialComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.materialComboBox1.DropDownWidth = 121;
+            this.materialComboBox1.Font = new System.Drawing.Font("Roboto Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.materialComboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialComboBox1.FormattingEnabled = true;
+            this.materialComboBox1.Hint = "Select CLO";
+            this.materialComboBox1.IntegralHeight = false;
+            this.materialComboBox1.ItemHeight = 43;
+            this.materialComboBox1.Location = new System.Drawing.Point(-1, 16);
+            this.materialComboBox1.MaxDropDownItems = 4;
+            this.materialComboBox1.MouseState = MaterialSkin.MouseState.OUT;
+            this.materialComboBox1.Name = "materialComboBox1";
+            this.materialComboBox1.Size = new System.Drawing.Size(243, 49);
+            this.materialComboBox1.StartIndex = 0;
+            this.materialComboBox1.TabIndex = 9;
             // 
             // bunifuDropdown1
             // 
@@ -519,56 +499,29 @@
             this.bunifuDropdown1.Name = "bunifuDropdown1";
             this.bunifuDropdown1.Size = new System.Drawing.Size(167, 32);
             this.bunifuDropdown1.TabIndex = 8;
+            this.bunifuDropdown1.Text = null;
             this.bunifuDropdown1.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
             this.bunifuDropdown1.TextLeftMargin = 5;
             // 
-            // materialComboBox1
+            // MeasurementLevelError
             // 
-            this.materialComboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.materialComboBox1.AutoResize = false;
-            this.materialComboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialComboBox1.Depth = 0;
-            this.materialComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.materialComboBox1.DropDownHeight = 174;
-            this.materialComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.materialComboBox1.DropDownWidth = 121;
-            this.materialComboBox1.Font = new System.Drawing.Font("Roboto Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.materialComboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialComboBox1.FormattingEnabled = true;
-            this.materialComboBox1.Hint = "Select CLO";
-            this.materialComboBox1.IntegralHeight = false;
-            this.materialComboBox1.ItemHeight = 43;
-            this.materialComboBox1.Location = new System.Drawing.Point(-1, 16);
-            this.materialComboBox1.MaxDropDownItems = 4;
-            this.materialComboBox1.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialComboBox1.Name = "materialComboBox1";
-            this.materialComboBox1.Size = new System.Drawing.Size(227, 49);
-            this.materialComboBox1.StartIndex = 0;
-            this.materialComboBox1.TabIndex = 9;
+            this.MeasurementLevelError.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.MeasurementLevelError.AutoSize = true;
+            this.MeasurementLevelError.ForeColor = System.Drawing.Color.Red;
+            this.MeasurementLevelError.Location = new System.Drawing.Point(78, 266);
+            this.MeasurementLevelError.Name = "MeasurementLevelError";
+            this.MeasurementLevelError.Size = new System.Drawing.Size(0, 13);
+            this.MeasurementLevelError.TabIndex = 7;
             // 
-            // materialComboBox2
+            // RubricLevelError
             // 
-            this.materialComboBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.materialComboBox2.AutoResize = false;
-            this.materialComboBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialComboBox2.Depth = 0;
-            this.materialComboBox2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.materialComboBox2.DropDownHeight = 174;
-            this.materialComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.materialComboBox2.DropDownWidth = 121;
-            this.materialComboBox2.Font = new System.Drawing.Font("Roboto Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.materialComboBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialComboBox2.FormattingEnabled = true;
-            this.materialComboBox2.Hint = "Select Rubric";
-            this.materialComboBox2.IntegralHeight = false;
-            this.materialComboBox2.ItemHeight = 43;
-            this.materialComboBox2.Location = new System.Drawing.Point(0, 71);
-            this.materialComboBox2.MaxDropDownItems = 4;
-            this.materialComboBox2.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialComboBox2.Name = "materialComboBox2";
-            this.materialComboBox2.Size = new System.Drawing.Size(226, 49);
-            this.materialComboBox2.StartIndex = 0;
-            this.materialComboBox2.TabIndex = 10;
+            this.RubricLevelError.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.RubricLevelError.AutoSize = true;
+            this.RubricLevelError.ForeColor = System.Drawing.Color.Red;
+            this.RubricLevelError.Location = new System.Drawing.Point(84, 199);
+            this.RubricLevelError.Name = "RubricLevelError";
+            this.RubricLevelError.Size = new System.Drawing.Size(0, 13);
+            this.RubricLevelError.TabIndex = 6;
             // 
             // MeasurmentLeveltxt
             // 
@@ -593,49 +546,97 @@
             this.MeasurmentLeveltxt.SelectionLength = 0;
             this.MeasurmentLeveltxt.SelectionStart = 0;
             this.MeasurmentLeveltxt.ShortcutsEnabled = true;
-            this.MeasurmentLeveltxt.Size = new System.Drawing.Size(228, 48);
+            this.MeasurmentLeveltxt.Size = new System.Drawing.Size(244, 48);
             this.MeasurmentLeveltxt.TabIndex = 5;
             this.MeasurmentLeveltxt.TabStop = false;
             this.MeasurmentLeveltxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.MeasurmentLeveltxt.TrailingIcon = null;
             this.MeasurmentLeveltxt.UseSystemPasswordChar = false;
             // 
-            // materialComboBox3
+            // RubricLeveltxt
             // 
-            this.materialComboBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.materialComboBox3.AutoResize = false;
-            this.materialComboBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialComboBox3.Depth = 0;
-            this.materialComboBox3.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.materialComboBox3.DropDownHeight = 174;
-            this.materialComboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.materialComboBox3.DropDownWidth = 121;
-            this.materialComboBox3.Font = new System.Drawing.Font("Roboto Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.materialComboBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialComboBox3.FormattingEnabled = true;
-            this.materialComboBox3.Hint = "Select CLO";
-            this.materialComboBox3.IntegralHeight = false;
-            this.materialComboBox3.ItemHeight = 43;
-            this.materialComboBox3.Location = new System.Drawing.Point(1, 48);
-            this.materialComboBox3.MaxDropDownItems = 4;
-            this.materialComboBox3.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialComboBox3.Name = "materialComboBox3";
-            this.materialComboBox3.Size = new System.Drawing.Size(227, 49);
-            this.materialComboBox3.StartIndex = 0;
-            this.materialComboBox3.TabIndex = 10;
+            this.RubricLeveltxt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.RubricLeveltxt.AnimateReadOnly = false;
+            this.RubricLeveltxt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.RubricLeveltxt.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.RubricLeveltxt.Depth = 0;
+            this.RubricLeveltxt.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.RubricLeveltxt.HideSelection = true;
+            this.RubricLeveltxt.Hint = "Enter Rubriic Level";
+            this.RubricLeveltxt.LeadingIcon = null;
+            this.RubricLeveltxt.Location = new System.Drawing.Point(-1, 144);
+            this.RubricLeveltxt.MaxLength = 32767;
+            this.RubricLeveltxt.MouseState = MaterialSkin.MouseState.OUT;
+            this.RubricLeveltxt.Name = "RubricLeveltxt";
+            this.RubricLeveltxt.PasswordChar = '\0';
+            this.RubricLeveltxt.PrefixSuffixText = null;
+            this.RubricLeveltxt.ReadOnly = false;
+            this.RubricLeveltxt.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.RubricLeveltxt.SelectedText = "";
+            this.RubricLeveltxt.SelectionLength = 0;
+            this.RubricLeveltxt.SelectionStart = 0;
+            this.RubricLeveltxt.ShortcutsEnabled = true;
+            this.RubricLeveltxt.Size = new System.Drawing.Size(243, 48);
+            this.RubricLeveltxt.TabIndex = 4;
+            this.RubricLeveltxt.TabStop = false;
+            this.RubricLeveltxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.RubricLeveltxt.TrailingIcon = null;
+            this.RubricLeveltxt.UseSystemPasswordChar = false;
             // 
-            // linkLabel1
+            // bunifuThinButton23
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.LinkColor = System.Drawing.Color.Black;
-            this.linkLabel1.Location = new System.Drawing.Point(171, 32);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(44, 13);
-            this.linkLabel1.TabIndex = 6;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Refresh";
-            this.linkLabel1.Visible = false;
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabel1_LinkClicked);
+            this.bunifuThinButton23.ActiveBorderThickness = 1;
+            this.bunifuThinButton23.ActiveCornerRadius = 20;
+            this.bunifuThinButton23.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton23.ActiveForecolor = System.Drawing.Color.White;
+            this.bunifuThinButton23.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton23.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.bunifuThinButton23.BackColor = System.Drawing.SystemColors.Control;
+            this.bunifuThinButton23.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton23.BackgroundImage")));
+            this.bunifuThinButton23.ButtonText = "Save";
+            this.bunifuThinButton23.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuThinButton23.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuThinButton23.ForeColor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton23.IdleBorderThickness = 1;
+            this.bunifuThinButton23.IdleCornerRadius = 20;
+            this.bunifuThinButton23.IdleFillColor = System.Drawing.Color.White;
+            this.bunifuThinButton23.IdleForecolor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton23.IdleLineColor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton23.Location = new System.Drawing.Point(16, 280);
+            this.bunifuThinButton23.Margin = new System.Windows.Forms.Padding(5);
+            this.bunifuThinButton23.Name = "bunifuThinButton23";
+            this.bunifuThinButton23.Size = new System.Drawing.Size(206, 41);
+            this.bunifuThinButton23.TabIndex = 3;
+            this.bunifuThinButton23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton23.Click += new System.EventHandler(this.BunifuThinButton23_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Noto Sans", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(19, 20);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(202, 33);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Mannage Clos\'s";
+            // 
+            // materialTextBox1
+            // 
+            this.materialTextBox1.AnimateReadOnly = false;
+            this.materialTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.materialTextBox1.Depth = 0;
+            this.materialTextBox1.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialTextBox1.LeadingIcon = null;
+            this.materialTextBox1.Location = new System.Drawing.Point(3, 430);
+            this.materialTextBox1.MaxLength = 50;
+            this.materialTextBox1.MouseState = MaterialSkin.MouseState.OUT;
+            this.materialTextBox1.Multiline = false;
+            this.materialTextBox1.Name = "materialTextBox1";
+            this.materialTextBox1.Size = new System.Drawing.Size(221, 50);
+            this.materialTextBox1.TabIndex = 0;
+            this.materialTextBox1.Text = "";
+            this.materialTextBox1.TrailingIcon = null;
             // 
             // UC_CLO
             // 
@@ -643,9 +644,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.MinimumSize = new System.Drawing.Size(741, 560);
+            this.MinimumSize = new System.Drawing.Size(787, 549);
             this.Name = "UC_CLO";
-            this.Size = new System.Drawing.Size(741, 560);
+            this.Size = new System.Drawing.Size(787, 560);
             this.Load += new System.EventHandler(this.UC_CLO_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();

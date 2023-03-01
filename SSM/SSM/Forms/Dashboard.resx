@@ -117,4 +117,17 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="bunifuToggleSwitch1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAADcAAAAZCAYAAACVfbYAAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFKSURBVFhH7ZihbgJBEIZPIiuRPAKPUdVUIjFNKvsI9TgE
+        Hk2CQ96dRFbiSGoLCTTQloCA74clWY5J9c3lJvmSuZvZy365hctuYkWe503oZFnWgw/yY9nQvGBA3oVW
+        mPr/QeMLLBn4rYeUnTRNN8x1Rf4eFO6D4gNNU1jHg73AvLcwI79/ixIrDnDKJzSC1mUpen1jRVimf7j0
+        r2L681jGDd5BTj5tyb1y8RMXqwBOPf3WhlbRO3hNJTe3it7B61fL0ixWgVrOK7WcV2o5r+g7t7AK3sHr
+        ILmJVfQOXjMtyzeSXbHoHZwGkmuTVGK7cyX4PJ+3PVz0tQ8qNnkFn+wspuBGA7SDNZs9gZfOfppB7RLc
+        0PL8gn3c7AmJsQKfgtJt0KBDojHoNMl8QBmRFOgM6PaNWUHTI81D0GmS+cAywPzmMCLvhKlHkSQncfGg
+        Rd8ItPcAAAAASUVORK5CYII=
+</value>
+  </data>
 </root>

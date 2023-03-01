@@ -28,6 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
+            Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState toggleState1 = new Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState();
+            Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState toggleState2 = new Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState();
+            Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState toggleState3 = new Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlNav = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
@@ -44,11 +48,13 @@
             this.Picture = new System.Windows.Forms.PictureBox();
             this.btnSettings = new System.Windows.Forms.Button();
             this.panelcontainer = new System.Windows.Forms.Panel();
-            this.uC_CLO1 = new SSM.Forms.UC_CLO();
+            this.bunifuToggleSwitch1 = new Bunifu.UI.WinForms.BunifuToggleSwitch();
             this.ucReports1 = new SSM.Forms.UCReports();
-            this.attendence1 = new SSM.Forms.Attendence();
+            this.uC_CLO1 = new SSM.Forms.UC_CLO();
+            this.uC_Assesment1 = new SSM.Forms.UC_Assesment();
             this.student_User_Control1 = new SSM.Forms.Student_User_Control();
             this.dashBoard_User_Control1 = new SSM.Forms.DashBoard_User_Control();
+            this.attendence1 = new SSM.Forms.Attendence();
             this.add_Student1 = new SSM.Forms.Add_Student();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -70,10 +76,10 @@
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.btnSettings);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Location = new System.Drawing.Point(3, 64);
             this.panel1.MinimumSize = new System.Drawing.Size(193, 538);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(193, 561);
+            this.panel1.Size = new System.Drawing.Size(193, 549);
             this.panel1.TabIndex = 2;
             // 
             // pnlNav
@@ -264,61 +270,108 @@
             this.btnSettings.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSettings.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnSettings.Image = global::SSM.Properties.Resources.settings;
-            this.btnSettings.Location = new System.Drawing.Point(0, 519);
+            this.btnSettings.Location = new System.Drawing.Point(0, 507);
             this.btnSettings.Name = "btnSettings";
             this.btnSettings.Size = new System.Drawing.Size(193, 42);
             this.btnSettings.TabIndex = 1;
             this.btnSettings.Text = "Settings";
             this.btnSettings.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnSettings.UseVisualStyleBackColor = true;
+            this.btnSettings.Click += new System.EventHandler(this.BtnSettings_Click);
             // 
             // panelcontainer
             // 
             this.panelcontainer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelcontainer.Controls.Add(this.uC_CLO1);
             this.panelcontainer.Controls.Add(this.ucReports1);
-            this.panelcontainer.Controls.Add(this.attendence1);
+            this.panelcontainer.Controls.Add(this.uC_CLO1);
+            this.panelcontainer.Controls.Add(this.uC_Assesment1);
             this.panelcontainer.Controls.Add(this.student_User_Control1);
             this.panelcontainer.Controls.Add(this.dashBoard_User_Control1);
+            this.panelcontainer.Controls.Add(this.attendence1);
             this.panelcontainer.Controls.Add(this.add_Student1);
-            this.panelcontainer.Location = new System.Drawing.Point(194, 0);
+            this.panelcontainer.Location = new System.Drawing.Point(194, 64);
             this.panelcontainer.Name = "panelcontainer";
-            this.panelcontainer.Size = new System.Drawing.Size(741, 561);
+            this.panelcontainer.Size = new System.Drawing.Size(787, 549);
             this.panelcontainer.TabIndex = 6;
             // 
-            // uC_CLO1
+            // bunifuToggleSwitch1
             // 
-            this.uC_CLO1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.uC_CLO1.Location = new System.Drawing.Point(0, 1);
-            this.uC_CLO1.MinimumSize = new System.Drawing.Size(741, 560);
-            this.uC_CLO1.Name = "uC_CLO1";
-            this.uC_CLO1.Size = new System.Drawing.Size(741, 560);
-            this.uC_CLO1.TabIndex = 5;
+            this.bunifuToggleSwitch1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.bunifuToggleSwitch1.Animation = 5;
+            this.bunifuToggleSwitch1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuToggleSwitch1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuToggleSwitch1.BackgroundImage")));
+            this.bunifuToggleSwitch1.Checked = false;
+            this.bunifuToggleSwitch1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuToggleSwitch1.InnerCirclePadding = 3;
+            this.bunifuToggleSwitch1.Location = new System.Drawing.Point(909, 33);
+            this.bunifuToggleSwitch1.Name = "bunifuToggleSwitch1";
+            this.bunifuToggleSwitch1.Size = new System.Drawing.Size(55, 25);
+            this.bunifuToggleSwitch1.TabIndex = 7;
+            this.bunifuToggleSwitch1.ThumbMargin = 3;
+            toggleState1.BackColor = System.Drawing.Color.DarkGray;
+            toggleState1.BackColorInner = System.Drawing.Color.White;
+            toggleState1.BorderColor = System.Drawing.Color.DarkGray;
+            toggleState1.BorderColorInner = System.Drawing.Color.White;
+            toggleState1.BorderRadius = 17;
+            toggleState1.BorderRadiusInner = 11;
+            toggleState1.BorderThickness = 1;
+            toggleState1.BorderThicknessInner = 1;
+            this.bunifuToggleSwitch1.ToggleStateDisabled = toggleState1;
+            toggleState2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            toggleState2.BackColorInner = System.Drawing.Color.White;
+            toggleState2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            toggleState2.BorderColorInner = System.Drawing.Color.White;
+            toggleState2.BorderRadius = 17;
+            toggleState2.BorderRadiusInner = 11;
+            toggleState2.BorderThickness = 1;
+            toggleState2.BorderThicknessInner = 1;
+            this.bunifuToggleSwitch1.ToggleStateOff = toggleState2;
+            toggleState3.BackColor = System.Drawing.Color.DodgerBlue;
+            toggleState3.BackColorInner = System.Drawing.Color.White;
+            toggleState3.BorderColor = System.Drawing.Color.DodgerBlue;
+            toggleState3.BorderColorInner = System.Drawing.Color.White;
+            toggleState3.BorderRadius = 17;
+            toggleState3.BorderRadiusInner = 11;
+            toggleState3.BorderThickness = 1;
+            toggleState3.BorderThicknessInner = 1;
+            this.bunifuToggleSwitch1.ToggleStateOn = toggleState3;
+            this.bunifuToggleSwitch1.Value = false;
+            this.bunifuToggleSwitch1.CheckedChanged += new System.EventHandler<Bunifu.UI.WinForms.BunifuToggleSwitch.CheckedChangedEventArgs>(this.BunifuToggleSwitch1_CheckedChanged);
             // 
             // ucReports1
             // 
             this.ucReports1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.ucReports1.Location = new System.Drawing.Point(0, 3);
+            this.ucReports1.Location = new System.Drawing.Point(0, 4);
+            this.ucReports1.MinimumSize = new System.Drawing.Size(787, 549);
             this.ucReports1.Name = "ucReports1";
-            this.ucReports1.Size = new System.Drawing.Size(741, 560);
-            this.ucReports1.TabIndex = 4;
+            this.ucReports1.Size = new System.Drawing.Size(787, 560);
+            this.ucReports1.TabIndex = 6;
             // 
-            // attendence1
+            // uC_CLO1
             // 
-            this.attendence1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.uC_CLO1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.attendence1.Location = new System.Drawing.Point(0, 3);
-            this.attendence1.MinimumSize = new System.Drawing.Size(734, 560);
-            this.attendence1.Name = "attendence1";
-            this.attendence1.Size = new System.Drawing.Size(741, 560);
-            this.attendence1.TabIndex = 3;
+            this.uC_CLO1.Location = new System.Drawing.Point(0, 4);
+            this.uC_CLO1.MinimumSize = new System.Drawing.Size(741, 560);
+            this.uC_CLO1.Name = "uC_CLO1";
+            this.uC_CLO1.Size = new System.Drawing.Size(787, 560);
+            this.uC_CLO1.TabIndex = 5;
+            // 
+            // uC_Assesment1
+            // 
+            this.uC_Assesment1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.uC_Assesment1.Location = new System.Drawing.Point(3, 0);
+            this.uC_Assesment1.MinimumSize = new System.Drawing.Size(787, 549);
+            this.uC_Assesment1.Name = "uC_Assesment1";
+            this.uC_Assesment1.Size = new System.Drawing.Size(787, 549);
+            this.uC_Assesment1.TabIndex = 4;
             // 
             // student_User_Control1
             // 
@@ -326,12 +379,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.student_User_Control1.BackColor = System.Drawing.Color.White;
-            this.student_User_Control1.Location = new System.Drawing.Point(0, 3);
+            this.student_User_Control1.Location = new System.Drawing.Point(-4, 0);
             this.student_User_Control1.MinimumSize = new System.Drawing.Size(734, 560);
             this.student_User_Control1.Name = "student_User_Control1";
-            this.student_User_Control1.Size = new System.Drawing.Size(734, 560);
-            this.student_User_Control1.TabIndex = 1;
-            this.student_User_Control1.Load += new System.EventHandler(this.Student_User_Control1_Load_1);
+            this.student_User_Control1.Size = new System.Drawing.Size(788, 560);
+            this.student_User_Control1.TabIndex = 3;
             // 
             // dashBoard_User_Control1
             // 
@@ -339,10 +391,22 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dashBoard_User_Control1.BackColor = System.Drawing.Color.White;
-            this.dashBoard_User_Control1.Location = new System.Drawing.Point(0, 1);
+            this.dashBoard_User_Control1.Location = new System.Drawing.Point(0, 0);
+            this.dashBoard_User_Control1.MinimumSize = new System.Drawing.Size(787, 549);
             this.dashBoard_User_Control1.Name = "dashBoard_User_Control1";
-            this.dashBoard_User_Control1.Size = new System.Drawing.Size(734, 560);
-            this.dashBoard_User_Control1.TabIndex = 0;
+            this.dashBoard_User_Control1.Size = new System.Drawing.Size(787, 564);
+            this.dashBoard_User_Control1.TabIndex = 2;
+            // 
+            // attendence1
+            // 
+            this.attendence1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.attendence1.Location = new System.Drawing.Point(0, 4);
+            this.attendence1.MinimumSize = new System.Drawing.Size(734, 560);
+            this.attendence1.Name = "attendence1";
+            this.attendence1.Size = new System.Drawing.Size(787, 560);
+            this.attendence1.TabIndex = 1;
             // 
             // add_Student1
             // 
@@ -350,18 +414,19 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.add_Student1.BackColor = System.Drawing.Color.White;
-            this.add_Student1.Location = new System.Drawing.Point(0, 3);
+            this.add_Student1.Location = new System.Drawing.Point(3, 0);
             this.add_Student1.MinimumSize = new System.Drawing.Size(734, 560);
             this.add_Student1.Name = "add_Student1";
-            this.add_Student1.Size = new System.Drawing.Size(734, 560);
-            this.add_Student1.TabIndex = 2;
+            this.add_Student1.Size = new System.Drawing.Size(784, 560);
+            this.add_Student1.TabIndex = 0;
             // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(935, 561);
+            this.ClientSize = new System.Drawing.Size(981, 616);
+            this.Controls.Add(this.bunifuToggleSwitch1);
             this.Controls.Add(this.panelcontainer);
             this.Controls.Add(this.panel1);
             this.MinimumSize = new System.Drawing.Size(951, 577);
@@ -395,12 +460,14 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panelcontainer;
-        private Add_Student add_Student1;
+        private System.Windows.Forms.Button button3;
+        private UCReports ucReports1;
+        private UC_CLO uC_CLO1;
+        private UC_Assesment uC_Assesment1;
+        private Student_User_Control student_User_Control1;
         private DashBoard_User_Control dashBoard_User_Control1;
         private Attendence attendence1;
-        private Student_User_Control student_User_Control1;
-        private UCReports ucReports1;
-        private System.Windows.Forms.Button button3;
-        private UC_CLO uC_CLO1;
+        private Add_Student add_Student1;
+        private Bunifu.UI.WinForms.BunifuToggleSwitch bunifuToggleSwitch1;
     }
 }
