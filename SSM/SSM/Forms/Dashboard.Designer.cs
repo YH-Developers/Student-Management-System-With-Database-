@@ -30,6 +30,7 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlNav = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btnContactUs = new System.Windows.Forms.Button();
@@ -43,7 +44,7 @@
             this.Picture = new System.Windows.Forms.PictureBox();
             this.btnSettings = new System.Windows.Forms.Button();
             this.panelcontainer = new System.Windows.Forms.Panel();
-            this.ucReports2 = new SSM.Forms.UCReports();
+            this.uC_CLO1 = new SSM.Forms.UC_CLO();
             this.ucReports1 = new SSM.Forms.UCReports();
             this.attendence1 = new SSM.Forms.Attendence();
             this.student_User_Control1 = new SSM.Forms.Student_User_Control();
@@ -59,6 +60,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.panel1.Controls.Add(this.pnlNav);
+            this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.btnContactUs);
@@ -79,8 +81,25 @@
             this.pnlNav.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.pnlNav.Location = new System.Drawing.Point(-7, 172);
             this.pnlNav.Name = "pnlNav";
-            this.pnlNav.Size = new System.Drawing.Size(12, 252);
+            this.pnlNav.Size = new System.Drawing.Size(13, 294);
             this.pnlNav.TabIndex = 3;
+            // 
+            // button3
+            // 
+            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.button3.Image = global::SSM.Properties.Resources.reports;
+            this.button3.Location = new System.Drawing.Point(0, 424);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(193, 42);
+            this.button3.TabIndex = 7;
+            this.button3.Text = "Reports     ";
+            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.Button3_Click);
             // 
             // button2
             // 
@@ -89,12 +108,12 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.button2.Image = global::SSM.Properties.Resources.reports;
+            this.button2.Image = global::SSM.Properties.Resources.evaluation;
             this.button2.Location = new System.Drawing.Point(0, 382);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(193, 42);
             this.button2.TabIndex = 5;
-            this.button2.Text = "Reports     ";
+            this.button2.Text = "Evaluation";
             this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.Button2_Click);
@@ -106,14 +125,15 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.button1.Image = global::SSM.Properties.Resources.evaluation;
+            this.button1.Image = global::SSM.Properties.Resources.clo_s;
             this.button1.Location = new System.Drawing.Point(0, 340);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(193, 42);
             this.button1.TabIndex = 4;
-            this.button1.Text = "Evaluation";
+            this.button1.Text = "CLOs\'s      ";
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // btnContactUs
             // 
@@ -127,7 +147,7 @@
             this.btnContactUs.Name = "btnContactUs";
             this.btnContactUs.Size = new System.Drawing.Size(193, 42);
             this.btnContactUs.TabIndex = 1;
-            this.btnContactUs.Text = "CLOs\'s      ";
+            this.btnContactUs.Text = "Assesments";
             this.btnContactUs.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnContactUs.UseVisualStyleBackColor = true;
             // 
@@ -209,9 +229,9 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(178)))));
             this.label2.Location = new System.Drawing.Point(28, 122);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(127, 12);
+            this.label2.Size = new System.Drawing.Size(121, 24);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Money is what you need";
+            this.label2.Text = "Education is the Key to\r\n           Success";
             // 
             // label1
             // 
@@ -257,7 +277,7 @@
             this.panelcontainer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelcontainer.Controls.Add(this.ucReports2);
+            this.panelcontainer.Controls.Add(this.uC_CLO1);
             this.panelcontainer.Controls.Add(this.ucReports1);
             this.panelcontainer.Controls.Add(this.attendence1);
             this.panelcontainer.Controls.Add(this.student_User_Control1);
@@ -268,12 +288,16 @@
             this.panelcontainer.Size = new System.Drawing.Size(741, 561);
             this.panelcontainer.TabIndex = 6;
             // 
-            // ucReports2
+            // uC_CLO1
             // 
-            this.ucReports2.Location = new System.Drawing.Point(20, 22);
-            this.ucReports2.Name = "ucReports2";
-            this.ucReports2.Size = new System.Drawing.Size(8, 8);
-            this.ucReports2.TabIndex = 5;
+            this.uC_CLO1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.uC_CLO1.Location = new System.Drawing.Point(0, 1);
+            this.uC_CLO1.MinimumSize = new System.Drawing.Size(741, 560);
+            this.uC_CLO1.Name = "uC_CLO1";
+            this.uC_CLO1.Size = new System.Drawing.Size(741, 560);
+            this.uC_CLO1.TabIndex = 5;
             // 
             // ucReports1
             // 
@@ -375,7 +399,8 @@
         private DashBoard_User_Control dashBoard_User_Control1;
         private Attendence attendence1;
         private Student_User_Control student_User_Control1;
-        private UCReports ucReports2;
         private UCReports ucReports1;
+        private System.Windows.Forms.Button button3;
+        private UC_CLO uC_CLO1;
     }
 }

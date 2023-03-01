@@ -50,3 +50,6 @@ E:\Study\Semesters\4th Semester\DBMS Lab\Mid Project\student-managment-system\SS
 E:\Study\Semesters\4th Semester\DBMS Lab\Mid Project\student-managment-system\SSM\SSM\obj\Debug\SSM.Forms.Attendence.resources
 E:\Study\Semesters\4th Semester\DBMS Lab\Mid Project\student-managment-system\SSM\SSM\obj\Debug\SSM.Forms.UCReports.resources
 E:\Study\Semesters\4th Semester\DBMS Lab\Mid Project\student-managment-system\SSM\SSM\obj\Debug\SSM.Forms.SplashScrren.resources
+E:\Study\Semesters\4th Semester\DBMS Lab\Mid Project\student-managment-system\SSM\SSM\obj\Debug\SSM.Forms.UC_Assesment.resources
+E:\Study\Semesters\4th Semester\DBMS Lab\Mid Project\student-managment-system\SSM\SSM\obj\Debug\SSM.Forms.UC_CLO.resources
+E:\Study\Semesters\4th Semester\DBMS Lab\Mid Project\student-managment-system\SSM\SSM\obj\Debug\SSM.UC_Update_CLO.resources

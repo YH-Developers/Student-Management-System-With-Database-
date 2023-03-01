@@ -72,6 +72,20 @@ namespace SSM.Forms
 
         private void Button2_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            uC_CLO1.Show();
+            student_User_Control1.Hide();
+            attendence1.Hide();
+            dashBoard_User_Control1.Hide();
+            uC_CLO1.BringToFront();
+        }
+
+        private void Button3_Click(object sender, EventArgs e)
+        {
             ucReports1.Show();
             student_User_Control1.Hide();
             attendence1.Hide();

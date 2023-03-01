@@ -21,14 +21,11 @@ namespace SSM.Forms
         private void UCReports_Load(object sender, EventArgs e)
         {
             var con = Configuration.getInstance().getConnection();
-            SqlCommand cmd = new SqlCommand(" SELECT s.Id AS StudentId, s.FirstName, s.LastName, c.Id AS CloId, c.Name AS CloName, SUM(rc.TotalMarks) AS TotalMarks, SUM(rc.TotalWeightage) AS TotalWeightage FROM Student s LEFT JOIN StudentResult sr ON s.Id = sr.StudentId LEFT JOIN AssessmentComponent ac ON sr.AssessmentComponentId = ac.Id LEFT JOIN Rubric r ON ac.RubricId = r.Id LEFT JOIN Clo c ON r.CloId = c.Id LEFT JOIN RubricLevel rl ON r.Id = rl.RubricId AND sr.RubricMeasurementId = rl.Id GROUP BY s.Id, c.Id", con);
+            SqlCommand cmd = new SqlCommand("SELECT s.Id AS StudentId, s.FirstName, s.LastName, assessment.Title AS AssessmentTitle, SUM(CASE WHEN rubric.CloId = 1 THEN rubricLevel.MeasurementLevel * assessmentComponent.TotalMarks / assessment.TotalWeightage ELSE NULL END) AS Clo1_Obtained,SUM(CASE WHEN rubric.CloId = 1 THEN assessmentComponent.TotalMarks ELSE NULL END) AS Clo1_Total,SUM(CASE WHEN rubric.CloId = 2 THEN rubricLevel.MeasurementLevel * assessmentComponent.TotalMarks / assessment.TotalWeightage ELSE NULL END) AS Clo2_Obtained,SUM(CASE WHEN rubric.CloId = 2 THEN assessmentComponent.TotalMarks ELSE NULL END) AS Clo2_Total,SUM(CASE WHEN rubric.CloId = 3 THEN rubricLevel.MeasurementLevel * assessmentComponent.TotalMarks / assessment.TotalWeightage ELSE NULL END) AS Clo3_Obtained,SUM(CASE WHEN rubric.CloId = 3 THEN assessmentComponent.TotalMarks ELSE NULL END) AS Clo3_Total,SUM(rubricLevel.MeasurementLevel * assessmentComponent.TotalMarks / assessment.TotalWeightage) AS ObtainedMarks,SUM(assessmentComponent.TotalMarks) AS TotalMarks,assessment.DateCreated FROM Student s INNER JOIN StudentResult studentResult ON s.Id = studentResult.StudentId INNER JOIN AssessmentComponent assessmentComponent ON studentResult.AssessmentComponentId = assessmentComponent.Id INNER JOIN Assessment assessment ON assessmentComponent.AssessmentId = assessment.Id INNER JOIN Rubric rubric ON assessmentComponent.RubricId = rubric.Id INNER JOIN RubricLevel rubricLevel ON rubric.Id = rubricLevel.RubricId AND studentResult.RubricMeasurementId = rubricLevel.Id GROUP BY s.Id, s.FirstName, s.LastName, assessment.Title, assessment.DateCreated ORDER BY s.LastName, s.FirstName, assessment.DateCreated", con);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             da.Fill(dt);
             bunifuDataGridView1.DataSource = dt;
-
-
-           
         }
     }
 }

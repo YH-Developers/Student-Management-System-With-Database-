@@ -291,6 +291,18 @@
     <Compile Include="Forms\UCReports.Designer.cs">
       <DependentUpon>UCReports.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\UC_Assesment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\UC_Assesment.Designer.cs">
+      <DependentUpon>UC_Assesment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UC_CLO.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\UC_CLO.Designer.cs">
+      <DependentUpon>UC_CLO.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="ProjectBDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -298,6 +310,12 @@
       <DependentUpon>ProjectBDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UC_Update_CLO.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Update_CLO.Designer.cs">
+      <DependentUpon>UC_Update_CLO.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Forms\Add_Student.resx">
       <DependentUpon>Add_Student.cs</DependentUpon>
     </EmbeddedResource>
@@ -319,6 +337,12 @@
     <EmbeddedResource Include="Forms\UCReports.resx">
       <DependentUpon>UCReports.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UC_Assesment.resx">
+      <DependentUpon>UC_Assesment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UC_CLO.resx">
+      <DependentUpon>UC_CLO.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -330,6 +354,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UC_Update_CLO.resx">
+      <DependentUpon>UC_Update_CLO.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="ProjectBDataSet.xsc">
       <DependentUpon>ProjectBDataSet.xsd</DependentUpon>
