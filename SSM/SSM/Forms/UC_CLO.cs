@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace SSM.Forms
 {
@@ -31,6 +32,11 @@ namespace SSM.Forms
             else
             {
                 cloError.Text = " ";
+                var con = Configuration.getInstance().getConnection();
+                SqlCommand cmd = new SqlCommand("INSERT INTO Clo (Name, DateCreated, DateUpdated) VALUES(@Name, GETDATE(), GETDATE()); ", con);
+                cmd.Parameters.AddWithValue("@Name", CloName.Text);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Successfully Saved");
             }
         }
 
@@ -75,6 +81,7 @@ namespace SSM.Forms
         private void BunifuThinButton24_Click(object sender, EventArgs e)
         {
             Updateclocombobox.Visible = true;
+            linkLabel1.Visible = true;
             bunifuThinButton21.Visible = false;
             if (CloName.Text == "")
             {
@@ -83,6 +90,65 @@ namespace SSM.Forms
             else
             {
                 cloError.Text = " ";
+
+                var con = Configuration.getInstance().getConnection();
+                SqlCommand cmd = new SqlCommand("UPDATE Clo SET Name=@NewName WHERE Name=@OldName", con);
+                cmd.Parameters.AddWithValue("@NewName", CloName.Text);
+                cmd.Parameters.AddWithValue("@OldName", Updateclocombobox.Text);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Successfully Updated...");
+            }
+        }
+
+        private void UC_CLO_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                var con = Configuration.getInstance().getConnection();
+                SqlCommand sc = new SqlCommand("select Name from Clo", con);
+                SqlDataReader reader;
+                reader = sc.ExecuteReader();
+                DataTable dt = new DataTable();
+                dt.Columns.Add("Name", typeof(string));
+                dt.Load(reader);
+                Updateclocombobox.ValueMember = "Name";
+                Updateclocombobox.DataSource = dt;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        private void CloName_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Updateclocombobox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void LinkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            try
+            {
+                var con = Configuration.getInstance().getConnection();
+                SqlCommand sc = new SqlCommand("select Name from Clo", con);
+                SqlDataReader reader;
+                reader = sc.ExecuteReader();
+                DataTable dt = new DataTable();
+                dt.Columns.Add("Name", typeof(string));
+                dt.Load(reader);
+                Updateclocombobox.ValueMember = "Name";
+                Updateclocombobox.DataSource = dt;
+            }
+            catch (Exception)
+            {
+
+                throw;
             }
         }
     }

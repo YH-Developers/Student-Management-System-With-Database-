@@ -40,6 +40,7 @@ namespace SSM.Forms
             dashBoard_User_Control1.Hide();
             attendence1.Hide();
             ucReports1.Hide();
+            uC_CLO1.Hide();
             student_User_Control1.BringToFront();
         }
 

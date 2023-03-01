@@ -22,7 +22,7 @@ namespace SSM.Forms
         private void BunifuButton4_Click(object sender, EventArgs e)
         {
             var con = Configuration.getInstance().getConnection();
-            SqlCommand cmd = new SqlCommand("Select * from Student", con);
+            SqlCommand cmd = new SqlCommand("SELECT s.Id,s.FirstName,s.LastName,s.Contact,s.Email,s.RegistrationNumber, l.Name as Status FROM Student s JOIN lookup l ON s.Status = l.LookupId;", con);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             da.Fill(dt);
@@ -31,7 +31,12 @@ namespace SSM.Forms
 
         private void Student_User_Control_Load(object sender, EventArgs e)
         {
-
+            var con = Configuration.getInstance().getConnection();
+            SqlCommand cmd = new SqlCommand("SELECT s.Id,s.FirstName,s.LastName,s.Contact,s.Email,s.RegistrationNumber, l.Name as Status FROM Student s JOIN lookup l ON s.Status = l.LookupId;", con);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            bunifuDataGridView1.DataSource = dt;
         }
 
         private void BunifuButton2_Click(object sender, EventArgs e)
@@ -52,7 +57,7 @@ namespace SSM.Forms
                 cmd.Parameters.AddWithValue("@ID", int.Parse(materialTextBox1.Text));
                 cmd.ExecuteNonQuery();
                 ErrorLabel.Text = " ";
-                MessageBox.Show("Successfully saved");
+                MessageBox.Show("Successfully Deleted");
                 materialTextBox1.Clear();
             }
            

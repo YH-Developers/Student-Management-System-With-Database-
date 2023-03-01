@@ -219,6 +219,7 @@
             this.circularProgressBar1.Location = new System.Drawing.Point(87, 63);
             this.circularProgressBar1.MarqueeAnimationSpeed = 2000;
             this.circularProgressBar1.Maximum = 60;
+            this.circularProgressBar1.MaximumSize = new System.Drawing.Size(180, 183);
             this.circularProgressBar1.Name = "circularProgressBar1";
             this.circularProgressBar1.OuterColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.circularProgressBar1.OuterMargin = -25;
