@@ -40,14 +40,13 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.materialComboBox3 = new MaterialSkin.Controls.MaterialComboBox();
+            this.selectCloCombobox = new MaterialSkin.Controls.MaterialComboBox();
             this.RubricError = new System.Windows.Forms.Label();
             this.RubricName = new MaterialSkin.Controls.MaterialTextBox2();
             this.bunifuThinButton22 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.materialComboBox2 = new MaterialSkin.Controls.MaterialComboBox();
-            this.materialComboBox1 = new MaterialSkin.Controls.MaterialComboBox();
+            this.SelectRubricIDComboBox = new MaterialSkin.Controls.MaterialComboBox();
             this.bunifuDropdown1 = new Bunifu.UI.WinForms.BunifuDropdown();
             this.MeasurementLevelError = new System.Windows.Forms.Label();
             this.RubricLevelError = new System.Windows.Forms.Label();
@@ -276,7 +275,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.materialComboBox3);
+            this.panel1.Controls.Add(this.selectCloCombobox);
             this.panel1.Controls.Add(this.RubricError);
             this.panel1.Controls.Add(this.RubricName);
             this.panel1.Controls.Add(this.bunifuThinButton22);
@@ -284,30 +283,32 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(235, 386);
             this.panel1.TabIndex = 2;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel1_Paint);
             // 
-            // materialComboBox3
+            // selectCloCombobox
             // 
-            this.materialComboBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.materialComboBox3.AutoResize = false;
-            this.materialComboBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialComboBox3.Depth = 0;
-            this.materialComboBox3.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.materialComboBox3.DropDownHeight = 174;
-            this.materialComboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.materialComboBox3.DropDownWidth = 121;
-            this.materialComboBox3.Font = new System.Drawing.Font("Roboto Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.materialComboBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialComboBox3.FormattingEnabled = true;
-            this.materialComboBox3.Hint = "Select CLO";
-            this.materialComboBox3.IntegralHeight = false;
-            this.materialComboBox3.ItemHeight = 43;
-            this.materialComboBox3.Location = new System.Drawing.Point(1, 48);
-            this.materialComboBox3.MaxDropDownItems = 4;
-            this.materialComboBox3.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialComboBox3.Name = "materialComboBox3";
-            this.materialComboBox3.Size = new System.Drawing.Size(242, 49);
-            this.materialComboBox3.StartIndex = 0;
-            this.materialComboBox3.TabIndex = 10;
+            this.selectCloCombobox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.selectCloCombobox.AutoResize = false;
+            this.selectCloCombobox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.selectCloCombobox.Depth = 0;
+            this.selectCloCombobox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.selectCloCombobox.DropDownHeight = 174;
+            this.selectCloCombobox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.selectCloCombobox.DropDownWidth = 121;
+            this.selectCloCombobox.Font = new System.Drawing.Font("Roboto Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.selectCloCombobox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.selectCloCombobox.FormattingEnabled = true;
+            this.selectCloCombobox.Hint = "Select CLO ID";
+            this.selectCloCombobox.IntegralHeight = false;
+            this.selectCloCombobox.ItemHeight = 43;
+            this.selectCloCombobox.Location = new System.Drawing.Point(1, 48);
+            this.selectCloCombobox.MaxDropDownItems = 4;
+            this.selectCloCombobox.MouseState = MaterialSkin.MouseState.OUT;
+            this.selectCloCombobox.Name = "selectCloCombobox";
+            this.selectCloCombobox.Size = new System.Drawing.Size(242, 49);
+            this.selectCloCombobox.StartIndex = 0;
+            this.selectCloCombobox.TabIndex = 10;
+            this.selectCloCombobox.SelectedIndexChanged += new System.EventHandler(this.SelectCloCombobox_SelectedIndexChanged);
             // 
             // RubricError
             // 
@@ -400,8 +401,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.materialComboBox2);
-            this.panel2.Controls.Add(this.materialComboBox1);
+            this.panel2.Controls.Add(this.SelectRubricIDComboBox);
             this.panel2.Controls.Add(this.bunifuDropdown1);
             this.panel2.Controls.Add(this.MeasurementLevelError);
             this.panel2.Controls.Add(this.RubricLevelError);
@@ -413,53 +413,29 @@
             this.panel2.Size = new System.Drawing.Size(243, 386);
             this.panel2.TabIndex = 6;
             // 
-            // materialComboBox2
+            // SelectRubricIDComboBox
             // 
-            this.materialComboBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.materialComboBox2.AutoResize = false;
-            this.materialComboBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialComboBox2.Depth = 0;
-            this.materialComboBox2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.materialComboBox2.DropDownHeight = 174;
-            this.materialComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.materialComboBox2.DropDownWidth = 121;
-            this.materialComboBox2.Font = new System.Drawing.Font("Roboto Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.materialComboBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialComboBox2.FormattingEnabled = true;
-            this.materialComboBox2.Hint = "Select Rubric";
-            this.materialComboBox2.IntegralHeight = false;
-            this.materialComboBox2.ItemHeight = 43;
-            this.materialComboBox2.Location = new System.Drawing.Point(0, 71);
-            this.materialComboBox2.MaxDropDownItems = 4;
-            this.materialComboBox2.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialComboBox2.Name = "materialComboBox2";
-            this.materialComboBox2.Size = new System.Drawing.Size(242, 49);
-            this.materialComboBox2.StartIndex = 0;
-            this.materialComboBox2.TabIndex = 10;
-            // 
-            // materialComboBox1
-            // 
-            this.materialComboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.materialComboBox1.AutoResize = false;
-            this.materialComboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialComboBox1.Depth = 0;
-            this.materialComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.materialComboBox1.DropDownHeight = 174;
-            this.materialComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.materialComboBox1.DropDownWidth = 121;
-            this.materialComboBox1.Font = new System.Drawing.Font("Roboto Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.materialComboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialComboBox1.FormattingEnabled = true;
-            this.materialComboBox1.Hint = "Select CLO";
-            this.materialComboBox1.IntegralHeight = false;
-            this.materialComboBox1.ItemHeight = 43;
-            this.materialComboBox1.Location = new System.Drawing.Point(-1, 16);
-            this.materialComboBox1.MaxDropDownItems = 4;
-            this.materialComboBox1.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialComboBox1.Name = "materialComboBox1";
-            this.materialComboBox1.Size = new System.Drawing.Size(243, 49);
-            this.materialComboBox1.StartIndex = 0;
-            this.materialComboBox1.TabIndex = 9;
+            this.SelectRubricIDComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.SelectRubricIDComboBox.AutoResize = false;
+            this.SelectRubricIDComboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.SelectRubricIDComboBox.Depth = 0;
+            this.SelectRubricIDComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.SelectRubricIDComboBox.DropDownHeight = 174;
+            this.SelectRubricIDComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.SelectRubricIDComboBox.DropDownWidth = 121;
+            this.SelectRubricIDComboBox.Font = new System.Drawing.Font("Roboto Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.SelectRubricIDComboBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.SelectRubricIDComboBox.FormattingEnabled = true;
+            this.SelectRubricIDComboBox.Hint = "Select Rubric";
+            this.SelectRubricIDComboBox.IntegralHeight = false;
+            this.SelectRubricIDComboBox.ItemHeight = 43;
+            this.SelectRubricIDComboBox.Location = new System.Drawing.Point(4, 48);
+            this.SelectRubricIDComboBox.MaxDropDownItems = 4;
+            this.SelectRubricIDComboBox.MouseState = MaterialSkin.MouseState.OUT;
+            this.SelectRubricIDComboBox.Name = "SelectRubricIDComboBox";
+            this.SelectRubricIDComboBox.Size = new System.Drawing.Size(242, 49);
+            this.SelectRubricIDComboBox.StartIndex = 0;
+            this.SelectRubricIDComboBox.TabIndex = 10;
             // 
             // bunifuDropdown1
             // 
@@ -684,9 +660,8 @@
         private System.Windows.Forms.Label RubricLevelError;
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton24;
         private MaterialSkin.Controls.MaterialComboBox Updateclocombobox;
-        private MaterialSkin.Controls.MaterialComboBox materialComboBox3;
-        private MaterialSkin.Controls.MaterialComboBox materialComboBox2;
-        private MaterialSkin.Controls.MaterialComboBox materialComboBox1;
+        private MaterialSkin.Controls.MaterialComboBox selectCloCombobox;
+        private MaterialSkin.Controls.MaterialComboBox SelectRubricIDComboBox;
         private Bunifu.UI.WinForms.BunifuDropdown bunifuDropdown1;
         private MaterialSkin.Controls.MaterialTextBox2 MeasurmentLeveltxt;
         private System.Windows.Forms.LinkLabel linkLabel1;

@@ -170,9 +170,9 @@ namespace SSM.Forms
             else { MessageBox.Show("First Name Can't Be Emplty", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning); }
 
 
-
            
         }
+
         public void AddStudent()
         {
             int status = 0;

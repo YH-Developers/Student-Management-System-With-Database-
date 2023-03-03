@@ -54,8 +54,30 @@ namespace SSM.Forms
             else
             {
                 RubricError.Text = " ";
+                int id = Get_Max_ID();
+                id++;
+                var con = Configuration.getInstance().getConnection();
+                SqlCommand cmd = new SqlCommand("Insert into Rubric values (@id,@Details,@Cloid)", con);
+                cmd.Parameters.AddWithValue("@id", id);
+                cmd.Parameters.AddWithValue("@Details", RubricName.Text);
+                cmd.Parameters.AddWithValue("@CloId", int.Parse(selectCloCombobox.Text));
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Successfully Saved");
             }
         }
+
+        public int Get_Max_ID()
+        {
+            var con = Configuration.getInstance().getConnection();
+            SqlCommand cmd = new SqlCommand("SELECT Max(Id) FROM Rubric", con);
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            return (int)dt.Rows[0][0];
+        }
+
 
         private void BunifuThinButton23_Click(object sender, EventArgs e)
         {
@@ -63,18 +85,46 @@ namespace SSM.Forms
             {
                 RubricLevelError.Text = "Enter Rubric Level To save!";
             }
-            else
-            {
-                RubricLevelError.Text = " ";
+            else { RubricLevelError.Text = " ";
+                    if (MeasurmentLeveltxt.Text == "")
+                    {
+                        MeasurementLevelError.Text = "Enter Rubric Name To save!";
+                    }
+                    else
+                    {
+                        MeasurementLevelError.Text = " ";
+                        RubricError.Text = " ";
+                        int id = Get_Max_RubricLevelID(SelectRubricIDComboBox.Text);
+                        id++;
+                        var con = Configuration.getInstance().getConnection();
+                        SqlCommand cmd = new SqlCommand("Insert into Rubric values (@id,@RubricId,@Details,@MeasurementLevel)", con);
+                        cmd.Parameters.AddWithValue("@id", id);
+                        cmd.Parameters.AddWithValue("@RubricId", int.Parse(SelectRubricIDComboBox.Text));
+                        cmd.Parameters.AddWithValue("@Details", RubricLeveltxt.Text);
+                        cmd.Parameters.AddWithValue("@MeasurementLevel", int.Parse(MeasurmentLeveltxt.Text));
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("Successfully Saved");
+                    }
             }
+        }
 
-            if (MeasurmentLeveltxt.Text == "")
+        public int Get_Max_RubricLevelID(string ID)
+        {
+            var con = Configuration.getInstance().getConnection();
+            SqlCommand cmd2 = new SqlCommand("SELECT COUNT(*) FROM RubricLevel where RubricId=@ID", con);
+            cmd2.Parameters.AddWithValue("@ID", ID);
+            int count = Convert.ToInt32(cmd2.ExecuteScalar());
+            if (count == 0)
             {
-                MeasurementLevelError.Text = "Enter Rubric Name To save!";
+                return 0;
             }
             else
             {
-                MeasurementLevelError.Text = " ";
+                SqlCommand cmd = new SqlCommand("SELECT Max(Id) FROM RubricLevel", con);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                return (int)dt.Rows[0][0];
             }
         }
 
@@ -119,6 +169,41 @@ namespace SSM.Forms
 
                 throw;
             }
+            try
+            {
+                var con = Configuration.getInstance().getConnection();
+                SqlCommand sc = new SqlCommand("select Id from Clo", con);
+                SqlDataReader reader;
+                reader = sc.ExecuteReader();
+                DataTable dt = new DataTable();
+                dt.Columns.Add("Id", typeof(string));
+                dt.Load(reader);
+                selectCloCombobox.ValueMember = "Id";
+                selectCloCombobox.DataSource = dt;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
+            try
+            {
+                var con = Configuration.getInstance().getConnection();
+                SqlCommand sc = new SqlCommand("select Id from Rubric", con);
+                SqlDataReader reader;
+                reader = sc.ExecuteReader();
+                DataTable dt = new DataTable();
+                dt.Columns.Add("Id", typeof(string));
+                dt.Load(reader);
+                SelectRubricIDComboBox.ValueMember = "Id";
+                SelectRubricIDComboBox.DataSource = dt;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
 
         private void CloName_Click(object sender, EventArgs e)
@@ -150,6 +235,16 @@ namespace SSM.Forms
 
                 throw;
             }
+        }
+
+        private void SelectCloCombobox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
