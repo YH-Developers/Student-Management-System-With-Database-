@@ -53,4 +53,5 @@ E:\Study\Semesters\4th Semester\DBMS Lab\Mid Project\student-managment-system\SS
 E:\Study\Semesters\4th Semester\DBMS Lab\Mid Project\student-managment-system\SSM\SSM\obj\Debug\SSM.Forms.UC_CLO.resources
 E:\Study\Semesters\4th Semester\DBMS Lab\Mid Project\student-managment-system\SSM\SSM\bin\Debug\itextsharp.xml
 E:\Study\Semesters\4th Semester\DBMS Lab\Mid Project\student-managment-system\SSM\SSM\obj\Debug\SSM.Forms.UC_Setting.resources
+E:\Study\Semesters\4th Semester\DBMS Lab\Mid Project\student-managment-system\SSM\SSM\obj\Debug\SSM.Forms.UC_Evaluation.resources
 E:\Study\Semesters\4th Semester\DBMS Lab\Mid Project\student-managment-system\SSM\SSM\obj\Debug\SSM.csprojAssemblyReference.cache
