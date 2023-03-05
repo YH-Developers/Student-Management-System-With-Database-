@@ -55,6 +55,12 @@
             this.bunifuThinButton23 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.label1 = new System.Windows.Forms.Label();
             this.materialTextBox1 = new MaterialSkin.Controls.MaterialTextBox();
+            this.bunifuThinButton25 = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
+            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel3 = new System.Windows.Forms.LinkLabel();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -91,6 +97,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.materialLabel3);
+            this.panel3.Controls.Add(this.materialLabel2);
+            this.panel3.Controls.Add(this.materialLabel1);
+            this.panel3.Controls.Add(this.bunifuThinButton25);
             this.panel3.Controls.Add(this.linkLabel1);
             this.panel3.Controls.Add(this.Updateclocombobox);
             this.panel3.Controls.Add(this.bunifuThinButton24);
@@ -107,7 +117,7 @@
             // 
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.LinkColor = System.Drawing.Color.Black;
-            this.linkLabel1.Location = new System.Drawing.Point(171, 32);
+            this.linkLabel1.Location = new System.Drawing.Point(181, 48);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(44, 13);
             this.linkLabel1.TabIndex = 6;
@@ -129,10 +139,10 @@
             this.Updateclocombobox.Font = new System.Drawing.Font("Roboto Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.Updateclocombobox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.Updateclocombobox.FormattingEnabled = true;
-            this.Updateclocombobox.Hint = "Select CLO to Update";
+            this.Updateclocombobox.Hint = "Select CLO";
             this.Updateclocombobox.IntegralHeight = false;
             this.Updateclocombobox.ItemHeight = 43;
-            this.Updateclocombobox.Location = new System.Drawing.Point(3, 48);
+            this.Updateclocombobox.Location = new System.Drawing.Point(1, 65);
             this.Updateclocombobox.MaxDropDownItems = 4;
             this.Updateclocombobox.MouseState = MaterialSkin.MouseState.OUT;
             this.Updateclocombobox.Name = "Updateclocombobox";
@@ -165,9 +175,10 @@
             this.bunifuThinButton24.Location = new System.Drawing.Point(5, 331);
             this.bunifuThinButton24.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuThinButton24.Name = "bunifuThinButton24";
-            this.bunifuThinButton24.Size = new System.Drawing.Size(205, 41);
+            this.bunifuThinButton24.Size = new System.Drawing.Size(98, 41);
             this.bunifuThinButton24.TabIndex = 4;
             this.bunifuThinButton24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton24.Visible = false;
             this.bunifuThinButton24.Click += new System.EventHandler(this.BunifuThinButton24_Click);
             // 
             // cloError
@@ -275,6 +286,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.linkLabel2);
             this.panel1.Controls.Add(this.selectCloCombobox);
             this.panel1.Controls.Add(this.RubricError);
             this.panel1.Controls.Add(this.RubricName);
@@ -392,7 +404,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(235, 53);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Add / Update CLO";
+            this.label2.Text = "Manage CLO";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel2
@@ -401,6 +413,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.linkLabel3);
             this.panel2.Controls.Add(this.SelectRubricIDComboBox);
             this.panel2.Controls.Add(this.bunifuDropdown1);
             this.panel2.Controls.Add(this.MeasurementLevelError);
@@ -614,6 +627,104 @@
             this.materialTextBox1.Text = "";
             this.materialTextBox1.TrailingIcon = null;
             // 
+            // bunifuThinButton25
+            // 
+            this.bunifuThinButton25.ActiveBorderThickness = 1;
+            this.bunifuThinButton25.ActiveCornerRadius = 20;
+            this.bunifuThinButton25.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton25.ActiveForecolor = System.Drawing.Color.White;
+            this.bunifuThinButton25.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton25.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.bunifuThinButton25.BackColor = System.Drawing.SystemColors.Control;
+            this.bunifuThinButton25.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton25.BackgroundImage")));
+            this.bunifuThinButton25.ButtonText = "Delete";
+            this.bunifuThinButton25.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuThinButton25.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuThinButton25.ForeColor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton25.IdleBorderThickness = 1;
+            this.bunifuThinButton25.IdleCornerRadius = 20;
+            this.bunifuThinButton25.IdleFillColor = System.Drawing.Color.White;
+            this.bunifuThinButton25.IdleForecolor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton25.IdleLineColor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton25.Location = new System.Drawing.Point(117, 331);
+            this.bunifuThinButton25.Margin = new System.Windows.Forms.Padding(5);
+            this.bunifuThinButton25.Name = "bunifuThinButton25";
+            this.bunifuThinButton25.Size = new System.Drawing.Size(98, 41);
+            this.bunifuThinButton25.TabIndex = 7;
+            this.bunifuThinButton25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton25.Visible = false;
+            this.bunifuThinButton25.Click += new System.EventHandler(this.BunifuThinButton25_Click);
+            // 
+            // materialLabel1
+            // 
+            this.materialLabel1.AutoSize = true;
+            this.materialLabel1.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.materialLabel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.materialLabel1.Depth = 0;
+            this.materialLabel1.Font = new System.Drawing.Font("Roboto Medium", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.materialLabel1.Location = new System.Drawing.Point(69, 4);
+            this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel1.Name = "materialLabel1";
+            this.materialLabel1.Size = new System.Drawing.Size(75, 19);
+            this.materialLabel1.TabIndex = 8;
+            this.materialLabel1.Text = "   Update   ";
+            this.materialLabel1.Click += new System.EventHandler(this.MaterialLabel1_Click);
+            // 
+            // materialLabel2
+            // 
+            this.materialLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.materialLabel2.AutoSize = true;
+            this.materialLabel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.materialLabel2.Depth = 0;
+            this.materialLabel2.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel2.Location = new System.Drawing.Point(156, 4);
+            this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel2.Name = "materialLabel2";
+            this.materialLabel2.Size = new System.Drawing.Size(69, 19);
+            this.materialLabel2.TabIndex = 9;
+            this.materialLabel2.Text = "   Delete   ";
+            this.materialLabel2.Click += new System.EventHandler(this.MaterialLabel2_Click);
+            // 
+            // materialLabel3
+            // 
+            this.materialLabel3.AutoSize = true;
+            this.materialLabel3.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.materialLabel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.materialLabel3.Depth = 0;
+            this.materialLabel3.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel3.Location = new System.Drawing.Point(10, 4);
+            this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel3.Name = "materialLabel3";
+            this.materialLabel3.Size = new System.Drawing.Size(53, 19);
+            this.materialLabel3.TabIndex = 10;
+            this.materialLabel3.Text = "   Add   ";
+            this.materialLabel3.Click += new System.EventHandler(this.MaterialLabel3_Click);
+            // 
+            // linkLabel2
+            // 
+            this.linkLabel2.AutoSize = true;
+            this.linkLabel2.LinkColor = System.Drawing.Color.Black;
+            this.linkLabel2.Location = new System.Drawing.Point(186, 32);
+            this.linkLabel2.Name = "linkLabel2";
+            this.linkLabel2.Size = new System.Drawing.Size(44, 13);
+            this.linkLabel2.TabIndex = 11;
+            this.linkLabel2.TabStop = true;
+            this.linkLabel2.Text = "Refresh";
+            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabel2_LinkClicked);
+            // 
+            // linkLabel3
+            // 
+            this.linkLabel3.AutoSize = true;
+            this.linkLabel3.LinkColor = System.Drawing.Color.Black;
+            this.linkLabel3.Location = new System.Drawing.Point(198, 23);
+            this.linkLabel3.Name = "linkLabel3";
+            this.linkLabel3.Size = new System.Drawing.Size(44, 13);
+            this.linkLabel3.TabIndex = 11;
+            this.linkLabel3.TabStop = true;
+            this.linkLabel3.Text = "Refresh";
+            this.linkLabel3.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabel3_LinkClicked);
+            // 
             // UC_CLO
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -665,5 +776,11 @@
         private Bunifu.UI.WinForms.BunifuDropdown bunifuDropdown1;
         private MaterialSkin.Controls.MaterialTextBox2 MeasurmentLeveltxt;
         private System.Windows.Forms.LinkLabel linkLabel1;
+        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton25;
+        private MaterialSkin.Controls.MaterialLabel materialLabel2;
+        private MaterialSkin.Controls.MaterialLabel materialLabel1;
+        private MaterialSkin.Controls.MaterialLabel materialLabel3;
+        private System.Windows.Forms.LinkLabel linkLabel2;
+        private System.Windows.Forms.LinkLabel linkLabel3;
     }
 }
