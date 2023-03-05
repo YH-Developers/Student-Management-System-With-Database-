@@ -52,7 +52,7 @@ namespace SSM.Forms
         private void Attendence_Load(object sender, EventArgs e)
         {
             var con = Configuration.getInstance().getConnection();
-            SqlCommand cmd = new SqlCommand("SELECT s.Id, s.FirstName, s.LastName FROM Student s LEFT JOIN StudentAttendance sa ON s.Id = sa.StudentId", con);
+            SqlCommand cmd = new SqlCommand("SELECT s.Id, s.FirstName, s.LastName FROM Student s", con);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             da.Fill(dt);

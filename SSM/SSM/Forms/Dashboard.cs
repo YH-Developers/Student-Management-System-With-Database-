@@ -118,5 +118,16 @@ namespace SSM.Forms
 
             }
         }
+
+        private void BtnContactUs_Click(object sender, EventArgs e)
+        {
+            uC_Assesment1.Show();
+            uC_CLO1.Hide();
+            //ucReports1.Hide();
+            student_User_Control1.Hide();
+            attendence1.Hide();
+            dashBoard_User_Control1.Hide();
+            uC_Assesment1.BringToFront();
+        }
     }
 }
