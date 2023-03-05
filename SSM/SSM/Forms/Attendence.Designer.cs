@@ -41,6 +41,8 @@
             this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuThinButton22 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.studentAttendanceTableAdapter = new SSM.ProjectBDataSetTableAdapters.StudentAttendanceTableAdapter();
+            this.guna2DateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.Status = new System.Windows.Forms.DataGridViewComboBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentAttendanceBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.projectBDataSet)).BeginInit();
@@ -65,9 +67,6 @@
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
             this.bunifuDataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.bunifuDataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.bunifuDataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.bunifuDataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.bunifuDataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -82,6 +81,8 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.bunifuDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.bunifuDataGridView1.ColumnHeadersHeight = 40;
+            this.bunifuDataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Status});
             this.bunifuDataGridView1.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             this.bunifuDataGridView1.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
             this.bunifuDataGridView1.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
@@ -175,6 +176,7 @@
             this.bunifuThinButton21.Size = new System.Drawing.Size(181, 41);
             this.bunifuThinButton21.TabIndex = 2;
             this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton21.Click += new System.EventHandler(this.BunifuThinButton21_Click);
             // 
             // bunifuThinButton22
             // 
@@ -207,10 +209,34 @@
             // 
             this.studentAttendanceTableAdapter.ClearBeforeFill = true;
             // 
+            // guna2DateTimePicker1
+            // 
+            this.guna2DateTimePicker1.Checked = true;
+            this.guna2DateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.guna2DateTimePicker1.Location = new System.Drawing.Point(204, 25);
+            this.guna2DateTimePicker1.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.guna2DateTimePicker1.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.guna2DateTimePicker1.Name = "guna2DateTimePicker1";
+            this.guna2DateTimePicker1.Size = new System.Drawing.Size(200, 36);
+            this.guna2DateTimePicker1.TabIndex = 5;
+            this.guna2DateTimePicker1.Value = new System.DateTime(2023, 3, 5, 16, 3, 4, 734);
+            // 
+            // Status
+            // 
+            this.Status.HeaderText = "Status";
+            this.Status.Items.AddRange(new object[] {
+            "Present",
+            "Absent",
+            "Leave",
+            "Late"});
+            this.Status.Name = "Status";
+            // 
             // Attendence
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.guna2DateTimePicker1);
             this.Controls.Add(this.bunifuThinButton22);
             this.Controls.Add(this.bunifuPictureBox1);
             this.Controls.Add(this.bunifuThinButton21);
@@ -239,5 +265,7 @@
         private System.Windows.Forms.BindingSource studentAttendanceBindingSource;
         private ProjectBDataSet projectBDataSet;
         private ProjectBDataSetTableAdapters.StudentAttendanceTableAdapter studentAttendanceTableAdapter;
+        private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker1;
+        private System.Windows.Forms.DataGridViewComboBoxColumn Status;
     }
 }
