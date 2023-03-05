@@ -32,6 +32,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.weightageError = new System.Windows.Forms.Label();
+            this.marksError = new System.Windows.Forms.Label();
+            this.weightagetxt = new MaterialSkin.Controls.MaterialTextBox2();
+            this.markstxt = new MaterialSkin.Controls.MaterialTextBox2();
             this.AddAssesment = new MaterialSkin.Controls.MaterialLabel();
             this.DeleteAssesment = new MaterialSkin.Controls.MaterialLabel();
             this.UpdateAssesment = new MaterialSkin.Controls.MaterialLabel();
@@ -48,15 +52,13 @@
             this.linkLabel3 = new System.Windows.Forms.LinkLabel();
             this.SelectRubricIDComboBox = new MaterialSkin.Controls.MaterialComboBox();
             this.bunifuDropdown1 = new Bunifu.UI.WinForms.BunifuDropdown();
-            this.MeasurementLevelError = new System.Windows.Forms.Label();
-            this.RubricLevelError = new System.Windows.Forms.Label();
-            this.MeasurmentLeveltxt = new MaterialSkin.Controls.MaterialTextBox2();
-            this.RubricLeveltxt = new MaterialSkin.Controls.MaterialTextBox2();
+            this.TotalMarkslError = new System.Windows.Forms.Label();
+            this.NameError = new System.Windows.Forms.Label();
+            this.TotalMarkstxt = new MaterialSkin.Controls.MaterialTextBox2();
+            this.Nametxt = new MaterialSkin.Controls.MaterialTextBox2();
             this.bunifuThinButton23 = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.marksError = new System.Windows.Forms.Label();
-            this.markstxt = new MaterialSkin.Controls.MaterialTextBox2();
-            this.weightageError = new System.Windows.Forms.Label();
-            this.weightagetxt = new MaterialSkin.Controls.MaterialTextBox2();
+            this.SelectAssesmentIDComboBox = new MaterialSkin.Controls.MaterialComboBox();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -118,6 +120,90 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(360, 386);
             this.panel3.TabIndex = 7;
+            // 
+            // weightageError
+            // 
+            this.weightageError.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.weightageError.AutoSize = true;
+            this.weightageError.ForeColor = System.Drawing.Color.Red;
+            this.weightageError.Location = new System.Drawing.Point(112, 266);
+            this.weightageError.Name = "weightageError";
+            this.weightageError.Size = new System.Drawing.Size(0, 13);
+            this.weightageError.TabIndex = 5;
+            // 
+            // marksError
+            // 
+            this.marksError.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.marksError.AutoSize = true;
+            this.marksError.ForeColor = System.Drawing.Color.Red;
+            this.marksError.Location = new System.Drawing.Point(204, 182);
+            this.marksError.Name = "marksError";
+            this.marksError.Size = new System.Drawing.Size(0, 13);
+            this.marksError.TabIndex = 12;
+            // 
+            // weightagetxt
+            // 
+            this.weightagetxt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.weightagetxt.AnimateReadOnly = false;
+            this.weightagetxt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.weightagetxt.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.weightagetxt.Depth = 0;
+            this.weightagetxt.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.weightagetxt.HideSelection = true;
+            this.weightagetxt.Hint = "Total Weightage";
+            this.weightagetxt.LeadingIcon = null;
+            this.weightagetxt.Location = new System.Drawing.Point(78, 215);
+            this.weightagetxt.MaxLength = 32767;
+            this.weightagetxt.MouseState = MaterialSkin.MouseState.OUT;
+            this.weightagetxt.Name = "weightagetxt";
+            this.weightagetxt.PasswordChar = '\0';
+            this.weightagetxt.PrefixSuffixText = null;
+            this.weightagetxt.ReadOnly = false;
+            this.weightagetxt.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.weightagetxt.SelectedText = "";
+            this.weightagetxt.SelectionLength = 0;
+            this.weightagetxt.SelectionStart = 0;
+            this.weightagetxt.ShortcutsEnabled = true;
+            this.weightagetxt.Size = new System.Drawing.Size(170, 48);
+            this.weightagetxt.TabIndex = 4;
+            this.weightagetxt.TabStop = false;
+            this.weightagetxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.weightagetxt.TrailingIcon = null;
+            this.weightagetxt.UseSystemPasswordChar = false;
+            this.weightagetxt.Visible = false;
+            this.weightagetxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Weightagetxt_KeyPress);
+            // 
+            // markstxt
+            // 
+            this.markstxt.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.markstxt.AnimateReadOnly = false;
+            this.markstxt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.markstxt.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.markstxt.Depth = 0;
+            this.markstxt.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.markstxt.HideSelection = true;
+            this.markstxt.Hint = "Total Marks";
+            this.markstxt.LeadingIcon = null;
+            this.markstxt.Location = new System.Drawing.Point(175, 131);
+            this.markstxt.MaxLength = 32767;
+            this.markstxt.MouseState = MaterialSkin.MouseState.OUT;
+            this.markstxt.Name = "markstxt";
+            this.markstxt.PasswordChar = '\0';
+            this.markstxt.PrefixSuffixText = null;
+            this.markstxt.ReadOnly = false;
+            this.markstxt.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.markstxt.SelectedText = "";
+            this.markstxt.SelectionLength = 0;
+            this.markstxt.SelectionStart = 0;
+            this.markstxt.ShortcutsEnabled = true;
+            this.markstxt.Size = new System.Drawing.Size(165, 48);
+            this.markstxt.TabIndex = 11;
+            this.markstxt.TabStop = false;
+            this.markstxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.markstxt.TrailingIcon = null;
+            this.markstxt.UseSystemPasswordChar = false;
+            this.markstxt.Visible = false;
+            this.markstxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Markstxt_KeyPress);
             // 
             // AddAssesment
             // 
@@ -190,6 +276,7 @@
             this.DeleteBtn.TabIndex = 7;
             this.DeleteBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.DeleteBtn.Visible = false;
+            this.DeleteBtn.Click += new System.EventHandler(this.DeleteBtn_Click);
             // 
             // Refresh
             // 
@@ -327,6 +414,7 @@
             this.Titletxt.TrailingIcon = null;
             this.Titletxt.UseSystemPasswordChar = false;
             this.Titletxt.Visible = false;
+            this.Titletxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Titletxt_KeyPress);
             // 
             // label4
             // 
@@ -364,13 +452,15 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.linkLabel1);
+            this.panel2.Controls.Add(this.SelectAssesmentIDComboBox);
             this.panel2.Controls.Add(this.linkLabel3);
             this.panel2.Controls.Add(this.SelectRubricIDComboBox);
             this.panel2.Controls.Add(this.bunifuDropdown1);
-            this.panel2.Controls.Add(this.MeasurementLevelError);
-            this.panel2.Controls.Add(this.RubricLevelError);
-            this.panel2.Controls.Add(this.MeasurmentLeveltxt);
-            this.panel2.Controls.Add(this.RubricLeveltxt);
+            this.panel2.Controls.Add(this.TotalMarkslError);
+            this.panel2.Controls.Add(this.NameError);
+            this.panel2.Controls.Add(this.TotalMarkstxt);
+            this.panel2.Controls.Add(this.Nametxt);
             this.panel2.Controls.Add(this.bunifuThinButton23);
             this.panel2.Location = new System.Drawing.Point(371, 58);
             this.panel2.Name = "panel2";
@@ -381,12 +471,13 @@
             // 
             this.linkLabel3.AutoSize = true;
             this.linkLabel3.LinkColor = System.Drawing.Color.Black;
-            this.linkLabel3.Location = new System.Drawing.Point(198, 23);
+            this.linkLabel3.Location = new System.Drawing.Point(295, 32);
             this.linkLabel3.Name = "linkLabel3";
             this.linkLabel3.Size = new System.Drawing.Size(44, 13);
             this.linkLabel3.TabIndex = 11;
             this.linkLabel3.TabStop = true;
             this.linkLabel3.Text = "Refresh";
+            this.linkLabel3.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabel3_LinkClicked);
             // 
             // SelectRubricIDComboBox
             // 
@@ -401,7 +492,7 @@
             this.SelectRubricIDComboBox.Font = new System.Drawing.Font("Roboto Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.SelectRubricIDComboBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.SelectRubricIDComboBox.FormattingEnabled = true;
-            this.SelectRubricIDComboBox.Hint = "Select Rubric";
+            this.SelectRubricIDComboBox.Hint = "Select Rubric ID";
             this.SelectRubricIDComboBox.IntegralHeight = false;
             this.SelectRubricIDComboBox.ItemHeight = 43;
             this.SelectRubricIDComboBox.Location = new System.Drawing.Point(4, 48);
@@ -454,85 +545,87 @@
             this.bunifuDropdown1.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
             this.bunifuDropdown1.TextLeftMargin = 5;
             // 
-            // MeasurementLevelError
+            // TotalMarkslError
             // 
-            this.MeasurementLevelError.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.MeasurementLevelError.AutoSize = true;
-            this.MeasurementLevelError.ForeColor = System.Drawing.Color.Red;
-            this.MeasurementLevelError.Location = new System.Drawing.Point(195, 266);
-            this.MeasurementLevelError.Name = "MeasurementLevelError";
-            this.MeasurementLevelError.Size = new System.Drawing.Size(0, 13);
-            this.MeasurementLevelError.TabIndex = 7;
+            this.TotalMarkslError.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.TotalMarkslError.AutoSize = true;
+            this.TotalMarkslError.ForeColor = System.Drawing.Color.Red;
+            this.TotalMarkslError.Location = new System.Drawing.Point(199, 315);
+            this.TotalMarkslError.Name = "TotalMarkslError";
+            this.TotalMarkslError.Size = new System.Drawing.Size(0, 13);
+            this.TotalMarkslError.TabIndex = 7;
             // 
-            // RubricLevelError
+            // NameError
             // 
-            this.RubricLevelError.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.RubricLevelError.AutoSize = true;
-            this.RubricLevelError.ForeColor = System.Drawing.Color.Red;
-            this.RubricLevelError.Location = new System.Drawing.Point(201, 199);
-            this.RubricLevelError.Name = "RubricLevelError";
-            this.RubricLevelError.Size = new System.Drawing.Size(0, 13);
-            this.RubricLevelError.TabIndex = 6;
+            this.NameError.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.NameError.AutoSize = true;
+            this.NameError.ForeColor = System.Drawing.Color.Red;
+            this.NameError.Location = new System.Drawing.Point(205, 248);
+            this.NameError.Name = "NameError";
+            this.NameError.Size = new System.Drawing.Size(0, 13);
+            this.NameError.TabIndex = 6;
             // 
-            // MeasurmentLeveltxt
+            // TotalMarkstxt
             // 
-            this.MeasurmentLeveltxt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.MeasurmentLeveltxt.AnimateReadOnly = false;
-            this.MeasurmentLeveltxt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.MeasurmentLeveltxt.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.MeasurmentLeveltxt.Depth = 0;
-            this.MeasurmentLeveltxt.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.MeasurmentLeveltxt.HideSelection = true;
-            this.MeasurmentLeveltxt.Hint = "Enter Measurement Level";
-            this.MeasurmentLeveltxt.LeadingIcon = null;
-            this.MeasurmentLeveltxt.Location = new System.Drawing.Point(-2, 215);
-            this.MeasurmentLeveltxt.MaxLength = 32767;
-            this.MeasurmentLeveltxt.MouseState = MaterialSkin.MouseState.OUT;
-            this.MeasurmentLeveltxt.Name = "MeasurmentLeveltxt";
-            this.MeasurmentLeveltxt.PasswordChar = '\0';
-            this.MeasurmentLeveltxt.PrefixSuffixText = null;
-            this.MeasurmentLeveltxt.ReadOnly = false;
-            this.MeasurmentLeveltxt.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.MeasurmentLeveltxt.SelectedText = "";
-            this.MeasurmentLeveltxt.SelectionLength = 0;
-            this.MeasurmentLeveltxt.SelectionStart = 0;
-            this.MeasurmentLeveltxt.ShortcutsEnabled = true;
-            this.MeasurmentLeveltxt.Size = new System.Drawing.Size(361, 48);
-            this.MeasurmentLeveltxt.TabIndex = 5;
-            this.MeasurmentLeveltxt.TabStop = false;
-            this.MeasurmentLeveltxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.MeasurmentLeveltxt.TrailingIcon = null;
-            this.MeasurmentLeveltxt.UseSystemPasswordChar = false;
+            this.TotalMarkstxt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.TotalMarkstxt.AnimateReadOnly = false;
+            this.TotalMarkstxt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.TotalMarkstxt.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.TotalMarkstxt.Depth = 0;
+            this.TotalMarkstxt.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.TotalMarkstxt.HideSelection = true;
+            this.TotalMarkstxt.Hint = "Total Marks";
+            this.TotalMarkstxt.LeadingIcon = null;
+            this.TotalMarkstxt.Location = new System.Drawing.Point(2, 264);
+            this.TotalMarkstxt.MaxLength = 32767;
+            this.TotalMarkstxt.MouseState = MaterialSkin.MouseState.OUT;
+            this.TotalMarkstxt.Name = "TotalMarkstxt";
+            this.TotalMarkstxt.PasswordChar = '\0';
+            this.TotalMarkstxt.PrefixSuffixText = null;
+            this.TotalMarkstxt.ReadOnly = false;
+            this.TotalMarkstxt.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.TotalMarkstxt.SelectedText = "";
+            this.TotalMarkstxt.SelectionLength = 0;
+            this.TotalMarkstxt.SelectionStart = 0;
+            this.TotalMarkstxt.ShortcutsEnabled = true;
+            this.TotalMarkstxt.Size = new System.Drawing.Size(361, 48);
+            this.TotalMarkstxt.TabIndex = 5;
+            this.TotalMarkstxt.TabStop = false;
+            this.TotalMarkstxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.TotalMarkstxt.TrailingIcon = null;
+            this.TotalMarkstxt.UseSystemPasswordChar = false;
+            this.TotalMarkstxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TotalMarkstxt_KeyPress);
             // 
-            // RubricLeveltxt
+            // Nametxt
             // 
-            this.RubricLeveltxt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.RubricLeveltxt.AnimateReadOnly = false;
-            this.RubricLeveltxt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.RubricLeveltxt.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.RubricLeveltxt.Depth = 0;
-            this.RubricLeveltxt.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.RubricLeveltxt.HideSelection = true;
-            this.RubricLeveltxt.Hint = "Enter Rubriic Level";
-            this.RubricLeveltxt.LeadingIcon = null;
-            this.RubricLeveltxt.Location = new System.Drawing.Point(-1, 144);
-            this.RubricLeveltxt.MaxLength = 32767;
-            this.RubricLeveltxt.MouseState = MaterialSkin.MouseState.OUT;
-            this.RubricLeveltxt.Name = "RubricLeveltxt";
-            this.RubricLeveltxt.PasswordChar = '\0';
-            this.RubricLeveltxt.PrefixSuffixText = null;
-            this.RubricLeveltxt.ReadOnly = false;
-            this.RubricLeveltxt.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.RubricLeveltxt.SelectedText = "";
-            this.RubricLeveltxt.SelectionLength = 0;
-            this.RubricLeveltxt.SelectionStart = 0;
-            this.RubricLeveltxt.ShortcutsEnabled = true;
-            this.RubricLeveltxt.Size = new System.Drawing.Size(360, 48);
-            this.RubricLeveltxt.TabIndex = 4;
-            this.RubricLeveltxt.TabStop = false;
-            this.RubricLeveltxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.RubricLeveltxt.TrailingIcon = null;
-            this.RubricLeveltxt.UseSystemPasswordChar = false;
+            this.Nametxt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.Nametxt.AnimateReadOnly = false;
+            this.Nametxt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.Nametxt.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.Nametxt.Depth = 0;
+            this.Nametxt.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.Nametxt.HideSelection = true;
+            this.Nametxt.Hint = "Name";
+            this.Nametxt.LeadingIcon = null;
+            this.Nametxt.Location = new System.Drawing.Point(3, 193);
+            this.Nametxt.MaxLength = 32767;
+            this.Nametxt.MouseState = MaterialSkin.MouseState.OUT;
+            this.Nametxt.Name = "Nametxt";
+            this.Nametxt.PasswordChar = '\0';
+            this.Nametxt.PrefixSuffixText = null;
+            this.Nametxt.ReadOnly = false;
+            this.Nametxt.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.Nametxt.SelectedText = "";
+            this.Nametxt.SelectionLength = 0;
+            this.Nametxt.SelectionStart = 0;
+            this.Nametxt.ShortcutsEnabled = true;
+            this.Nametxt.Size = new System.Drawing.Size(360, 48);
+            this.Nametxt.TabIndex = 4;
+            this.Nametxt.TabStop = false;
+            this.Nametxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.Nametxt.TrailingIcon = null;
+            this.Nametxt.UseSystemPasswordChar = false;
+            this.Nametxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Nametxt_KeyPress);
             // 
             // bunifuThinButton23
             // 
@@ -554,94 +647,49 @@
             this.bunifuThinButton23.IdleFillColor = System.Drawing.Color.White;
             this.bunifuThinButton23.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.bunifuThinButton23.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton23.Location = new System.Drawing.Point(16, 280);
+            this.bunifuThinButton23.Location = new System.Drawing.Point(16, 331);
             this.bunifuThinButton23.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuThinButton23.Name = "bunifuThinButton23";
             this.bunifuThinButton23.Size = new System.Drawing.Size(323, 41);
             this.bunifuThinButton23.TabIndex = 3;
             this.bunifuThinButton23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton23.Click += new System.EventHandler(this.BunifuThinButton23_Click);
             // 
-            // marksError
+            // SelectAssesmentIDComboBox
             // 
-            this.marksError.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.marksError.AutoSize = true;
-            this.marksError.ForeColor = System.Drawing.Color.Red;
-            this.marksError.Location = new System.Drawing.Point(204, 182);
-            this.marksError.Name = "marksError";
-            this.marksError.Size = new System.Drawing.Size(0, 13);
-            this.marksError.TabIndex = 12;
+            this.SelectAssesmentIDComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.SelectAssesmentIDComboBox.AutoResize = false;
+            this.SelectAssesmentIDComboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.SelectAssesmentIDComboBox.Depth = 0;
+            this.SelectAssesmentIDComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.SelectAssesmentIDComboBox.DropDownHeight = 174;
+            this.SelectAssesmentIDComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.SelectAssesmentIDComboBox.DropDownWidth = 121;
+            this.SelectAssesmentIDComboBox.Font = new System.Drawing.Font("Roboto Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.SelectAssesmentIDComboBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.SelectAssesmentIDComboBox.FormattingEnabled = true;
+            this.SelectAssesmentIDComboBox.Hint = "Select Assesment ID";
+            this.SelectAssesmentIDComboBox.IntegralHeight = false;
+            this.SelectAssesmentIDComboBox.ItemHeight = 43;
+            this.SelectAssesmentIDComboBox.Location = new System.Drawing.Point(0, 119);
+            this.SelectAssesmentIDComboBox.MaxDropDownItems = 4;
+            this.SelectAssesmentIDComboBox.MouseState = MaterialSkin.MouseState.OUT;
+            this.SelectAssesmentIDComboBox.Name = "SelectAssesmentIDComboBox";
+            this.SelectAssesmentIDComboBox.Size = new System.Drawing.Size(359, 49);
+            this.SelectAssesmentIDComboBox.StartIndex = 0;
+            this.SelectAssesmentIDComboBox.TabIndex = 12;
             // 
-            // markstxt
+            // linkLabel1
             // 
-            this.markstxt.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.markstxt.AnimateReadOnly = false;
-            this.markstxt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.markstxt.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.markstxt.Depth = 0;
-            this.markstxt.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.markstxt.HideSelection = true;
-            this.markstxt.Hint = "Total Marks";
-            this.markstxt.LeadingIcon = null;
-            this.markstxt.Location = new System.Drawing.Point(175, 131);
-            this.markstxt.MaxLength = 32767;
-            this.markstxt.MouseState = MaterialSkin.MouseState.OUT;
-            this.markstxt.Name = "markstxt";
-            this.markstxt.PasswordChar = '\0';
-            this.markstxt.PrefixSuffixText = null;
-            this.markstxt.ReadOnly = false;
-            this.markstxt.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.markstxt.SelectedText = "";
-            this.markstxt.SelectionLength = 0;
-            this.markstxt.SelectionStart = 0;
-            this.markstxt.ShortcutsEnabled = true;
-            this.markstxt.Size = new System.Drawing.Size(165, 48);
-            this.markstxt.TabIndex = 11;
-            this.markstxt.TabStop = false;
-            this.markstxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.markstxt.TrailingIcon = null;
-            this.markstxt.UseSystemPasswordChar = false;
-            this.markstxt.Visible = false;
-            // 
-            // weightageError
-            // 
-            this.weightageError.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.weightageError.AutoSize = true;
-            this.weightageError.ForeColor = System.Drawing.Color.Red;
-            this.weightageError.Location = new System.Drawing.Point(112, 266);
-            this.weightageError.Name = "weightageError";
-            this.weightageError.Size = new System.Drawing.Size(0, 13);
-            this.weightageError.TabIndex = 5;
-            // 
-            // weightagetxt
-            // 
-            this.weightagetxt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.weightagetxt.AnimateReadOnly = false;
-            this.weightagetxt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.weightagetxt.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.weightagetxt.Depth = 0;
-            this.weightagetxt.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.weightagetxt.HideSelection = true;
-            this.weightagetxt.Hint = "Total Weightage";
-            this.weightagetxt.LeadingIcon = null;
-            this.weightagetxt.Location = new System.Drawing.Point(78, 215);
-            this.weightagetxt.MaxLength = 32767;
-            this.weightagetxt.MouseState = MaterialSkin.MouseState.OUT;
-            this.weightagetxt.Name = "weightagetxt";
-            this.weightagetxt.PasswordChar = '\0';
-            this.weightagetxt.PrefixSuffixText = null;
-            this.weightagetxt.ReadOnly = false;
-            this.weightagetxt.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.weightagetxt.SelectedText = "";
-            this.weightagetxt.SelectionLength = 0;
-            this.weightagetxt.SelectionStart = 0;
-            this.weightagetxt.ShortcutsEnabled = true;
-            this.weightagetxt.Size = new System.Drawing.Size(170, 48);
-            this.weightagetxt.TabIndex = 4;
-            this.weightagetxt.TabStop = false;
-            this.weightagetxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.weightagetxt.TrailingIcon = null;
-            this.weightagetxt.UseSystemPasswordChar = false;
-            this.weightagetxt.Visible = false;
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.LinkColor = System.Drawing.Color.Black;
+            this.linkLabel1.Location = new System.Drawing.Point(295, 103);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(44, 13);
+            this.linkLabel1.TabIndex = 13;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Refresh";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabel1_LinkClicked);
             // 
             // UC_Assesment
             // 
@@ -673,7 +721,7 @@
         private MaterialSkin.Controls.MaterialLabel DeleteAssesment;
         private MaterialSkin.Controls.MaterialLabel UpdateAssesment;
         private Bunifu.Framework.UI.BunifuThinButton2 DeleteBtn;
-        private System.Windows.Forms.LinkLabel Refresh;
+        private new System.Windows.Forms.LinkLabel Refresh;
         private MaterialSkin.Controls.MaterialComboBox UpdateAssesmentcombobox;
         private Bunifu.Framework.UI.BunifuThinButton2 UpdateBtn;
         private System.Windows.Forms.Label TitleError;
@@ -685,14 +733,16 @@
         private System.Windows.Forms.LinkLabel linkLabel3;
         private MaterialSkin.Controls.MaterialComboBox SelectRubricIDComboBox;
         private Bunifu.UI.WinForms.BunifuDropdown bunifuDropdown1;
-        private System.Windows.Forms.Label MeasurementLevelError;
-        private System.Windows.Forms.Label RubricLevelError;
-        private MaterialSkin.Controls.MaterialTextBox2 MeasurmentLeveltxt;
-        private MaterialSkin.Controls.MaterialTextBox2 RubricLeveltxt;
+        private System.Windows.Forms.Label TotalMarkslError;
+        private System.Windows.Forms.Label NameError;
+        private MaterialSkin.Controls.MaterialTextBox2 TotalMarkstxt;
+        private MaterialSkin.Controls.MaterialTextBox2 Nametxt;
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton23;
         private System.Windows.Forms.Label weightageError;
         private System.Windows.Forms.Label marksError;
         private MaterialSkin.Controls.MaterialTextBox2 weightagetxt;
         private MaterialSkin.Controls.MaterialTextBox2 markstxt;
+        private MaterialSkin.Controls.MaterialComboBox SelectAssesmentIDComboBox;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }
