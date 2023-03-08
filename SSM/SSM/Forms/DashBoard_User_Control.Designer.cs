@@ -236,9 +236,8 @@
             this.circularProgressBar1.SuperscriptMargin = new System.Windows.Forms.Padding(10, 35, 0, 0);
             this.circularProgressBar1.SuperscriptText = "";
             this.circularProgressBar1.TabIndex = 1;
-            this.circularProgressBar1.Text = "65%";
+            this.circularProgressBar1.Text = "0%";
             this.circularProgressBar1.TextMargin = new System.Windows.Forms.Padding(8, 8, 0, 0);
-            this.circularProgressBar1.Value = 60;
             // 
             // label6
             // 

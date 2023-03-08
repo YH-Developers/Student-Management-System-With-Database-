@@ -78,7 +78,10 @@ namespace SSM.Forms
         private void BunifuButton1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            
+            Add_Student newUserControl = new Add_Student();
+            this.Parent.Controls.Add(newUserControl);
+            newUserControl.BringToFront();
+
         }
 
         private void BunifuLabel2_Click(object sender, EventArgs e)

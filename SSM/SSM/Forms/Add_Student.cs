@@ -69,6 +69,7 @@ namespace SSM.Forms
         private void Add_Student_Load(object sender, EventArgs e)
         {
             bunifuButton4.Visible = true;
+           
         }
 
         /// <summary>
@@ -304,7 +305,7 @@ namespace SSM.Forms
         /// </summary>
         public void Load_Student_Data()
         {
-            // Data BAse Connection To Show Data In the Text Boxes.
+            // Data Base Connection To Show Data In the Text Boxes.
             var con = Configuration.getInstance().getConnection();
             SqlCommand cmd = new SqlCommand("Select * from Student where ID=@ID", con);
             con.Close();
@@ -330,6 +331,11 @@ namespace SSM.Forms
             txtPhoneNumber.Clear();
             txtEmail.Clear();
             materialTextBox3.Clear();
+        }
+
+        private void Backbtn_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

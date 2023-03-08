@@ -52,7 +52,7 @@
             this.bunifuLabel1.AutoEllipsis = false;
             this.bunifuLabel1.CursorType = null;
             this.bunifuLabel1.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold);
-            this.bunifuLabel1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.bunifuLabel1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.bunifuLabel1.Location = new System.Drawing.Point(25, 29);
             this.bunifuLabel1.Name = "bunifuLabel1";
             this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -155,7 +155,7 @@
             this.bunifuButton4.IdleIconLeftImage = null;
             this.bunifuButton4.IdleIconRightImage = null;
             this.bunifuButton4.IndicateFocus = false;
-            this.bunifuButton4.Location = new System.Drawing.Point(145, 395);
+            this.bunifuButton4.Location = new System.Drawing.Point(174, 395);
             this.bunifuButton4.Name = "bunifuButton4";
             this.bunifuButton4.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.bunifuButton4.OnDisabledState.BorderRadius = 1;
@@ -379,7 +379,7 @@
             this.bunifuButton2.IdleIconLeftImage = null;
             this.bunifuButton2.IdleIconRightImage = null;
             this.bunifuButton2.IndicateFocus = false;
-            this.bunifuButton2.Location = new System.Drawing.Point(515, 395);
+            this.bunifuButton2.Location = new System.Drawing.Point(454, 395);
             this.bunifuButton2.Name = "bunifuButton2";
             this.bunifuButton2.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.bunifuButton2.OnDisabledState.BorderRadius = 1;

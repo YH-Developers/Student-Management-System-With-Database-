@@ -11,6 +11,8 @@ using System.Data.SqlClient;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
 using System.IO;
+using System.Net;
+using System.Net.Mail;
 
 namespace SSM.Forms
 {
@@ -224,6 +226,7 @@ namespace SSM.Forms
 
                         transaction.Commit();
                         MessageBox.Show("Attendance saved successfully.");
+                    Email_Snd();
                     }
                     catch (Exception ex)
                     {
@@ -232,5 +235,61 @@ namespace SSM.Forms
                     }
                 }
         }
+
+        public void Email_Snd()
+        {
+
+
+                // Get all the student emails
+                string query = "SELECT Email FROM Student";
+            var con = Configuration.getInstance().getConnection();
+            using (SqlCommand command = new SqlCommand(query, con))
+                {
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        // Store the emails in an array
+                        var emails = new System.Collections.Generic.List<string>();
+
+                        while (reader.Read())
+                        {
+                            string email = (string)reader["Email"];
+                            emails.Add(email);
+                        }
+
+                        // Send a "hello" email to each student
+                        foreach (string email in emails)
+                        {
+                            SendHelloEmail(email);
+                        }
+                    }
+                }
+
+            
+        }
+
+        static void SendHelloEmail(string email)
+        {
+            // Replace the SMTP server, email address, password, and message text with your own values
+            string smtpServer = "smtp.gmail.com";
+            string fromEmail = "hyasir368@gmail.com";
+            string password = "";
+            string message = "Hello!";
+
+            using (var client = new SmtpClient(smtpServer))
+            {
+                client.UseDefaultCredentials = false;
+                client.Credentials = new NetworkCredential(fromEmail, password);
+                client.EnableSsl = true;
+                client.Port = 587;
+
+                using (var msg = new MailMessage(fromEmail, email, "Hello from Assessment App", message))
+                {
+                    client.Send(msg);
+                }
+            }
+
+           MessageBox.Show("Sent hello email to {0}.", email);
+        }
     }
 }
+
