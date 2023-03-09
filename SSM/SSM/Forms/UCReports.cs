@@ -26,7 +26,33 @@ namespace SSM.Forms
         private void UCReports_Load(object sender, EventArgs e)
         {
             var con = Configuration.getInstance().getConnection();
-            SqlCommand cmd = new SqlCommand("SELECT s.Id AS StudentId, s.FirstName, s.LastName, assessment.Title AS AssessmentTitle, SUM(CASE WHEN rubric.CloId = 1 THEN rubricLevel.MeasurementLevel * assessmentComponent.TotalMarks / assessment.TotalWeightage ELSE NULL END) AS Clo1_Obtained,SUM(CASE WHEN rubric.CloId = 1 THEN assessmentComponent.TotalMarks ELSE NULL END) AS Clo1_Total,SUM(CASE WHEN rubric.CloId = 2 THEN rubricLevel.MeasurementLevel * assessmentComponent.TotalMarks / assessment.TotalWeightage ELSE NULL END) AS Clo2_Obtained,SUM(CASE WHEN rubric.CloId = 2 THEN assessmentComponent.TotalMarks ELSE NULL END) AS Clo2_Total,SUM(CASE WHEN rubric.CloId = 3 THEN rubricLevel.MeasurementLevel * assessmentComponent.TotalMarks / assessment.TotalWeightage ELSE NULL END) AS Clo3_Obtained,SUM(CASE WHEN rubric.CloId = 3 THEN assessmentComponent.TotalMarks ELSE NULL END) AS Clo3_Total,SUM(rubricLevel.MeasurementLevel * assessmentComponent.TotalMarks / assessment.TotalWeightage) AS ObtainedMarks,SUM(assessmentComponent.TotalMarks) AS TotalMarks,assessment.DateCreated FROM Student s INNER JOIN StudentResult studentResult ON s.Id = studentResult.StudentId INNER JOIN AssessmentComponent assessmentComponent ON studentResult.AssessmentComponentId = assessmentComponent.Id INNER JOIN Assessment assessment ON assessmentComponent.AssessmentId = assessment.Id INNER JOIN Rubric rubric ON assessmentComponent.RubricId = rubric.Id INNER JOIN RubricLevel rubricLevel ON rubric.Id = rubricLevel.RubricId AND studentResult.RubricMeasurementId = rubricLevel.Id GROUP BY s.Id, s.FirstName, s.LastName, assessment.Title, assessment.DateCreated ORDER BY s.LastName, s.FirstName, assessment.DateCreated", con);
+            SqlCommand cmd = new SqlCommand(@"SELECT 
+  CONCAT(Student.FirstName, ' ', Student.LastName) AS StudentName, 
+  Assessment.Id AS AssessmentId, 
+  Clo.Name AS CloName, 
+  SUM((StudentResult.RubricMeasurementId / MaxRubricLevel.MaxLevel * AssessmentComponent.TotalMarks) * Assessment.TotalWeightage ) AS ObtainedMarks,
+  SUM(AssessmentComponent.TotalMarks) AS TotalMarks
+FROM 
+  Student
+  INNER JOIN StudentResult ON StudentResult.StudentId = Student.Id
+  INNER JOIN AssessmentComponent ON StudentResult.AssessmentComponentId = AssessmentComponent.Id
+  INNER JOIN Assessment ON AssessmentComponent.AssessmentId = Assessment.Id
+  INNER JOIN Rubric ON AssessmentComponent.RubricId = Rubric.Id
+  INNER JOIN Clo ON Rubric.CloId = Clo.Id
+  INNER JOIN (
+    SELECT RubricId, MAX(MeasurementLevel) AS MaxLevel
+    FROM RubricLevel
+    GROUP BY RubricId
+  ) AS MaxRubricLevel ON MaxRubricLevel.RubricId = Rubric.Id
+GROUP BY 
+  CONCAT(Student.FirstName, ' ', Student.LastName), 
+  Assessment.Id, 
+  Clo.Name
+ORDER BY 
+  StudentName, 
+  AssessmentId, 
+  CloName
+", con);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             da.Fill(dt);
@@ -52,9 +78,34 @@ namespace SSM.Forms
 
                 // Open the document
                 document.Open();
+                
+                // Create a new font for the heading
+                iTextSharp.text.Font headingFont = FontFactory.GetFont("Times New Roman", 18, iTextSharp.text.Font.BOLD);
+
+                // Create a new paragraph for the heading
+                Paragraph heading = new Paragraph("Final Report", headingFont);
+                heading.Alignment = Element.ALIGN_CENTER;
+                heading.SpacingBefore = 10f;
+                heading.SpacingAfter = 10f;
+
+                // Add the heading to the document
+                document.Add(heading);
+
+                // Create a new paragraph for the course name
+                iTextSharp.text.Font courseFont = FontFactory.GetFont("Times New Roman", 12);
+                Paragraph course = new Paragraph("Course: Database", courseFont);
+                course.Alignment = Element.ALIGN_LEFT;
+                course.IndentationLeft = 55f; // Add a little space from the left side
+                course.SpacingAfter = 20f;
+
+                // Add the course name to the document
+                document.Add(course);
 
                 // Create a new PdfPTable object with the same number of columns as the DataGridView control
                 PdfPTable pdfTable = new PdfPTable(dataGridView.ColumnCount);
+
+                // Set the font size of the table
+                iTextSharp.text.Font tableFont = FontFactory.GetFont("Times New Roman", 10);
 
                 // Loop through each column in the DataGridView control and add a new PdfPCell object to the PdfPTable object
                 for (int i = 0; i < dataGridView.ColumnCount; i++)
@@ -91,6 +142,11 @@ namespace SSM.Forms
                 // Display a message box with the path to the PDF file
                 MessageBox.Show("PDF report generated successfully. File saved at: " + pdfFilePath);
             }
+        }
+
+        private void BunifuDataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

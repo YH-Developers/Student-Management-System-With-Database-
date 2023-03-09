@@ -101,6 +101,7 @@
             this.bunifuDataGridView1.Size = new System.Drawing.Size(784, 454);
             this.bunifuDataGridView1.TabIndex = 0;
             this.bunifuDataGridView1.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
+            this.bunifuDataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.BunifuDataGridView1_CellContentClick);
             // 
             // bunifuThinButton21
             // 

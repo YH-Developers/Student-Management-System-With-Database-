@@ -82,7 +82,7 @@ namespace SSM.Forms
             student_User_Control1.Hide();
             attendence1.Hide();
             dashBoard_User_Control1.Hide();
-            uC_Assesment1.BringToFront();
+            uC_Evaluation1.BringToFront();
         }
 
         private void Button1_Click(object sender, EventArgs e)

@@ -274,6 +274,7 @@ namespace SSM.Forms
         private void MaterialLabel3_Click(object sender, EventArgs e)
         {
             CloName.Visible = true;
+            linkLabel1.Visible=false;
             Updateclocombobox.Visible = false;
             bunifuThinButton21.Visible = true;
             bunifuThinButton25.Visible = false;

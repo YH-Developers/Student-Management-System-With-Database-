@@ -21,12 +21,7 @@ namespace SSM.Forms
 
         private void BunifuButton4_Click(object sender, EventArgs e)
         {
-            var con = Configuration.getInstance().getConnection();
-            SqlCommand cmd = new SqlCommand("SELECT s.Id,s.FirstName,s.LastName,s.Contact,s.Email,s.RegistrationNumber, l.Name as Status FROM Student s JOIN lookup l ON s.Status = l.LookupId;", con);
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            bunifuDataGridView1.DataSource = dt;
+            
         }
 
         private void Student_User_Control_Load(object sender, EventArgs e)
