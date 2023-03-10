@@ -26,32 +26,7 @@ namespace SSM.Forms
 
         private void UCReports_Load(object sender, EventArgs e)
         {
-            var con = Configuration.getInstance().getConnection();
-            SqlCommand cmd = new SqlCommand(@"SELECT S.RegistrationNumber, CASE WHEN A.Id IS NULL THEN '-' ELSE A.Title END AS Assessment, CASE WHEN AC.Name IS NULL THEN '-' ELSE AC.Name END AS AssesmentComponent , CASE WHEN AC.Id IS NULL THEN '-' ELSE C.Name END AS CLO, CASE WHEN A.Id IS NULL THEN '-' ELSE AC.TotalMarks END AS TotalMarks, CASE WHEN AC.Name IS NULL THEN '0' ELSE CAST( (SUM(((RL.MeasurementLevel/(RL.Maximum*1.0)) * AC.TotalMarks))) AS decimal(9,2)) END  AS Obtained_Marks
-FROM Student S
-LEFT JOIN StudentResult SR
-ON S.Id = SR.StudentId
-LEFT JOIN AssessmentComponent AC
-ON AC.Id = SR.AssessmentComponentId
-LEFT JOIN Assessment A
-ON A.Id = AC.AssessmentId
-LEFT JOIN Rubric R
-ON R.Id = AC.RubricId
-LEFT JOIN Clo C
-ON C.Id = R.CloId
-LEFT JOIN (SELECT Id,RubricId ,MeasurementLevel , R.Maximum FROM RubricLevel, (SELECT 
-		RubricId AS RID, Max(RubricLevel.MeasurementLevel) AS Maximum 
-		FROM RubricLevel 
-		GROUP BY RubricId) AS R 
-		WHERE RubricLevel.RubricId = R.RID ) AS RL
-ON SR.RubricMeasurementId = RL.ID
-GROUP BY S.Id, S.RegistrationNumber, A.Id,A.Title, AC.Id, AC.Name, AC.TotalMarks, C.Id, C.Name
-HAVING S.RegistrationNumber LIKE '%'
-", con);
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            bunifuDataGridView1.DataSource = dt;
+            
         }
 
         private void BunifuThinButton21_Click(object sender, EventArgs e)
@@ -156,6 +131,107 @@ HAVING S.RegistrationNumber LIKE '%'
         private void BunifuDataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void SelectReportType_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if(SelectReportType.Text== "Assesment Component Wise Report")
+            {
+                var con = Configuration.getInstance().getConnection();
+                SqlCommand cmd = new SqlCommand(@"SELECT S.RegistrationNumber, CASE WHEN A.Id IS NULL THEN '-' ELSE A.Title END AS Assessment, CASE WHEN AC.Name IS NULL THEN '-' ELSE AC.Name END AS AssesmentComponent , CASE WHEN AC.Id IS NULL THEN '-' ELSE C.Name END AS CLO, CASE WHEN A.Id IS NULL THEN '-' ELSE AC.TotalMarks END AS TotalMarks, CASE WHEN AC.Name IS NULL THEN '0' ELSE CAST( (SUM(((RL.MeasurementLevel/(RL.Maximum*1.0)) * AC.TotalMarks))) AS decimal(9,2)) END  AS Obtained_Marks
+                                                FROM Student S
+                                                LEFT JOIN StudentResult SR
+                                                ON S.Id = SR.StudentId
+                                                LEFT JOIN AssessmentComponent AC
+                                                ON AC.Id = SR.AssessmentComponentId
+                                                LEFT JOIN Assessment A
+                                                ON A.Id = AC.AssessmentId
+                                                LEFT JOIN Rubric R
+                                                ON R.Id = AC.RubricId
+                                                LEFT JOIN Clo C
+                                                ON C.Id = R.CloId
+                                                LEFT JOIN (SELECT Id,RubricId ,MeasurementLevel , R.Maximum FROM RubricLevel, (SELECT 
+		                                                RubricId AS RID, Max(RubricLevel.MeasurementLevel) AS Maximum 
+		                                                FROM RubricLevel 
+		                                                GROUP BY RubricId) AS R 
+		                                                WHERE RubricLevel.RubricId = R.RID ) AS RL
+                                                ON SR.RubricMeasurementId = RL.ID
+                                                GROUP BY S.Id, S.RegistrationNumber, A.Id,A.Title, AC.Id, AC.Name, AC.TotalMarks, C.Id, C.Name
+                                                HAVING S.RegistrationNumber LIKE '%'", con);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                bunifuDataGridView1.DataSource = dt;
+            }
+            else if(SelectReportType.Text== "Clo Wise Report")
+            {
+                var con = Configuration.getInstance().getConnection();
+                SqlCommand cmd = new SqlCommand(@"SELECT S.RegistrationNumber, C.Name AS CLO,
+                                                   COALESCE(SUM(AC.TotalMarks), 0) AS TotalMarks,
+                                                   COALESCE(SUM(((RL.MeasurementLevel / (RL.Maximum * 1.0)) * AC.TotalMarks)), 0) AS ObtainedMarks
+                                            FROM Student S
+                                            LEFT JOIN StudentResult SR ON S.Id = SR.StudentId
+                                            LEFT JOIN AssessmentComponent AC ON AC.Id = SR.AssessmentComponentId
+                                            LEFT JOIN Assessment A ON A.Id = AC.AssessmentId
+                                            LEFT JOIN Rubric R ON R.Id = AC.RubricId
+                                            LEFT JOIN Clo C ON C.Id = R.CloId
+                                            LEFT JOIN (SELECT Id, RubricId, MeasurementLevel, R.Maximum FROM RubricLevel, 
+                                                       (SELECT RubricId AS RID, MAX(RubricLevel.MeasurementLevel) AS Maximum 
+                                                        FROM RubricLevel GROUP BY RubricId) AS R 
+                                                       WHERE RubricLevel.RubricId = R.RID) AS RL ON SR.RubricMeasurementId = RL.ID
+                                            GROUP BY S.RegistrationNumber, C.Name
+                                            ORDER BY S.RegistrationNumber, C.Name;", con);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                bunifuDataGridView1.DataSource = dt;
+            }
+            else if(SelectReportType.Text== "Total Result Report")
+            {
+                var con = Configuration.getInstance().getConnection();
+                SqlCommand cmd = new SqlCommand(@"SELECT S.RegistrationNumber,
+                                                  COALESCE(SUM(AC.TotalMarks), 0) AS TotalMarks,
+                                                  COALESCE(SUM(((RL.MeasurementLevel / (RL.Maximum * 1.0)) * AC.TotalMarks)), 0) AS ObtainedMarks
+                                                  FROM Student S
+                                                  LEFT JOIN StudentResult SR ON S.Id = SR.StudentId
+                                                  LEFT JOIN AssessmentComponent AC ON AC.Id = SR.AssessmentComponentId
+                                                  LEFT JOIN Assessment A ON A.Id = AC.AssessmentId
+                                                  LEFT JOIN Rubric R ON R.Id = AC.RubricId
+                                                  LEFT JOIN Clo C ON C.Id = R.CloId
+                                                  LEFT JOIN (SELECT Id, RubricId, MeasurementLevel, R.Maximum FROM RubricLevel, 
+                                                           (SELECT RubricId AS RID, MAX(RubricLevel.MeasurementLevel) AS Maximum 
+                                                            FROM RubricLevel GROUP BY RubricId) AS R 
+                                                           WHERE RubricLevel.RubricId = R.RID) AS RL ON SR.RubricMeasurementId = RL.ID
+                                                  GROUP BY S.RegistrationNumber
+                                                  ORDER BY S.RegistrationNumber;", con);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                bunifuDataGridView1.DataSource = dt;
+            }
+            else if(SelectReportType.Text== "Assesment Wise Report")
+            {
+                var con = Configuration.getInstance().getConnection();
+                SqlCommand cmd = new SqlCommand(@"SELECT S.RegistrationNumber, A.Title AS Assessment,
+                                                       COALESCE(SUM(AC.TotalMarks), 0) AS TotalMarks,
+                                                       COALESCE(SUM(((RL.MeasurementLevel / (RL.Maximum * 1.0)) * AC.TotalMarks)), 0) AS ObtainedMarks
+                                                FROM Student S
+                                                LEFT JOIN StudentResult SR ON S.Id = SR.StudentId
+                                                LEFT JOIN AssessmentComponent AC ON AC.Id = SR.AssessmentComponentId
+                                                LEFT JOIN Assessment A ON A.Id = AC.AssessmentId
+                                                LEFT JOIN Rubric R ON R.Id = AC.RubricId
+                                                LEFT JOIN Clo C ON C.Id = R.CloId
+                                                LEFT JOIN (SELECT Id, RubricId, MeasurementLevel, R.Maximum FROM RubricLevel, 
+                                                           (SELECT RubricId AS RID, MAX(RubricLevel.MeasurementLevel) AS Maximum 
+                                                            FROM RubricLevel GROUP BY RubricId) AS R 
+                                                           WHERE RubricLevel.RubricId = R.RID) AS RL ON SR.RubricMeasurementId = RL.ID
+                                                GROUP BY S.RegistrationNumber, A.Title
+                                                ORDER BY S.RegistrationNumber, A.Title;", con);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                bunifuDataGridView1.DataSource = dt;
+            }
         }
     }
 }

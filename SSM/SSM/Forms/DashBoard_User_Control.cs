@@ -50,5 +50,10 @@ namespace SSM.Forms
         {
 
         }
+
+        private void TableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

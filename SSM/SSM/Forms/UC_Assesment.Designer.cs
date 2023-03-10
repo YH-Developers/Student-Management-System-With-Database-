@@ -49,6 +49,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.SelectAssesmentIDComboBox = new MaterialSkin.Controls.MaterialComboBox();
             this.linkLabel3 = new System.Windows.Forms.LinkLabel();
             this.SelectRubricIDComboBox = new MaterialSkin.Controls.MaterialComboBox();
             this.bunifuDropdown1 = new Bunifu.UI.WinForms.BunifuDropdown();
@@ -57,8 +59,6 @@
             this.TotalMarkstxt = new MaterialSkin.Controls.MaterialTextBox2();
             this.Nametxt = new MaterialSkin.Controls.MaterialTextBox2();
             this.bunifuThinButton23 = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.SelectAssesmentIDComboBox = new MaterialSkin.Controls.MaterialComboBox();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -237,6 +237,8 @@
             // 
             // UpdateAssesment
             // 
+            this.UpdateAssesment.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.UpdateAssesment.AutoSize = true;
             this.UpdateAssesment.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.UpdateAssesment.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -467,6 +469,42 @@
             this.panel2.Size = new System.Drawing.Size(360, 386);
             this.panel2.TabIndex = 6;
             // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.LinkColor = System.Drawing.Color.Black;
+            this.linkLabel1.Location = new System.Drawing.Point(295, 103);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(44, 13);
+            this.linkLabel1.TabIndex = 13;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Refresh";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabel1_LinkClicked);
+            // 
+            // SelectAssesmentIDComboBox
+            // 
+            this.SelectAssesmentIDComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.SelectAssesmentIDComboBox.AutoResize = false;
+            this.SelectAssesmentIDComboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.SelectAssesmentIDComboBox.Depth = 0;
+            this.SelectAssesmentIDComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.SelectAssesmentIDComboBox.DropDownHeight = 174;
+            this.SelectAssesmentIDComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.SelectAssesmentIDComboBox.DropDownWidth = 121;
+            this.SelectAssesmentIDComboBox.Font = new System.Drawing.Font("Roboto Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.SelectAssesmentIDComboBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.SelectAssesmentIDComboBox.FormattingEnabled = true;
+            this.SelectAssesmentIDComboBox.Hint = "Select Assesment ID";
+            this.SelectAssesmentIDComboBox.IntegralHeight = false;
+            this.SelectAssesmentIDComboBox.ItemHeight = 43;
+            this.SelectAssesmentIDComboBox.Location = new System.Drawing.Point(0, 119);
+            this.SelectAssesmentIDComboBox.MaxDropDownItems = 4;
+            this.SelectAssesmentIDComboBox.MouseState = MaterialSkin.MouseState.OUT;
+            this.SelectAssesmentIDComboBox.Name = "SelectAssesmentIDComboBox";
+            this.SelectAssesmentIDComboBox.Size = new System.Drawing.Size(359, 49);
+            this.SelectAssesmentIDComboBox.StartIndex = 0;
+            this.SelectAssesmentIDComboBox.TabIndex = 12;
+            // 
             // linkLabel3
             // 
             this.linkLabel3.AutoSize = true;
@@ -654,42 +692,6 @@
             this.bunifuThinButton23.TabIndex = 3;
             this.bunifuThinButton23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuThinButton23.Click += new System.EventHandler(this.BunifuThinButton23_Click);
-            // 
-            // SelectAssesmentIDComboBox
-            // 
-            this.SelectAssesmentIDComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.SelectAssesmentIDComboBox.AutoResize = false;
-            this.SelectAssesmentIDComboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.SelectAssesmentIDComboBox.Depth = 0;
-            this.SelectAssesmentIDComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.SelectAssesmentIDComboBox.DropDownHeight = 174;
-            this.SelectAssesmentIDComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.SelectAssesmentIDComboBox.DropDownWidth = 121;
-            this.SelectAssesmentIDComboBox.Font = new System.Drawing.Font("Roboto Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.SelectAssesmentIDComboBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.SelectAssesmentIDComboBox.FormattingEnabled = true;
-            this.SelectAssesmentIDComboBox.Hint = "Select Assesment ID";
-            this.SelectAssesmentIDComboBox.IntegralHeight = false;
-            this.SelectAssesmentIDComboBox.ItemHeight = 43;
-            this.SelectAssesmentIDComboBox.Location = new System.Drawing.Point(0, 119);
-            this.SelectAssesmentIDComboBox.MaxDropDownItems = 4;
-            this.SelectAssesmentIDComboBox.MouseState = MaterialSkin.MouseState.OUT;
-            this.SelectAssesmentIDComboBox.Name = "SelectAssesmentIDComboBox";
-            this.SelectAssesmentIDComboBox.Size = new System.Drawing.Size(359, 49);
-            this.SelectAssesmentIDComboBox.StartIndex = 0;
-            this.SelectAssesmentIDComboBox.TabIndex = 12;
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.LinkColor = System.Drawing.Color.Black;
-            this.linkLabel1.Location = new System.Drawing.Point(295, 103);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(44, 13);
-            this.linkLabel1.TabIndex = 13;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Refresh";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabel1_LinkClicked);
             // 
             // UC_Assesment
             // 

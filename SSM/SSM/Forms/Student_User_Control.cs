@@ -71,7 +71,12 @@ namespace SSM.Forms
         private void BunifuButton3_Click(object sender, EventArgs e)
         {
             var con = Configuration.getInstance().getConnection();
-            SqlCommand cmd = new SqlCommand("DELETE FROM Student WHERE ID=@ID", con);
+            SqlCommand cmd = new SqlCommand(@"
+                        DELETE FROM StudentAttendance WHERE StudentId = @ID;
+                        DELETE FROM StudentResult WHERE StudentId = @ID;
+                        DELETE FROM ClassAttendance WHERE Id IN(SELECT AttendanceId FROM StudentAttendance WHERE StudentId = @ID);
+                        DELETE FROM Student WHERE Id = @ID;                        
+", con);
             cmd.Parameters.AddWithValue("@ID", int.Parse(SelectId.Text));
             cmd.ExecuteNonQuery();
             MessageBox.Show("Successfully deleted...");
