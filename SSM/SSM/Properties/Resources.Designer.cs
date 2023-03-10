@@ -133,6 +133,16 @@ namespace SSM.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Report_Pdf {
+            get {
+                object obj = ResourceManager.GetObject("Report_Pdf", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap reports {
             get {
                 object obj = ResourceManager.GetObject("reports", resourceCulture);

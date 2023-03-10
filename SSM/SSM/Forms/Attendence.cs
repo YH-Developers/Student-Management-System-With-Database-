@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
+using iTextSharp.text.pdf.draw;
 using System.IO;
 using System.Net;
 using System.Net.Mail;
@@ -100,7 +101,37 @@ namespace SSM.Forms
 
                 // Open the document
                 document.Open();
+                iTextSharp.text.Image image = iTextSharp.text.Image.GetInstance(@"Report_Pdf.png");
+                image.ScaleAbsolute(50f, 50f);
+                document.Add(image);
 
+
+                // Create a new font for the heading
+                iTextSharp.text.Font headingFont = FontFactory.GetFont("Times New Roman", 18, iTextSharp.text.Font.BOLD);
+
+                // Create a new paragraph for the heading
+                Paragraph heading = new Paragraph("Attendence Report", headingFont);
+                heading.Alignment = Element.ALIGN_CENTER;
+                heading.SpacingBefore = 10f;
+                heading.SpacingAfter = 10f;
+
+                // Add the heading to the document
+                document.Add(heading);
+                // Create a new LineSeparator object
+                LineSeparator line = new LineSeparator();
+
+                // Add the line separator to the paragraph
+                document.Add(line);
+                DateTime attendanceDate = guna2DateTimePicker1.Value;
+                // Create a new paragraph for the course name
+                iTextSharp.text.Font courseFont = FontFactory.GetFont("Times New Roman", 12);
+                Paragraph course = new Paragraph("Date : "+attendanceDate.ToString(), courseFont);
+                course.Alignment = Element.ALIGN_LEFT;
+                course.IndentationLeft = 55f; // Add a little space from the left side
+                course.SpacingAfter = 20f;
+
+                // Add the course name to the document
+                document.Add(course);
                 // Create a new PdfPTable object with the same number of columns as the DataGridView control
                 PdfPTable pdfTable = new PdfPTable(dataGridView.ColumnCount);
 
@@ -290,6 +321,14 @@ namespace SSM.Forms
             }
 
            MessageBox.Show("Sent hello email to :"+ email);
+        }
+
+        private void BunifuThinButton23_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            UC_ViewAttendence newUserControl = new UC_ViewAttendence();
+            this.Parent.Controls.Add(newUserControl);
+            newUserControl.BringToFront();
         }
     }
 }

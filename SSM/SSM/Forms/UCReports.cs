@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
+using iTextSharp.text.pdf.draw;
 using System.IO;
 
 namespace SSM.Forms
@@ -26,32 +27,26 @@ namespace SSM.Forms
         private void UCReports_Load(object sender, EventArgs e)
         {
             var con = Configuration.getInstance().getConnection();
-            SqlCommand cmd = new SqlCommand(@"SELECT 
-  CONCAT(Student.FirstName, ' ', Student.LastName) AS StudentName, 
-  Assessment.Id AS AssessmentId, 
-  Clo.Name AS CloName, 
-  SUM((StudentResult.RubricMeasurementId / MaxRubricLevel.MaxLevel * AssessmentComponent.TotalMarks) * Assessment.TotalWeightage ) AS ObtainedMarks,
-  SUM(AssessmentComponent.TotalMarks) AS TotalMarks
-FROM 
-  Student
-  INNER JOIN StudentResult ON StudentResult.StudentId = Student.Id
-  INNER JOIN AssessmentComponent ON StudentResult.AssessmentComponentId = AssessmentComponent.Id
-  INNER JOIN Assessment ON AssessmentComponent.AssessmentId = Assessment.Id
-  INNER JOIN Rubric ON AssessmentComponent.RubricId = Rubric.Id
-  INNER JOIN Clo ON Rubric.CloId = Clo.Id
-  INNER JOIN (
-    SELECT RubricId, MAX(MeasurementLevel) AS MaxLevel
-    FROM RubricLevel
-    GROUP BY RubricId
-  ) AS MaxRubricLevel ON MaxRubricLevel.RubricId = Rubric.Id
-GROUP BY 
-  CONCAT(Student.FirstName, ' ', Student.LastName), 
-  Assessment.Id, 
-  Clo.Name
-ORDER BY 
-  StudentName, 
-  AssessmentId, 
-  CloName
+            SqlCommand cmd = new SqlCommand(@"SELECT S.RegistrationNumber, CASE WHEN A.Id IS NULL THEN '-' ELSE A.Title END AS Assessment, CASE WHEN AC.Name IS NULL THEN '-' ELSE AC.Name END AS AssesmentComponent , CASE WHEN AC.Id IS NULL THEN '-' ELSE C.Name END AS CLO, CASE WHEN A.Id IS NULL THEN '-' ELSE AC.TotalMarks END AS TotalMarks, CASE WHEN AC.Name IS NULL THEN '0' ELSE CAST( (SUM(((RL.MeasurementLevel/(RL.Maximum*1.0)) * AC.TotalMarks))) AS decimal(9,2)) END  AS Obtained_Marks
+FROM Student S
+LEFT JOIN StudentResult SR
+ON S.Id = SR.StudentId
+LEFT JOIN AssessmentComponent AC
+ON AC.Id = SR.AssessmentComponentId
+LEFT JOIN Assessment A
+ON A.Id = AC.AssessmentId
+LEFT JOIN Rubric R
+ON R.Id = AC.RubricId
+LEFT JOIN Clo C
+ON C.Id = R.CloId
+LEFT JOIN (SELECT Id,RubricId ,MeasurementLevel , R.Maximum FROM RubricLevel, (SELECT 
+		RubricId AS RID, Max(RubricLevel.MeasurementLevel) AS Maximum 
+		FROM RubricLevel 
+		GROUP BY RubricId) AS R 
+		WHERE RubricLevel.RubricId = R.RID ) AS RL
+ON SR.RubricMeasurementId = RL.ID
+GROUP BY S.Id, S.RegistrationNumber, A.Id,A.Title, AC.Id, AC.Name, AC.TotalMarks, C.Id, C.Name
+HAVING S.RegistrationNumber LIKE '%'
 ", con);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
@@ -78,7 +73,11 @@ ORDER BY
 
                 // Open the document
                 document.Open();
-                
+                iTextSharp.text.Image image = iTextSharp.text.Image.GetInstance(@"Report_Pdf.png");
+                image.ScaleAbsolute(50f, 50f);
+                document.Add(image);
+
+
                 // Create a new font for the heading
                 iTextSharp.text.Font headingFont = FontFactory.GetFont("Times New Roman", 18, iTextSharp.text.Font.BOLD);
 
@@ -90,6 +89,11 @@ ORDER BY
 
                 // Add the heading to the document
                 document.Add(heading);
+                // Create a new LineSeparator object
+                LineSeparator line = new LineSeparator();
+
+                // Add the line separator to the paragraph
+                document.Add(line);
 
                 // Create a new paragraph for the course name
                 iTextSharp.text.Font courseFont = FontFactory.GetFont("Times New Roman", 12);
@@ -128,6 +132,7 @@ ORDER BY
 
                 // Add the PdfPTable object to the document
                 document.Add(pdfTable);
+                
             }
             catch (Exception ex)
             {
@@ -141,6 +146,10 @@ ORDER BY
 
                 // Display a message box with the path to the PDF file
                 MessageBox.Show("PDF report generated successfully. File saved at: " + pdfFilePath);
+                if (File.Exists("report.pdf"))
+                {
+                    System.Diagnostics.Process.Start("report.pdf");
+                }
             }
         }
 

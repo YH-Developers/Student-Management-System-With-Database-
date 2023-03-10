@@ -48,16 +48,17 @@
             this.Picture = new System.Windows.Forms.PictureBox();
             this.btnSettings = new System.Windows.Forms.Button();
             this.panelcontainer = new System.Windows.Forms.Panel();
-            this.bunifuToggleSwitch1 = new Bunifu.UI.WinForms.BunifuToggleSwitch();
+            this.uC_Evaluation1 = new SSM.Forms.UC_Evaluation();
             this.uC_Assesment2 = new SSM.Forms.UC_Assesment();
             this.ucReports1 = new SSM.Forms.UCReports();
             this.uC_CLO1 = new SSM.Forms.UC_CLO();
             this.uC_Assesment1 = new SSM.Forms.UC_Assesment();
             this.student_User_Control1 = new SSM.Forms.Student_User_Control();
-            this.dashBoard_User_Control1 = new SSM.Forms.DashBoard_User_Control();
             this.attendence1 = new SSM.Forms.Attendence();
             this.add_Student1 = new SSM.Forms.Add_Student();
-            this.uC_Evaluation1 = new SSM.Forms.UC_Evaluation();
+            this.bunifuToggleSwitch1 = new Bunifu.UI.WinForms.BunifuToggleSwitch();
+            this.dashBoard_User_Control1 = new SSM.Forms.DashBoard_User_Control();
+            this.uC_ViewAttendence1 = new SSM.Forms.UC_ViewAttendence();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Picture)).BeginInit();
@@ -287,63 +288,31 @@
             this.panelcontainer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelcontainer.Controls.Add(this.uC_ViewAttendence1);
             this.panelcontainer.Controls.Add(this.uC_Evaluation1);
             this.panelcontainer.Controls.Add(this.uC_Assesment2);
             this.panelcontainer.Controls.Add(this.ucReports1);
             this.panelcontainer.Controls.Add(this.uC_CLO1);
             this.panelcontainer.Controls.Add(this.uC_Assesment1);
             this.panelcontainer.Controls.Add(this.student_User_Control1);
-            this.panelcontainer.Controls.Add(this.dashBoard_User_Control1);
             this.panelcontainer.Controls.Add(this.attendence1);
             this.panelcontainer.Controls.Add(this.add_Student1);
+            this.panelcontainer.Controls.Add(this.dashBoard_User_Control1);
             this.panelcontainer.Location = new System.Drawing.Point(194, 64);
             this.panelcontainer.Name = "panelcontainer";
             this.panelcontainer.Size = new System.Drawing.Size(787, 549);
             this.panelcontainer.TabIndex = 6;
             // 
-            // bunifuToggleSwitch1
+            // uC_Evaluation1
             // 
-            this.bunifuToggleSwitch1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.bunifuToggleSwitch1.Animation = 5;
-            this.bunifuToggleSwitch1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuToggleSwitch1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuToggleSwitch1.BackgroundImage")));
-            this.bunifuToggleSwitch1.Checked = false;
-            this.bunifuToggleSwitch1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuToggleSwitch1.InnerCirclePadding = 3;
-            this.bunifuToggleSwitch1.Location = new System.Drawing.Point(909, 33);
-            this.bunifuToggleSwitch1.Name = "bunifuToggleSwitch1";
-            this.bunifuToggleSwitch1.Size = new System.Drawing.Size(55, 25);
-            this.bunifuToggleSwitch1.TabIndex = 7;
-            this.bunifuToggleSwitch1.ThumbMargin = 3;
-            toggleState1.BackColor = System.Drawing.Color.DarkGray;
-            toggleState1.BackColorInner = System.Drawing.Color.White;
-            toggleState1.BorderColor = System.Drawing.Color.DarkGray;
-            toggleState1.BorderColorInner = System.Drawing.Color.White;
-            toggleState1.BorderRadius = 17;
-            toggleState1.BorderRadiusInner = 11;
-            toggleState1.BorderThickness = 1;
-            toggleState1.BorderThicknessInner = 1;
-            this.bunifuToggleSwitch1.ToggleStateDisabled = toggleState1;
-            toggleState2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            toggleState2.BackColorInner = System.Drawing.Color.White;
-            toggleState2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            toggleState2.BorderColorInner = System.Drawing.Color.White;
-            toggleState2.BorderRadius = 17;
-            toggleState2.BorderRadiusInner = 11;
-            toggleState2.BorderThickness = 1;
-            toggleState2.BorderThicknessInner = 1;
-            this.bunifuToggleSwitch1.ToggleStateOff = toggleState2;
-            toggleState3.BackColor = System.Drawing.Color.DodgerBlue;
-            toggleState3.BackColorInner = System.Drawing.Color.White;
-            toggleState3.BorderColor = System.Drawing.Color.DodgerBlue;
-            toggleState3.BorderColorInner = System.Drawing.Color.White;
-            toggleState3.BorderRadius = 17;
-            toggleState3.BorderRadiusInner = 11;
-            toggleState3.BorderThickness = 1;
-            toggleState3.BorderThicknessInner = 1;
-            this.bunifuToggleSwitch1.ToggleStateOn = toggleState3;
-            this.bunifuToggleSwitch1.Value = false;
-            this.bunifuToggleSwitch1.CheckedChanged += new System.EventHandler<Bunifu.UI.WinForms.BunifuToggleSwitch.CheckedChangedEventArgs>(this.BunifuToggleSwitch1_CheckedChanged);
+            this.uC_Evaluation1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.uC_Evaluation1.Location = new System.Drawing.Point(0, -3);
+            this.uC_Evaluation1.MinimumSize = new System.Drawing.Size(787, 549);
+            this.uC_Evaluation1.Name = "uC_Evaluation1";
+            this.uC_Evaluation1.Size = new System.Drawing.Size(787, 549);
+            this.uC_Evaluation1.TabIndex = 8;
             // 
             // uC_Assesment2
             // 
@@ -398,18 +367,6 @@
             this.student_User_Control1.Size = new System.Drawing.Size(788, 560);
             this.student_User_Control1.TabIndex = 3;
             // 
-            // dashBoard_User_Control1
-            // 
-            this.dashBoard_User_Control1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dashBoard_User_Control1.BackColor = System.Drawing.Color.White;
-            this.dashBoard_User_Control1.Location = new System.Drawing.Point(0, 0);
-            this.dashBoard_User_Control1.MinimumSize = new System.Drawing.Size(787, 549);
-            this.dashBoard_User_Control1.Name = "dashBoard_User_Control1";
-            this.dashBoard_User_Control1.Size = new System.Drawing.Size(787, 564);
-            this.dashBoard_User_Control1.TabIndex = 2;
-            // 
             // attendence1
             // 
             this.attendence1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -433,16 +390,69 @@
             this.add_Student1.Size = new System.Drawing.Size(784, 560);
             this.add_Student1.TabIndex = 0;
             // 
-            // uC_Evaluation1
+            // bunifuToggleSwitch1
             // 
-            this.uC_Evaluation1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.bunifuToggleSwitch1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.bunifuToggleSwitch1.Animation = 5;
+            this.bunifuToggleSwitch1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuToggleSwitch1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuToggleSwitch1.BackgroundImage")));
+            this.bunifuToggleSwitch1.Checked = false;
+            this.bunifuToggleSwitch1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuToggleSwitch1.InnerCirclePadding = 3;
+            this.bunifuToggleSwitch1.Location = new System.Drawing.Point(909, 33);
+            this.bunifuToggleSwitch1.Name = "bunifuToggleSwitch1";
+            this.bunifuToggleSwitch1.Size = new System.Drawing.Size(55, 25);
+            this.bunifuToggleSwitch1.TabIndex = 7;
+            this.bunifuToggleSwitch1.ThumbMargin = 3;
+            toggleState1.BackColor = System.Drawing.Color.DarkGray;
+            toggleState1.BackColorInner = System.Drawing.Color.White;
+            toggleState1.BorderColor = System.Drawing.Color.DarkGray;
+            toggleState1.BorderColorInner = System.Drawing.Color.White;
+            toggleState1.BorderRadius = 17;
+            toggleState1.BorderRadiusInner = 11;
+            toggleState1.BorderThickness = 1;
+            toggleState1.BorderThicknessInner = 1;
+            this.bunifuToggleSwitch1.ToggleStateDisabled = toggleState1;
+            toggleState2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            toggleState2.BackColorInner = System.Drawing.Color.White;
+            toggleState2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            toggleState2.BorderColorInner = System.Drawing.Color.White;
+            toggleState2.BorderRadius = 17;
+            toggleState2.BorderRadiusInner = 11;
+            toggleState2.BorderThickness = 1;
+            toggleState2.BorderThicknessInner = 1;
+            this.bunifuToggleSwitch1.ToggleStateOff = toggleState2;
+            toggleState3.BackColor = System.Drawing.Color.DodgerBlue;
+            toggleState3.BackColorInner = System.Drawing.Color.White;
+            toggleState3.BorderColor = System.Drawing.Color.DodgerBlue;
+            toggleState3.BorderColorInner = System.Drawing.Color.White;
+            toggleState3.BorderRadius = 17;
+            toggleState3.BorderRadiusInner = 11;
+            toggleState3.BorderThickness = 1;
+            toggleState3.BorderThicknessInner = 1;
+            this.bunifuToggleSwitch1.ToggleStateOn = toggleState3;
+            this.bunifuToggleSwitch1.Value = false;
+            this.bunifuToggleSwitch1.CheckedChanged += new System.EventHandler<Bunifu.UI.WinForms.BunifuToggleSwitch.CheckedChangedEventArgs>(this.BunifuToggleSwitch1_CheckedChanged);
+            // 
+            // dashBoard_User_Control1
+            // 
+            this.dashBoard_User_Control1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.uC_Evaluation1.Location = new System.Drawing.Point(0, -3);
-            this.uC_Evaluation1.MinimumSize = new System.Drawing.Size(787, 549);
-            this.uC_Evaluation1.Name = "uC_Evaluation1";
-            this.uC_Evaluation1.Size = new System.Drawing.Size(787, 549);
-            this.uC_Evaluation1.TabIndex = 8;
+            this.dashBoard_User_Control1.BackColor = System.Drawing.Color.White;
+            this.dashBoard_User_Control1.Location = new System.Drawing.Point(0, 0);
+            this.dashBoard_User_Control1.MinimumSize = new System.Drawing.Size(787, 549);
+            this.dashBoard_User_Control1.Name = "dashBoard_User_Control1";
+            this.dashBoard_User_Control1.Size = new System.Drawing.Size(787, 564);
+            this.dashBoard_User_Control1.TabIndex = 2;
+            // 
+            // uC_ViewAttendence1
+            // 
+            this.uC_ViewAttendence1.Location = new System.Drawing.Point(0, 0);
+            this.uC_ViewAttendence1.MinimumSize = new System.Drawing.Size(787, 549);
+            this.uC_ViewAttendence1.Name = "uC_ViewAttendence1";
+            this.uC_ViewAttendence1.Size = new System.Drawing.Size(787, 549);
+            this.uC_ViewAttendence1.TabIndex = 9;
             // 
             // Dashboard
             // 
@@ -495,5 +505,6 @@
         private Bunifu.UI.WinForms.BunifuToggleSwitch bunifuToggleSwitch1;
         private UC_Assesment uC_Assesment2;
         private UC_Evaluation uC_Evaluation1;
+        private UC_ViewAttendence uC_ViewAttendence1;
     }
 }

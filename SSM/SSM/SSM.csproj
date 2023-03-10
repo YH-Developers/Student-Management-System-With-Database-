@@ -330,6 +330,12 @@
     <Compile Include="Forms\UC_Setting.Designer.cs">
       <DependentUpon>UC_Setting.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\UC_ViewAttendence.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\UC_ViewAttendence.Designer.cs">
+      <DependentUpon>UC_ViewAttendence.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="ProjectBDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -369,6 +375,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\UC_Setting.resx">
       <DependentUpon>UC_Setting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UC_ViewAttendence.resx">
+      <DependentUpon>UC_ViewAttendence.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -418,9 +427,11 @@
     <Content Include="Resources\downloads.png" />
     <None Include="Resources\evaluation.png" />
     <Content Include="Resources\home.png" />
+    <Content Include="Resources\illustration.png" />
     <Content Include="Resources\money-bag.png" />
     <None Include="Resources\reports.png" />
     <None Include="Resources\print.png" />
+    <None Include="Resources\Report_Pdf.png" />
     <Content Include="Resources\settings.png" />
     <None Include="Resources\student.png" />
     <Content Include="Resources\Untitled-11.png" />

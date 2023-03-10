@@ -21,7 +21,36 @@ namespace SSM.Forms
 
         private void BunifuButton4_Click(object sender, EventArgs e)
         {
-            
+            try
+            {
+                var con = Configuration.getInstance().getConnection();
+                SqlCommand cmd = new SqlCommand("SELECT s.Id,s.FirstName,s.LastName,s.Contact,s.Email,s.RegistrationNumber, l.Name as Status FROM Student s JOIN lookup l ON s.Status = l.LookupId;", con);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                bunifuDataGridView1.DataSource = dt;
+            }
+            catch(Exception)
+            {
+                MessageBox.Show("Database Error");
+            }
+            try
+            {
+                var con = Configuration.getInstance().getConnection();
+                SqlCommand sc = new SqlCommand("SELECT Id FROM Student", con);
+                SqlDataReader reader;
+                reader = sc.ExecuteReader();
+                DataTable dt = new DataTable();
+                dt.Columns.Add("Id", typeof(string));
+                dt.Load(reader);
+                SelectId.ValueMember = "Id";
+                SelectId.DataSource = dt;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Database Error");
+            }
+
         }
 
         private void Student_User_Control_Load(object sender, EventArgs e)
@@ -41,21 +70,12 @@ namespace SSM.Forms
 
         private void BunifuButton3_Click(object sender, EventArgs e)
         {
-            if(materialTextBox1.Text.Length<1)
-            {
-                ErrorLabel.Text= "ID can't be Emplty";
-            }
-            else
-            {
-                var con = Configuration.getInstance().getConnection();
-                SqlCommand cmd = new SqlCommand("DELETE FROM Student WHERE ID = @ID", con);
-                cmd.Parameters.AddWithValue("@ID", int.Parse(materialTextBox1.Text));
-                cmd.ExecuteNonQuery();
-                ErrorLabel.Text = " ";
-                MessageBox.Show("Successfully Deleted");
-                materialTextBox1.Clear();
-            }
-           
+            var con = Configuration.getInstance().getConnection();
+            SqlCommand cmd = new SqlCommand("DELETE FROM Student WHERE ID=@ID", con);
+            cmd.Parameters.AddWithValue("@ID", int.Parse(SelectId.Text));
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("Successfully deleted...");
+
         }
 
         private void MaterialTextBox1_KeyPress(object sender, KeyPressEventArgs e)

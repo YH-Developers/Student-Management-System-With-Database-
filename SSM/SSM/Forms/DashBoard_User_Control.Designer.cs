@@ -238,6 +238,7 @@
             this.circularProgressBar1.TabIndex = 1;
             this.circularProgressBar1.Text = "0%";
             this.circularProgressBar1.TextMargin = new System.Windows.Forms.Padding(8, 8, 0, 0);
+            this.circularProgressBar1.Value = 60;
             // 
             // label6
             // 

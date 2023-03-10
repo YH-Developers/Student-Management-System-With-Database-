@@ -40,8 +40,7 @@
             this.bunifuButton4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.bunifuButton3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.bunifuButton1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.materialTextBox1 = new MaterialSkin.Controls.MaterialTextBox();
-            this.ErrorLabel = new Bunifu.UI.WinForms.BunifuLabel();
+            this.SelectId = new MaterialSkin.Controls.MaterialComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -100,7 +99,7 @@
             this.bunifuDataGridView1.EnableHeadersVisualStyles = false;
             this.bunifuDataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
             this.bunifuDataGridView1.HeaderBackColor = System.Drawing.Color.DodgerBlue;
-            this.bunifuDataGridView1.HeaderBackColor = System.Drawing.Color.Empty;
+            this.bunifuDataGridView1.HeaderBgColor = System.Drawing.Color.Empty;
             this.bunifuDataGridView1.HeaderForeColor = System.Drawing.Color.White;
             this.bunifuDataGridView1.Location = new System.Drawing.Point(10, 111);
             this.bunifuDataGridView1.Name = "bunifuDataGridView1";
@@ -402,51 +401,35 @@
             this.bunifuButton1.UseDefaultRadiusAndThickness = true;
             this.bunifuButton1.Click += new System.EventHandler(this.BunifuButton1_Click);
             // 
-            // materialTextBox1
+            // SelectId
             // 
-            this.materialTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.materialTextBox1.AnimateReadOnly = false;
-            this.materialTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.materialTextBox1.Depth = 0;
-            this.materialTextBox1.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialTextBox1.Hint = "Enter ID to delete Student";
-            this.materialTextBox1.LeadingIcon = null;
-            this.materialTextBox1.Location = new System.Drawing.Point(77, 460);
-            this.materialTextBox1.MaxLength = 50;
-            this.materialTextBox1.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialTextBox1.Multiline = false;
-            this.materialTextBox1.Name = "materialTextBox1";
-            this.materialTextBox1.Size = new System.Drawing.Size(264, 50);
-            this.materialTextBox1.TabIndex = 6;
-            this.materialTextBox1.Text = "";
-            this.materialTextBox1.TrailingIcon = null;
-            this.materialTextBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.MaterialTextBox1_KeyPress);
-            // 
-            // ErrorLabel
-            // 
-            this.ErrorLabel.AllowParentOverrides = false;
-            this.ErrorLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.ErrorLabel.AutoEllipsis = false;
-            this.ErrorLabel.Cursor = System.Windows.Forms.Cursors.Default;
-            this.ErrorLabel.CursorType = System.Windows.Forms.Cursors.Default;
-            this.ErrorLabel.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.ErrorLabel.ForeColor = System.Drawing.Color.Red;
-            this.ErrorLabel.Location = new System.Drawing.Point(245, 516);
-            this.ErrorLabel.Name = "ErrorLabel";
-            this.ErrorLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.ErrorLabel.Size = new System.Drawing.Size(0, 0);
-            this.ErrorLabel.TabIndex = 7;
-            this.ErrorLabel.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.ErrorLabel.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            this.ErrorLabel.Click += new System.EventHandler(this.BunifuLabel2_Click);
+            this.SelectId.AutoResize = false;
+            this.SelectId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.SelectId.Depth = 0;
+            this.SelectId.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.SelectId.DropDownHeight = 174;
+            this.SelectId.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.SelectId.DropDownWidth = 121;
+            this.SelectId.Font = new System.Drawing.Font("Roboto Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.SelectId.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.SelectId.FormattingEnabled = true;
+            this.SelectId.Hint = "Select Student Id";
+            this.SelectId.IntegralHeight = false;
+            this.SelectId.ItemHeight = 43;
+            this.SelectId.Location = new System.Drawing.Point(67, 461);
+            this.SelectId.MaxDropDownItems = 4;
+            this.SelectId.MouseState = MaterialSkin.MouseState.OUT;
+            this.SelectId.Name = "SelectId";
+            this.SelectId.Size = new System.Drawing.Size(315, 49);
+            this.SelectId.StartIndex = 0;
+            this.SelectId.TabIndex = 6;
             // 
             // Student_User_Control
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.ErrorLabel);
-            this.Controls.Add(this.materialTextBox1);
+            this.Controls.Add(this.SelectId);
             this.Controls.Add(this.bunifuLabel1);
             this.Controls.Add(this.bunifuButton4);
             this.Controls.Add(this.bunifuButton3);
@@ -469,7 +452,6 @@
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton bunifuButton3;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton bunifuButton4;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
-        private MaterialSkin.Controls.MaterialTextBox materialTextBox1;
-        private Bunifu.UI.WinForms.BunifuLabel ErrorLabel;
+        private MaterialSkin.Controls.MaterialComboBox SelectId;
     }
 }

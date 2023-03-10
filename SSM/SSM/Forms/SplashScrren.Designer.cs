@@ -74,11 +74,14 @@
             this.ProgressBar.TabIndex = 0;
             this.ProgressBar.Text = "Loading";
             this.ProgressBar.TextMargin = new System.Windows.Forms.Padding(8, 8, 0, 0);
+            this.ProgressBar.UseWaitCursor = true;
+            this.ProgressBar.Value = 68;
             // 
             // bunifuLabel1
             // 
             this.bunifuLabel1.AllowParentOverrides = false;
             this.bunifuLabel1.AutoEllipsis = false;
+            this.bunifuLabel1.Cursor = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel1.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel1.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuLabel1.ForeColor = System.Drawing.SystemColors.Window;
@@ -90,6 +93,7 @@
             this.bunifuLabel1.Text = "Student ";
             this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.bunifuLabel1.UseWaitCursor = true;
             // 
             // bunifuLabel2
             // 
@@ -106,6 +110,7 @@
             this.bunifuLabel2.Text = "Management";
             this.bunifuLabel2.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel2.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.bunifuLabel2.UseWaitCursor = true;
             // 
             // bunifuLabel3
             // 
@@ -122,11 +127,13 @@
             this.bunifuLabel3.Text = "System";
             this.bunifuLabel3.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel3.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.bunifuLabel3.UseWaitCursor = true;
             // 
             // bunifuLabel4
             // 
             this.bunifuLabel4.AllowParentOverrides = false;
             this.bunifuLabel4.AutoEllipsis = false;
+            this.bunifuLabel4.Cursor = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel4.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel4.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuLabel4.ForeColor = System.Drawing.SystemColors.HighlightText;
@@ -138,6 +145,7 @@
             this.bunifuLabel4.Text = "Please Wait For a Minute white we do some Process";
             this.bunifuLabel4.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel4.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.bunifuLabel4.UseWaitCursor = true;
             // 
             // SplashScrren
             // 
